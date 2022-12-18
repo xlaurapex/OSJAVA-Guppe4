@@ -1,6 +1,7 @@
 
 /**
- * Beschreiben Sie hier die Klasse Kunstinstallation.
+ * Die Klasse „Kunstinstallation“ ist eine Child-Klasse der abstrakten Klasse „Kunstwerk“, wel-che durch die Besonderheiten 
+ * einer Kunstinstallation (z.B. alleinige Platzierung im Raum) ergänzt wird. Die Klasse „Kunstinstallation“ ist somit eine Datenträgerklasse.
  * 
  * @author Darya Bialova
  * @version (eine Versionsnummer oder ein Datum)

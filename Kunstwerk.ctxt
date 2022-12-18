@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Kunstwerk
-comment0.text=\r\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Kunstwerke.\r\n\ \r\n\ @author\ Darya\ Bialova\r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
+comment0.text=\r\n\ Die\ Klasse\ Kunstwerk\ ist\ eine\ abstrakte\ Klasse,\ woraus\ sich\ die\ Klassen\ \u201EBild\u201C,\ \u201EKunstge-genstand\u201C\ und\ \r\n\ \u201EKunstinstallation\u201C\ als\ Child-Klassen\ ableiten.\ Es\ k\u00F6nnen\ keine\ Objekte\ der\ Klasse\ \u201EKunstwerk\u201C\ erzeugt\ werden.\r\n\ \r\n\ @author\ Darya\ Bialova\r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
 comment1.params=
 comment1.target=Kunstwerk()
 comment1.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Kunstwerke\r\n

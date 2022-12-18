@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Datei
-comment0.text=\r\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Datei.\r\n\ \r\n\ @author\ Laura\ Perlbach\r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
+comment0.text=\r\n\ Die\ Klasse\ Datei\ dient\ dem\ Einlesen\ und\ Ausgeben\ von\ Dateien\ und\ bietet\ Standardfunk-tionen\ zur\ Dateiverarbeitung.\ \r\n\ Diese\ wird\ durch\ die\ Klassen\ \u201EAusstellungsverwaltung\u201C\ (z.B.\ Erstellen\ des\ Ausstellungsf\u00FChrers),\ \r\n\ Raumverwaltung\ (z.B.\ Einlesen\ der\ Raumdatei)\ und\ Kunstwerksverwaltung\ (z.B.\ Einlesen\ der\ verf\u00FCgbaren\ Kunstwerke)\ verwendet.\r\n\ \r\n\ @author\ Laura\ Perlbach\r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
 comment1.params=
 comment1.target=Datei()
 comment1.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Datei\r\n

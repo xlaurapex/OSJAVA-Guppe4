@@ -1,6 +1,8 @@
 
 /**
- * Beschreiben Sie hier die Klasse Ausstellung.
+ * Eine Ausstellung enthält jeweils die in dieser Ausstellung präsentierten Kunstwerke und die Aufteilung der Kunstwerke in die einzelnen Räume. Eine 
+ * Ausstellung nutzt daher die Ge-gebenheiten der Räume und beinhaltet Objekte der Klassen „Bild“, 
+ * „Kunstgegenstand“ und „Kunstinstallation“. Zudem erzeugt die Klasse „Ausstellung“ anschließend die Dateien Mu-seumsführer, Leihübersicht und Raumplan.
  * 
  * @author Laura Perlbach
  * @version (eine Versionsnummer oder ein Datum)

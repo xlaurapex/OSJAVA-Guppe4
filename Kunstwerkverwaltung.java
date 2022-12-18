@@ -1,6 +1,7 @@
 
 /**
- * Beschreiben Sie hier die Klasse Kunstwerkverwaltung.
+ * Die Kunstwerkverwaltung enthält die jeweils verfügbaren Kunstwerke der anderen Museen, welche für Ausstellungen genutzt werden können. Die Klasse 
+ * „Ausstellungsverwaltung“ greift auf diese verfügbaren Kunstwerke zu, um die entsprechenden Kunstwerke für eine Ausstellung einplanen zu können.
  * 
  * @author Darya Bialova
  * @version (eine Versionsnummer oder ein Datum)

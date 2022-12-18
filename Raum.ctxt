@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Raum
-comment0.text=\r\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Raum.\r\n\ \r\n\ @author\ Johannes\ Riedmeier\r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
+comment0.text=\r\n\ Die\ Klasse\ Raum\ dient\ der\ Datenhaltung\ einzelner\ R\u00E4ume\ und\ definiert\ deren\ Attribute,\ wie\ z.B.\ Ausma\u00DFe.\ Die\ Klasse\ Raum\ ist\ somit\ eine\ \r\n\ Datentr\u00E4gerklasse.\ Auf\ die\ Klasse\ \u201ERaumverwaltung\u201C\ wird\ durch\ die\ Klasse\ \u201EAusstellungsverwaltung\u201C\ zugegriffen,\ um\ auf\ Ba-sis\ der\ \r\n\ R\u00E4ume\ eine\ Ausstellung\ erstellen\ zu\ k\u00F6nnen.\ Zudem\ wird\ die\ Klasse\ \u201EDatei\u201C\ ver-wendet,\ um\ die\ Raumdatei\ einlesen\ und\ verarbeiten\ zu\ k\u00F6nnen.\r\n\ \r\n\ @author\ Johannes\ Riedmeier\r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
 comment1.params=
 comment1.target=Raum()
 comment1.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Raum\r\n

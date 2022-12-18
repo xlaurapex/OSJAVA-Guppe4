@@ -1,6 +1,8 @@
 
 /**
- * Beschreiben Sie hier die Klasse Raum.
+ * Die Klasse Raum dient der Datenhaltung einzelner Räume und definiert deren Attribute, wie z.B. Ausmaße. Die Klasse Raum ist somit eine 
+ * Datenträgerklasse. Auf die Klasse „Raumverwaltung“ wird durch die Klasse „Ausstellungsverwaltung“ zugegriffen, um auf Ba-sis der 
+ * Räume eine Ausstellung erstellen zu können. Zudem wird die Klasse „Datei“ ver-wendet, um die Raumdatei einlesen und verarbeiten zu können.
  * 
  * @author Johannes Riedmeier
  * @version (eine Versionsnummer oder ein Datum)

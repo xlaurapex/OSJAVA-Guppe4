@@ -1,6 +1,7 @@
 
 /**
- * Beschreiben Sie hier die Klasse Kunstgegenstand.
+ * Die Klasse „Kunstgegenstand“ ist eine Child-Klasse der abstrakten Klasse „Kunstwerk“, welche durch die besonderen 
+ * Attribute eines Kunstgegenstands (z.B. Länge) ergänzt wird. Die Klasse „Kunstgegenstand“ ist somit eine Datenträgerklasse.
  * 
  * @author Darya Bialova
  * @version (eine Versionsnummer oder ein Datum)

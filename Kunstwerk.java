@@ -1,6 +1,7 @@
 
 /**
- * Beschreiben Sie hier die Klasse Kunstwerke.
+ * Die Klasse Kunstwerk ist eine abstrakte Klasse, woraus sich die Klassen „Bild“, „Kunstge-genstand“ und 
+ * „Kunstinstallation“ als Child-Klassen ableiten. Es können keine Objekte der Klasse „Kunstwerk“ erzeugt werden.
  * 
  * @author Darya Bialova
  * @version (eine Versionsnummer oder ein Datum)

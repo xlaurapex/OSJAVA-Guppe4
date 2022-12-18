@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Kunstwerkverwaltung
-comment0.text=\r\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Kunstwerkverwaltung.\r\n\ \r\n\ @author\ Darya\ Bialova\r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
+comment0.text=\r\n\ Die\ Kunstwerkverwaltung\ enth\u00E4lt\ die\ jeweils\ verf\u00FCgbaren\ Kunstwerke\ der\ anderen\ Museen,\ welche\ f\u00FCr\ Ausstellungen\ genutzt\ werden\ k\u00F6nnen.\ Die\ Klasse\ \r\n\ \u201EAusstellungsverwaltung\u201C\ greift\ auf\ diese\ verf\u00FCgbaren\ Kunstwerke\ zu,\ um\ die\ entsprechenden\ Kunstwerke\ f\u00FCr\ eine\ Ausstellung\ einplanen\ zu\ k\u00F6nnen.\r\n\ \r\n\ @author\ Darya\ Bialova\r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
 comment1.params=
 comment1.target=Kunstwerkverwaltung()
 comment1.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Kunstwerkverwaltung\r\n

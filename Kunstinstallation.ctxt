@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Kunstinstallation
-comment0.text=\r\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Kunstinstallation.\r\n\ \r\n\ @author\ Darya\ Bialova\r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
+comment0.text=\r\n\ Die\ Klasse\ \u201EKunstinstallation\u201C\ ist\ eine\ Child-Klasse\ der\ abstrakten\ Klasse\ \u201EKunstwerk\u201C,\ wel-che\ durch\ die\ Besonderheiten\ \r\n\ einer\ Kunstinstallation\ (z.B.\ alleinige\ Platzierung\ im\ Raum)\ erg\u00E4nzt\ wird.\ Die\ Klasse\ \u201EKunstinstallation\u201C\ ist\ somit\ eine\ Datentr\u00E4gerklasse.\r\n\ \r\n\ @author\ Darya\ Bialova\r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
 comment1.params=
 comment1.target=Kunstinstallation()
 comment1.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Kunstinstallation\r\n

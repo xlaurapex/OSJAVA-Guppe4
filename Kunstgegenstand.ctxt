@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Kunstgegenstand
-comment0.text=\r\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Kunstgegenstand.\r\n\ \r\n\ @author\ Darya\ Bialova\r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
+comment0.text=\r\n\ Die\ Klasse\ \u201EKunstgegenstand\u201C\ ist\ eine\ Child-Klasse\ der\ abstrakten\ Klasse\ \u201EKunstwerk\u201C,\ welche\ durch\ die\ besonderen\ \r\n\ Attribute\ eines\ Kunstgegenstands\ (z.B.\ L\u00E4nge)\ erg\u00E4nzt\ wird.\ Die\ Klasse\ \u201EKunstgegenstand\u201C\ ist\ somit\ eine\ Datentr\u00E4gerklasse.\r\n\ \r\n\ @author\ Darya\ Bialova\r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
 comment1.params=
 comment1.target=Kunstgegenstand()
 comment1.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Kunstgegenstand\r\n

@@ -1,6 +1,8 @@
 
 /**
- * Beschreiben Sie hier die Klasse Datei.
+ * Die Klasse Datei dient dem Einlesen und Ausgeben von Dateien und bietet Standardfunk-tionen zur Dateiverarbeitung. 
+ * Diese wird durch die Klassen „Ausstellungsverwaltung“ (z.B. Erstellen des Ausstellungsführers), 
+ * Raumverwaltung (z.B. Einlesen der Raumdatei) und Kunstwerksverwaltung (z.B. Einlesen der verfügbaren Kunstwerke) verwendet.
  * 
  * @author Laura Perlbach
  * @version (eine Versionsnummer oder ein Datum)
