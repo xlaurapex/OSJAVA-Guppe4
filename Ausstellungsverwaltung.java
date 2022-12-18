@@ -1,6 +1,12 @@
 
 /**
- * Beschreiben Sie hier die Klasse Museumsverwaltung.
+ * Die Klasse Ausstellungsverwaltung Die Klasse „Ausstellungsverwaltung“ stellt die Kernaufgabe des Systems dar. 
+ * Sie dient dazu aus den Gegebenheiten der Raum- und Kunstwerksverwaltung die optimale Ausstel-lungskombination zu ermitteln. 
+ * Diese Klasse beinhaltet somit den größten Anteil der Pro-zessabwicklung. 
+ * Durch die Klasse „Ausstellungsverwaltung“ werden Objekte der Klasse „Ausstellung“ erzeugt. 
+ * Über die Klassen „Raumverwaltung“ und „Kunstwerksverwaltung“ werden Input-Daten der Räume und verfügbaren Kunstwerke geliefert.
+ * 
+ * 
  * 
  * @author Marcell Wach, Laura Perlbach, Johannes Riedmeier, Darya Bialova
  * @version (eine Versionsnummer oder ein Datum)
@@ -23,14 +29,26 @@ public class Ausstellungsverwaltung
     }
 
     /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
+     * die Main-Methode beschreibt den zentralen Logik-Ablauf der Museumsverwaltung und steuert 
+     * damit den Ablauf und Aufruf der verschiedenen Klassen von der Eingabe der Eingabe-Dateien bis hin zur Ausgabe der Augabedateien
      * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
+     * 
+     * 
      */
-    public int beispielMethode(int y)
+    public static void main(String args[])
     {
-        // tragen Sie hier den Code ein
-        return x + y;
+        // Abfragen der Eingabedateien
+        
+        // dadurch Erstellung der Raüme und Kunstwerke
+        
+        // Starten des Optimierungsalgorithmus
+        
+        // dadurch Erzeugung der Ausstellung (Zuordnung Raum und Kunstwerke)
+        
+        // Ausstellung erzeugt Ausgabedateien
+    
     }
 }
+
+
+
