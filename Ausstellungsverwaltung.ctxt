@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Ausstellungsverwaltung
+comment0.text=\r\n\ Die\ Klasse\ Ausstellungsverwaltung\ Die\ Klasse\ \u201EAusstellungsverwaltung\u201C\ stellt\ die\ Kernaufgabe\ des\ Systems\ dar.\ \r\n\ Sie\ dient\ dazu\ aus\ den\ Gegebenheiten\ der\ Raum-\ und\ Kunstwerksverwaltung\ die\ optimale\ Ausstel-lungskombination\ zu\ ermitteln.\ \r\n\ Diese\ Klasse\ beinhaltet\ somit\ den\ gr\u00F6\u00DFten\ Anteil\ der\ Pro-zessabwicklung.\ \r\n\ Durch\ die\ Klasse\ \u201EAusstellungsverwaltung\u201C\ werden\ Objekte\ der\ Klasse\ \u201EAusstellung\u201C\ erzeugt.\ \r\n\ \u00DCber\ die\ Klassen\ \u201ERaumverwaltung\u201C\ und\ \u201EKunstwerksverwaltung\u201C\ werden\ Input-Daten\ der\ R\u00E4ume\ und\ verf\u00FCgbaren\ Kunstwerke\ geliefert.\r\n\ \r\n\ \r\n\ \r\n\ @author\ Marcell\ Wach,\ Laura\ Perlbach,\ Johannes\ Riedmeier,\ Darya\ Bialova\r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
+comment1.params=
+comment1.target=Ausstellungsverwaltung()
+comment1.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Museumsverwaltung\r\n
+comment2.params=args
+comment2.target=void\ main(java.lang.String[])
+comment2.text=\r\n\ die\ Main-Methode\ beschreibt\ den\ zentralen\ Logik-Ablauf\ der\ Museumsverwaltung\ und\ steuert\ \r\n\ damit\ den\ Ablauf\ und\ Aufruf\ der\ verschiedenen\ Klassen\ von\ der\ Eingabe\ der\ Eingabe-Dateien\ bis\ hin\ zur\ Ausgabe\ der\ Augabedateien\r\n\ \r\n\ \r\n\ \r\n
+numComments=3
