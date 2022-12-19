@@ -15,6 +15,7 @@ public class Datei
 
     /**
      * Konstruktor für Objekte der Klasse Datei
+     * test
      */
     public Datei()
     {
