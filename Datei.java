@@ -14,8 +14,7 @@ import java.io.*;
 public class Datei
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
-    private String in_datei;
-    private char deliminator;
+    private File in_datei;
     private Kunstwerkverwaltung kVerw;
     private Raumverwaltung rVerw;
     private ArrayList<Kunstwerk> kunstwerke;
@@ -60,18 +59,20 @@ public class Datei
      * "Kunstinstallation" erzeugt und in der Museumsverwaltung gespeichert werden
      * @author  Laura Perlbach
      */
-    public void verarbeiteKunstwerkeDatei(String in_datei)
+    public boolean verarbeiteKunstwerkeDatei(String in_datei)
     {
         //Erstelle neue Kunstwerkverwaltung
         kVerw = new Kunstwerkverwaltung();
         //Ermitteln der leeren Liste für Kunstwerke, um in Verlauf der Methode Räume anhängen zu können
         kunstwerke = kVerw.getKunstwerke();
         //Speichern des Eingabedateipfads
-        this.in_datei = in_datei;
+        this.in_datei = new File(in_datei);
         
         //Öffnen der Eingabedatei
         //openInFile();
         
+        
+        return true;
         //Einlesen der Datei für die Raumdatei
         //Trennen der einzelnen Datensätze
         //Für jeden Datensatz prüfen, ob Art des Kunstwerks "B", "I" oder "G". 
@@ -80,40 +81,116 @@ public class Datei
     
     /**
      * mit der Methode verarbeiteRaumDatei() werden die Eingabedateien für Räume eingelesen, 
-     * verarbeitet und entsprechende Objekte der Klasse "Raum" 
+     * verarbeitet und entsprechende Objekte der Klasse "Raum" angelegt
      * 
      * @param  dateipfad    als Eingabeparameter für die Methode ist der Dateipfad erforderlich, wo die einzulesende Datei zu finden ist
-     * @return        die Methode besitzt keinen Rückgabewert, da lediglich Objekte der Klassen "Bild","Kunstgegenstand" und 
-     * "Kunstinstallation" erzeugt und in der Museumsverwaltung gespeichert werden
+     * @return        die Methode gibt je nach Erfolg true oder false zurück
+     * 
      * @author  Laura Perlbach
      */
-    public void verarbeiteRaumDatei(String dateipfad) 
+    public boolean verarbeiteRaumDatei(String in_datei) 
     {
         //Erstelle neue Raumverwaltung
         rVerw = new Raumverwaltung();
         //Ermitteln der leeren Liste für Räume, um in Verlauf der Methode Räume anhängen zu können
         raeume = rVerw.getRaeume();
+        // Anlegen eines Strings, der innnerhalb diese Methode benoetigt wird
+        String zwStr;
         //Speichern des Eingabedateipfads
-        this.in_datei = in_datei;
+        this.in_datei = new File(in_datei);
         
+               
         //Öffnen der Eingabedatei
         try{openInFile();}
-        catch (Exception e)
+        catch (IOException e)
         {
             System.out.println("Fehler beim Einlesen der Datei");
             System.out.println(e.getMessage());
+            return false;
         }
+        
+        //Verarbeiten der Datei bis Ende erreicht
+        while (!eof){
+            //Ergänzen eines Zählers
+            int count = 0;
+            
+            //Einlesen der aktuellen Zeile der Datei
+            try{zwStr = readLine();}
+            catch (IOException e)
+            {
+            System.out.println("Fehler beim Einlesen der "+ count + ". Zeile");
+            System.out.println(e.getMessage());
+            return false;
+            }
+            
+            if(!eof){
+                //Erhöhen des Zeilenzählers
+                count++;
+
+                //Ermitteln der Position des Trennzeichens ","
+                int posKomma = zwStr.indexOf(",");
+                //setzen der laufenden Nummer 
+                int lfdNr = Integer.parseInt(zwStr.substring(0,posKomma));
+                //Verkürzen des eingelesenen Strings um die laufende Nummer
+                zwStr = zwStr.substring(posKomma+1);
+                
+                posKomma = zwStr.indexOf(",");
+                //Setzen der Bezeichnung
+                String bezeichnung = zwStr.substring(0,posKomma);
+                zwStr = zwStr.substring(posKomma+1);
+                
+                posKomma = zwStr.indexOf(",");
+                //Setzen der Länge
+                int laenge = Integer.parseInt(zwStr.substring(0,posKomma));
+                zwStr = zwStr.substring(posKomma+1);
+                
+                posKomma = zwStr.indexOf(",");
+                //Setzen der Breite
+                int breite = Integer.parseInt(zwStr.substring(0,posKomma));
+                zwStr = zwStr.substring(posKomma+1);
+                
+                posKomma = zwStr.indexOf(",");
+                //Setzen der Höhe
+                int hoehe = Integer.parseInt(zwStr.substring(0,posKomma));
+                zwStr = zwStr.substring(posKomma+1);
+                
+                posKomma = zwStr.indexOf(",");
+                //Setzen der Türbreite Nord
+                int tNord = Integer.parseInt(zwStr.substring(0,posKomma));
+                zwStr = zwStr.substring(posKomma+1);
+                
+                posKomma = zwStr.indexOf(",");
+                //Setzen der Türbreite Ost
+                int tOst = Integer.parseInt(zwStr.substring(0,posKomma));
+                zwStr = zwStr.substring(posKomma+1);
+                
+                posKomma = zwStr.indexOf(",");
+                //Setzen der Türbreite Süd
+                int tSued = Integer.parseInt(zwStr.substring(0,posKomma));
+                zwStr = zwStr.substring(posKomma+1);
+
+                //Setzen der Türbreite West
+                int tWest = Integer.parseInt(zwStr);
+                
+                //Erzeuge neuen Raum
+                rVerw.addRaum(new Raum(lfdNr, bezeichnung, laenge, breite, hoehe, tNord, tOst, tSued, tWest));
+            }
+        
+            
+        }
+        
         
         //Schließen der Eingabedatei
         try{closeInFile();}
-        catch (Exception e)
+        catch (IOException e)
         {
-            System.out.println("Fehler beim Einlesen der Datei");
+            System.out.println("Fehler beim Schließen der Datei");
             System.out.println(e.getMessage());
+            return false;
         }
         
               
-        
+        return true;
         //Einlesen der Datei für die Raumdatei
         //Trennen der einzelnen Datensätze
         //Für jeden Datensatz Anlage eines Objekts der Klasse Raum (+zugehörige Objekte der Klasse Wand) 
@@ -126,10 +203,10 @@ public class Datei
      * 
      * @param  ausstellung der Parameter ausstellung beschreibt die Liste der ausgestellten Kunstwerke inklusive Raumzuordnung,
      * welche die fertige Planung darstellt. 
-     * @return        die Methode gibt einen Integer wieder, welcher den Fehlercode der Verarbeitung beschreibt
+     * @return        ddie Methode gibt je nach Erfolg true oder false zurück
      * @author  Laura Perlbach
      */
-    public int erzeugeLeihDatei(ArrayList ausstellung)
+    public boolean erzeugeLeihDatei(ArrayList ausstellung)
     {
         int error = 0;
         
@@ -137,7 +214,7 @@ public class Datei
         //Sortieren der Objekte nach Leih-Quelle
         //diese werden einzeln mit den relevanten Informationen in eine Datei geschrieben
                 
-        return error;
+        return true;
     }
     
     /**
@@ -147,10 +224,10 @@ public class Datei
      * 
      * @param  ausstellung der Parameter ausstellung beschreibt die Liste der ausgestellten Kunstwerke inklusive Raumzuordnung,
      * welche die fertige Planung darstellt. 
-     * @return        die Methode gibt einen Integer wieder, welcher den Fehlercode der Verarbeitung beschreibt
+     * @return        die Methode gibt je nach Erfolg true oder false zurück
      * @author  Laura Perlbach
      */
-    public int erzeugeZuordnungsDatei(ArrayList ausstellung)
+    public boolean erzeugeZuordnungsDatei(ArrayList ausstellung)
     {
         int error = 0;
         
@@ -158,7 +235,7 @@ public class Datei
         //Sortieren der Objekte nach Ausstellungsraum
         //diese werden einzeln mit den relevanten Informationen in eine Datei geschrieben
                 
-        return error;
+        return true;
     }
     
     /**
@@ -167,10 +244,10 @@ public class Datei
      * 
      * @param  ausstellung der Parameter ausstellung beschreibt die Liste der ausgestellten Kunstwerke inklusive Raumzuordnung,
      * welche die fertige Planung darstellt. 
-     * @return        die Methode gibt einen Integer wieder, welcher den Fehlercode der Verarbeitung beschreibt
+     * @return        die Methode gibt je nach Erfolg true oder false zurück
      * @author  Laura Perlbach
      */
-    public int erzeugeMuseumsführer(ArrayList ausstellung)
+    public boolean erzeugeMuseumsführer(ArrayList ausstellung)
     {
         int error = 0;
         
@@ -178,7 +255,7 @@ public class Datei
         //Sortieren der Objekte nach Leih-Quelle
         //diese werden einzeln mit den relevanten Informationen in eine Datei geschrieben
                 
-        return error;
+        return true;
     }
     
     /**
@@ -203,5 +280,24 @@ public class Datei
         errorCode =0;
         eof = false;
         dEin.close();
+    }
+    
+    /**
+     * Liest eine Zeile aus einer Eingabedatei.
+     * 
+     * @return ausgelesene Zeile.
+     * @exception IOException Wenn beim Zugriff auf die Datei ein Fehler aufgetreten ist
+     */
+    private String readLine() throws IOException
+    {
+        String zw_in = dEin.readLine();
+        if (zw_in == null){
+            eof=true;
+            return zw_in;
+        }
+        else{
+            errorCode =0;
+            return zw_in;
+        }
     }
 }

@@ -15,7 +15,7 @@ import java.util.Scanner;
 public class Ausstellungsverwaltung
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
-    private int x;
+    
     Ausstellung a;
     Kunstwerkverwaltung kwv;
     Raumverwaltung rvw;
@@ -26,7 +26,7 @@ public class Ausstellungsverwaltung
     public Ausstellungsverwaltung()
     {
         // Instanzvariable initialisieren
-        x = 0;
+        
     }
 
     /**
