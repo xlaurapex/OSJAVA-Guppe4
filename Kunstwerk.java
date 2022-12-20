@@ -9,41 +9,124 @@
 public abstract class Kunstwerk 
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
-    private int x;
-    int preis;
-    int wert;
-    
-    //Variablen aus Einlesedatei
-    int lfdNr;
-    char art;
-    String bezeichnung;
-    String kuenstler;
-    String jahresangabe;
-    String thema;
-    byte attraktivitaet;
-    String partnermuseum;
-    String addrPartnermuseum;
-    int hoehe;
-    int breite;
+    private long laufendeNummer;
+    private String bezeichnung;
+    private String kuenstlername;
+    private int jahresangabe;
+    private String thema;
+    private double attraktivitaet;
+    private int kosten;
+    private String nameMuseums;
+    private String anschriftMuseums;
+    private int hoehe;
+    private int breite;
     
     /**
-     * Konstruktor für Objekte der Klasse Kunstwerke
-     */
-    public Kunstwerk()
-    {
-        // Instanzvariable initialisieren
-        x = 0;
+ * Kontruktor für Objekte der abstrakten Klasse Kunstwerk
+ */     
+    
+    public Kunstwerk (long laufendeNummer, String bezeichnung,
+                String kuenstlername, int jahresangabe,
+                String thema, double attraktivitaet,
+                int kosten, String nameMuseums,
+                String anschriftMuseums, int hoehe, int breite) {
+        this.laufendeNummer = laufendeNummer;
+        this.bezeichnung = bezeichnung;
+        this.kuenstlername = kuenstlername;
+        this.jahresangabe = jahresangabe;
+        this.thema = thema;
+        this.attraktivitaet = attraktivitaet;
+        this.kosten = kosten;
+        this.nameMuseums = nameMuseums;
+        this.anschriftMuseums = anschriftMuseums;
+        this.hoehe = hoehe;
+        this.breite = breite;
     }
 
     /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
-     * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
-     */
-    public int beispielMethode(int y)
-    {
-        // tragen Sie hier den Code ein
-        return x + y;
+ * Getters and setters - da wir alle Attributen als private deklariert haben, brauchen wir jetzt getters und setters, um den Zugang zu den Attributen zu gewärhleisten
+ */
+
+    public long getLaufendeNummer() {
+    return laufendeNummer;}
+
+public void setLaufendeNummer(long laufendeNummer) {
+    this.laufendeNummer = laufendeNummer;}
+
+public String getBezeichnung() {
+    return bezeichnung;}
+
+public void setBezeichnung(String bezeichnung) {
+    this.bezeichnung = bezeichnung;}
+
+public String getKuenstlername() {
+    return kuenstlername;}
+
+public void setKuenstlername(String kuenstlername) {
+    this.kuenstlername = kuenstlername;}
+
+public int getJahresangabe() {
+    return jahresangabe;}
+
+public void setJahresangabe(int jahresangabe) {
+    this.jahresangabe = jahresangabe;}
+
+public String getThema() {
+    return thema;}
+
+public void setThema(String thema) {
+    this.thema = thema;}
+
+public double getAttraktivitaet() {
+    return attraktivitaet;}
+
+public void setAttraktivitaet(double attraktivitaet) {
+    this.attraktivitaet = attraktivitaet;}
+
+public int getKosten() {
+    return kosten;}
+
+public void setKosten(int kosten) {
+    this.kosten = kosten;}
+
+public String getNameMuseums() {
+    return nameMuseums;}
+
+public void setNameMuseums(String nameMuseums) {
+    this.nameMuseums = nameMuseums;}
+
+public String getAnschriftMuseums() {
+    return anschriftMuseums;}
+
+public void setAnschriftMuseums(String anschriftMuseums) {
+    this.anschriftMuseums = anschriftMuseums;}
+
+public int getHoehe() {
+    return hoehe;}
+
+public void setHoehe(int hoehe) {
+    this.hoehe = hoehe;}
+
+public int getBreite() {
+    return breite;}
+
+public void setBreite(int breite) {
+    this.breite = breite;
+}
+
+    @Override
+    public String toString() {
+        return "laufendeNummer=" + laufendeNummer +
+                ", bezeichnung='" + bezeichnung + '\'' +
+                ", kuenstlername='" + kuenstlername + '\'' +
+                ", jahresangabe=" + jahresangabe +
+                ", thema='" + thema + '\'' +
+                ", attraktivitaet=" + attraktivitaet +
+                ", kosten=" + kosten +
+                ", nameMuseums='" + nameMuseums + '\'' +
+                ", anschriftMuseums='" + anschriftMuseums + '\'' +
+                ", hoehe=" + hoehe +
+                ", breite=" + breite +
+                '}';
     }
 }
