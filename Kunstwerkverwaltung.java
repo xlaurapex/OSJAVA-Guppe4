@@ -15,14 +15,6 @@ public class Kunstwerkverwaltung {
     }
 
     /**
-     * Lade eine Liste der Kunstwerken aus einer CSV Datei in ListeKunstwerk
-     *
-     * @param pfad ist der Pfad zur CSV Datei
-     */
-    public void ladeKunstwerke(String pfad) {
-    }
-
-    /**
      * Gibt die Liste der Kunstwerken zurück
      *
      * @return List<Kunstwerk>
@@ -30,4 +22,27 @@ public class Kunstwerkverwaltung {
     public ArrayList<Kunstwerk> getKunstwerke() {
         return ListeKunstwerk;
     }
+    
+    /**
+     * Fügt Kunstwerk der liste hinzu
+     * @param k Übergabe eines Objekts der Klasse Kunstwerk (bzw. Unterklasse)
+     * 
+     */
+    public void addKunstwerk(Kunstwerk k) {
+        ListeKunstwerk.add(k);
+    }
+    
+        /**
+     * Es braucht eine Methode, um auf ein bestimmtes Kunstwerk der Liste zugreifen zu können 
+     * 
+     * @param  id    die ID (lfd. Nummer) muss eingegeben werden
+     * @return es wird ein Objekt Kunstwerk zurückgegeben
+     */
+    public Kunstwerk getKunstwerkByID(int id)
+    {
+        Kunstwerk r = null; 
+        // tragen Sie hier den Code ein
+        return r;
+    }
+
 }

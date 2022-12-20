@@ -32,7 +32,7 @@ public class Raumverwaltung
     public void addRaum(Raum raum)
     {
         // tragen Sie hier den Code ein
-        
+        raeume.add(raum);
     }
     
     /**

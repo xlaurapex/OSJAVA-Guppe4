@@ -11,7 +11,7 @@ public class Kunstinstallation extends Kunstwerk
     private int laenge;
     private double gewicht;
 
-    public Kunstinstallation(long laufendeNummer, String bezeichnung, String kuenstlername,
+    public Kunstinstallation(int laufendeNummer, String bezeichnung, String kuenstlername,
                              int jahresangabe, String thema, double attraktivitaet, int kosten,
                              String nameMuseums, String anschriftMuseums, int hoehe,
                              int breite, int laenge, double gewicht) {

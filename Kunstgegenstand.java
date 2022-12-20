@@ -10,7 +10,7 @@ public class Kunstgegenstand extends Kunstwerk {
     private int laenge;
     private double gewicht;
 
-    public Kunstgegenstand(long laufendeNummer, String bezeichnung,
+    public Kunstgegenstand(int laufendeNummer, String bezeichnung,
                            String kuenstlername, int jahresangabe,
                            String thema, double attraktivitaet, int kosten,
                            String nameMuseums, String anschriftMuseums, int hoehe,

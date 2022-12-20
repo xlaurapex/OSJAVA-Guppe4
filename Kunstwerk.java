@@ -9,7 +9,7 @@
 public abstract class Kunstwerk 
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
-    private long laufendeNummer;
+    private int laufendeNummer;
     private String bezeichnung;
     private String kuenstlername;
     private int jahresangabe;
@@ -25,7 +25,7 @@ public abstract class Kunstwerk
  * Kontruktor für Objekte der abstrakten Klasse Kunstwerk
  */     
     
-    public Kunstwerk (long laufendeNummer, String bezeichnung,
+    public Kunstwerk (int laufendeNummer, String bezeichnung,
                 String kuenstlername, int jahresangabe,
                 String thema, double attraktivitaet,
                 int kosten, String nameMuseums,
@@ -47,10 +47,10 @@ public abstract class Kunstwerk
  * Getters and setters - da wir alle Attributen als private deklariert haben, brauchen wir jetzt getters und setters, um den Zugang zu den Attributen zu gewärhleisten
  */
 
-    public long getLaufendeNummer() {
+    public int getLaufendeNummer() {
     return laufendeNummer;}
 
-public void setLaufendeNummer(long laufendeNummer) {
+public void setLaufendeNummer(int laufendeNummer) {
     this.laufendeNummer = laufendeNummer;}
 
 public String getBezeichnung() {

@@ -33,7 +33,7 @@ public class Optimierungsalgorithmus
      */
     public Ausstellung optimiere(ArrayList<Raum> r, ArrayList<Kunstwerk> k, String thema)
     {
-        // a = new Ausstellung();
+        // Rückgabetyp Dictionary
         // 
         //test
         return a;

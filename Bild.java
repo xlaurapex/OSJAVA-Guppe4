@@ -33,7 +33,7 @@ public class Bild extends Kunstwerk
      * @param minLuftfeuchtigkeit
      * @param maxLuftfeuchtigkeit
      */
-    public Bild(long laufendeNummer, String bezeichnung, String kuenstlername, int jahresangabe, String thema, double attraktivitaet, int kosten, String nameMuseums, String anschriftMuseums, int hoehe, int breite, double minTemperatur, double maxTemperatur, double minLuftfeuchtigkeit, double maxLuftfeuchtigkeit) {
+    public Bild(int laufendeNummer, String bezeichnung, String kuenstlername, int jahresangabe, String thema, double attraktivitaet, int kosten, String nameMuseums, String anschriftMuseums, int hoehe, int breite, double minTemperatur, double maxTemperatur, double minLuftfeuchtigkeit, double maxLuftfeuchtigkeit) {
         super(laufendeNummer, bezeichnung, kuenstlername, jahresangabe, thema, attraktivitaet, kosten, nameMuseums, anschriftMuseums, hoehe, breite);
         this.minTemperatur = minTemperatur;
         this.maxTemperatur = maxTemperatur;
