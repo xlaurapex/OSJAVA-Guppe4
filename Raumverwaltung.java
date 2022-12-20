@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 /**
  * Die Raumverwaltung erzeugt und verwaltet die Objekte der Klasse „Raum“ auf Basis der Planungsdatei der Räume für die jeweiligen Ausstellungszeiträume. 
@@ -8,8 +9,9 @@
  */
 public class Raumverwaltung
 {
-    // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
-    private int x;
+    // es braucht auf jeden Fall eine Variable vom Typ ArrayList<Raum>, um eine Liste der Räume zu erzeugen
+    
+    private ArrayList<Raum> raeume;
     private Raum r;
     Datei d;
     /**
@@ -18,18 +20,42 @@ public class Raumverwaltung
     public Raumverwaltung()
     {
         // Instanzvariable initialisieren
-        x = 0;
+        raeume = new ArrayList<Raum>();
     }
 
     /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
+     * Es braucht eine Methode, um an die bestehende Liste der Räume einen neuen Raum anzuhängen (z.B. aus der Eingabedatei)
      * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
+     * @param  raum    es muss ein Objekt des Typs Raum übergeben werden, welcher an Liste angehangen wird
+     * 
      */
-    public int beispielMethode(int y)
+    public void addRaum(Raum raum)
     {
         // tragen Sie hier den Code ein
-        return x + y;
+        
+    }
+    
+    /**
+     * Es braucht eine Methode, um auf einen bestimmten Raum der Liste zugreifen zu können 
+     * 
+     * @param  id    die ID (lfd. Nummer) muss eingegeben werden
+     * @return es wird ein Objekt Raum zurückgegeben
+     */
+    public Raum getRaumByID(int id)
+    {
+        Raum r = null; 
+        // tragen Sie hier den Code ein
+        return r;
+    }
+    
+    /**
+     * Es braucht eine Methode, um die gesamte Liste der Räume zurückzugeben
+     * 
+     * 
+     * @return es wird ein Objekt Raum zurückgegeben
+     */
+    public ArrayList<Raum> getRaeume()
+    {
+        return raeume;
     }
 }
