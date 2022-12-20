@@ -7,29 +7,27 @@ import java.util.ArrayList;
  * @author Darya Bialova
  * @version (eine Versionsnummer oder ein Datum)
  */
-public class Kunstwerkverwaltung
-{
-    // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
-    private ArrayList<Kunstwerk> kunstwerke;
-    private Kunstwerk k;
-    Datei d;
-    /**
-     * Konstruktor für Objekte der Klasse Kunstwerkverwaltung
-     */
-    public Kunstwerkverwaltung()
-    {
-        // Instanzvariable initialisieren
-        kunstwerke = new ArrayList<Kunstwerk>();
+public class Kunstwerkverwaltung {
+
+    private List<Kunstwerk> ListeKunstwerk;
+
+    public Kunstwerkverwaltung() {
     }
 
     /**
-     * Es braucht eine Methode, um die gesamte Liste der Kunstwerke zurückzugeben
-     * 
-     * @return es wird ein Objekt Kunstwerk zurückgegeben
+     * Lade eine Liste der Kunstwerken aus einer CSV Datei in ListeKunstwerk
+     *
+     * @param pfad ist der Pfad zur CSV Datei
      */
-    public ArrayList<Kunstwerk> getKunstwerke()
-    {
-         // tragen Sie hier den Code ein
-        return kunstwerke;
+    public void ladeKunstwerke(String pfad) {
+    }
+
+    /**
+     * Gibt die Liste der Kunstwerken zurück
+     *
+     * @return List<Kunstwerk>
+     */
+    public List<Kunstwerk> getKunstwerke() {
+        return ListeKunstwerk;
     }
 }
