@@ -9,7 +9,7 @@ import java.util.ArrayList;
  */
 public class Kunstwerkverwaltung {
 
-    private List<Kunstwerk> ListeKunstwerk;
+    private ArrayList<Kunstwerk> ListeKunstwerk;
 
     public Kunstwerkverwaltung() {
     }
@@ -27,7 +27,7 @@ public class Kunstwerkverwaltung {
      *
      * @return List<Kunstwerk>
      */
-    public List<Kunstwerk> getKunstwerke() {
+    public ArrayList<Kunstwerk> getKunstwerke() {
         return ListeKunstwerk;
     }
 }
