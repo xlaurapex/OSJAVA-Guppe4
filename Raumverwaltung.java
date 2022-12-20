@@ -59,15 +59,15 @@ public class Raumverwaltung
         return raeume;
     }
      
-    /**
-     * Es braucht eine Methode, um aus der bestehende Liste der Räume einen neuen Raum zu entfernen.
-     * 
-     * @param  raum    es muss ein Objekt des Typs Raum übergeben werden, welcher aus der Liste entfernt wird
-     * 
-     */
-    public void removeRaum(Raum raum)
-    {
-        // tragen Sie hier den Code ein
+    // /**
+     // * Es braucht eine Methode, um aus der bestehende Liste der Räume einen neuen Raum zu entfernen.
+     // * 
+     // * @param  raum    es muss ein Objekt des Typs Raum übergeben werden, welcher aus der Liste entfernt wird
+     // * 
+     // */
+    // public void removeRaum(Raum raum)
+    // {
+        // // tragen Sie hier den Code ein
         
-    }
+    // }
 }

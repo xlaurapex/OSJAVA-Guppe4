@@ -19,7 +19,8 @@ public class Raum
     private int tOst;
     private int tSued;
     private int tWest;
-    private Wand w;
+    
+    
     /**
      * Konstruktor für Objekte der Klasse Raum
      */
