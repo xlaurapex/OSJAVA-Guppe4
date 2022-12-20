@@ -12,6 +12,20 @@ public abstract class Kunstwerk
     private int x;
     int preis;
     int wert;
+    
+    //Variablen aus Einlesedatei
+    int lfdNr;
+    char art;
+    String bezeichnung;
+    String kuenstler;
+    String jahresangabe;
+    String thema;
+    byte attraktivitaet;
+    String partnermuseum;
+    String addrPartnermuseum;
+    int hoehe;
+    int breite;
+    
     /**
      * Konstruktor für Objekte der Klasse Kunstwerke
      */

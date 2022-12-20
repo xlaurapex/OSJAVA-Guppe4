@@ -9,7 +9,10 @@
 public class Bild extends Kunstwerk
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
-    private int x;
+    private int minTemp;
+    private int maxTemp;
+    private int minLuft;
+    private int maxLuft;
 
     /**
      * Konstruktor für Objekte der Klasse Bild
@@ -17,7 +20,7 @@ public class Bild extends Kunstwerk
     public Bild()
     {
         // Instanzvariable initialisieren
-        x = 0;
+        
     }
 
     /**
@@ -26,9 +29,9 @@ public class Bild extends Kunstwerk
      * @param  y    ein Beispielparameter für eine Methode
      * @return        die Summe aus x und y
      */
-    public int beispielMethode(int y)
-    {
-        // tragen Sie hier den Code ein
-        return x + y;
-    }
+    // public int beispielMethode(int y)
+    // {
+        // // tragen Sie hier den Code ein
+        
+    // }
 }
