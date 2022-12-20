@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 /**
  * Die Kunstwerkverwaltung enthält die jeweils verfügbaren Kunstwerke der anderen Museen, welche für Ausstellungen genutzt werden können. Die Klasse 
@@ -9,7 +10,7 @@
 public class Kunstwerkverwaltung
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
-    private int x;
+    private ArrayList<Kunstwerk> kunstwerke;
     private Kunstwerk k;
     Datei d;
     /**
@@ -18,18 +19,17 @@ public class Kunstwerkverwaltung
     public Kunstwerkverwaltung()
     {
         // Instanzvariable initialisieren
-        x = 0;
+        kunstwerke = new ArrayList<Kunstwerk>();
     }
 
     /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
+     * Es braucht eine Methode, um die gesamte Liste der Kunstwerke zurückzugeben
      * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
+     * @return es wird ein Objekt Kunstwerk zurückgegeben
      */
-    public int beispielMethode(int y)
+    public ArrayList<Kunstwerk> getKunstwerke()
     {
-        // tragen Sie hier den Code ein
-        return x + y;
+         // tragen Sie hier den Code ein
+        return kunstwerke;
     }
 }

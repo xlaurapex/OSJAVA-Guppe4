@@ -6,5 +6,5 @@ comment1.target=Optimierungsalgorithmus()
 comment1.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Optimierungsalgorithmus\r\n
 comment2.params=r\ k\ thema
 comment2.target=Ausstellung\ optimiere(java.util.ArrayList,\ java.util.ArrayList,\ java.lang.String)
-comment2.text=\r\n\ Ein\ Beispiel\ einer\ Methode\ -\ ersetzen\ Sie\ diesen\ Kommentar\ mit\ Ihrem\ eigenen\r\n\ \r\n\ @param\ \ y\ \ \ \ ein\ Beispielparameter\ f\u00FCr\ eine\ Methode\r\n\ @return\ \ \ \ \ \ \ \ die\ Summe\ aus\ x\ und\ y\r\n
+comment2.text=\r\n\ Es\ ben\u00F6tigt\ die\ Methode\ optimiere,\ um\ aus\ den\ Anforderungen\ ein\ Objekt\ der\ Klasse\ Ausstellung\ zu\ erzeugen\r\n\ \r\n\ @param\ \ r\ \ \ \ eine\ Liste\ der\ R\u00E4ume\ (aus\ der\ Raumverwaltung)\ muss\ eingegeben\ werden\ \r\n\ @param\ \ k\ \ \ \ eine\ Liste\ der\ Kunstwerke\ (aus\ der\ Kunstwerksverwaltung)\ muss\ eingegeben\ werden\ \r\n\ @param\ \ thema\ \ \ \ das\ vorgegebene\ Thema\ muss\ eingegeben\ werden\ \r\n\ \r\n\ @return\ \ \ \ \ \ \ \ ein\ Objekt\ der\ Klasse\ Ausstellung\ wird\ zur\u00FCckgegeben,\ welches\ die\ optimierte\ Zuordnung\ von\ Raum\ zu\ Kunstwerk\ beinhaltet\r\n
 numComments=3

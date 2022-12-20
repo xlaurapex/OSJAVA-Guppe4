@@ -33,8 +33,8 @@ public class Optimierungsalgorithmus
      */
     public Ausstellung optimiere(ArrayList<Raum> r, ArrayList<Kunstwerk> k, String thema)
     {
-        a = new Ausstellung();
-        // tragen Sie hier den Code ein
+        // a = new Ausstellung();
+        // 
         return a;
     }
 }

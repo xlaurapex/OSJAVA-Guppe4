@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 /**
  * Die Klasse Ausstellungsverwaltung Die Klasse „Ausstellungsverwaltung“ stellt die Kernaufgabe des Systems dar. 

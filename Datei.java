@@ -1,4 +1,7 @@
 import java.util.ArrayList;
+import java.util.Scanner;
+import java.io.*;
+
 
 /**
  * Die Klasse Datei dient dem Einlesen und Ausgeben von Dateien und bietet Standardfunk-tionen zur Dateiverarbeitung. 
@@ -11,7 +14,31 @@ import java.util.ArrayList;
 public class Datei
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
-    private String dateipfad;
+    private String in_datei;
+    private char deliminator;
+    private Kunstwerkverwaltung kVerw;
+    private Raumverwaltung rVerw;
+    private ArrayList<Kunstwerk> kunstwerke;
+    private ArrayList<Raum> raeume;
+    
+    // Enthält, wenn eine Eingabedatei ihr Ende erreicht true, ansonsten enthält eof immer false.
+    // Um dies sicherzustellen kann nicht von ausserhalb auf dieses Attribut zugegriffen werden, 
+    // sondern ein Zugriff muss über die Methode eof erfolgen.
+    private boolean eof;
+    // Objekt einer Java-Klasse zum Schreiben von Zeichenketten
+    private PrintWriter dAus;
+    // Objekt einer Java-Klasse zum Lesen von Zeichenketten
+    private BufferedReader dEin;
+    
+    
+    /**
+    * Enthält nach dem Aufruf einer Methode einen Fehlercode.
+    * 0 bedeutet, dass kein Fehler aufgetreten ist und über die 
+    * Methode errorMessage kann man eine Beschreibung eines 
+    * Fehlercodes erfragen.
+    */
+    public int errorCode;
+    
 
     /**
      * Konstruktor für Objekte der Klasse Datei
@@ -19,7 +46,7 @@ public class Datei
      */
     public Datei()
     {
-        //nichts zu tun
+        //nichts tun
         
     }
     
@@ -33,9 +60,17 @@ public class Datei
      * "Kunstinstallation" erzeugt und in der Museumsverwaltung gespeichert werden
      * @author  Laura Perlbach
      */
-    public void verarbeiteKunstwerkeDatei(String dateipfad)
+    public void verarbeiteKunstwerkeDatei(String in_datei)
     {
-        //möglicherweise auch direkt ArrayList als Rückgabe sinnvoll
+        //Erstelle neue Kunstwerkverwaltung
+        kVerw = new Kunstwerkverwaltung();
+        //Ermitteln der leeren Liste für Kunstwerke, um in Verlauf der Methode Räume anhängen zu können
+        kunstwerke = kVerw.getKunstwerke();
+        //Speichern des Eingabedateipfads
+        this.in_datei = in_datei;
+        
+        //Öffnen der Eingabedatei
+        //openInFile();
         
         //Einlesen der Datei für die Raumdatei
         //Trennen der einzelnen Datensätze
@@ -52,9 +87,32 @@ public class Datei
      * "Kunstinstallation" erzeugt und in der Museumsverwaltung gespeichert werden
      * @author  Laura Perlbach
      */
-    public void verarbeiteRaumDatei(String dateipfad)
+    public void verarbeiteRaumDatei(String dateipfad) 
     {
-        //möglicherweise auch direkt ArrayList als Rückgabe sinnvoll
+        //Erstelle neue Raumverwaltung
+        rVerw = new Raumverwaltung();
+        //Ermitteln der leeren Liste für Räume, um in Verlauf der Methode Räume anhängen zu können
+        raeume = rVerw.getRaeume();
+        //Speichern des Eingabedateipfads
+        this.in_datei = in_datei;
+        
+        //Öffnen der Eingabedatei
+        try{openInFile();}
+        catch (Exception e)
+        {
+            System.out.println("Fehler beim Einlesen der Datei");
+            System.out.println(e.getMessage());
+        }
+        
+        //Schließen der Eingabedatei
+        try{closeInFile();}
+        catch (Exception e)
+        {
+            System.out.println("Fehler beim Einlesen der Datei");
+            System.out.println(e.getMessage());
+        }
+        
+              
         
         //Einlesen der Datei für die Raumdatei
         //Trennen der einzelnen Datensätze
@@ -121,5 +179,29 @@ public class Datei
         //diese werden einzeln mit den relevanten Informationen in eine Datei geschrieben
                 
         return error;
+    }
+    
+    /**
+     * Öffnet eine Eingabedatei namens dName.
+     * 
+     * @exception IOException Wenn die Datei nicht geöffnet werden konnte.
+     */
+    private void openInFile() throws IOException
+    {
+        errorCode =0;
+        eof = false;
+        dEin = new BufferedReader(new FileReader(in_datei));
+    }
+    
+    /**
+     * Schließt eine Eingabedatei.
+     * 
+     * @exception IOException Wenn beim Versuch die Datei zu schließen ein Fehler aufgetreten ist.
+     */
+    private void closeInFile()  throws IOException
+    {
+        errorCode =0;
+        eof = false;
+        dEin.close();
     }
 }
