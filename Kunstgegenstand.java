@@ -6,30 +6,45 @@
  * @author Darya Bialova
  * @version (eine Versionsnummer oder ein Datum)
  */
-public class Kunstgegenstand extends Kunstwerk
-{
-    // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
+public class Kunstgegenstand extends Kunstwerk {
     private int laenge;
-    private int gewicht;
+    private double gewicht;
 
-    /**
-     * Konstruktor für Objekte der Klasse Kunstgegenstand
-     */
-    public Kunstgegenstand()
-    {
-        // Instanzvariable initialisieren
-        
+    public Kunstgegenstand(long laufendeNummer, String bezeichnung,
+                           String kuenstlername, int jahresangabe,
+                           String thema, double attraktivitaet, int kosten,
+                           String nameMuseums, String anschriftMuseums, int hoehe,
+                           int breite, int laenge, double gewicht) {
+        super(laufendeNummer, bezeichnung, kuenstlername, jahresangabe, thema,
+                attraktivitaet, kosten, nameMuseums, anschriftMuseums, hoehe, breite);
+        this.laenge = laenge;
+        this.gewicht = gewicht;
     }
 
-    /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
-     * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
-     */
-    // public int beispielMethode(int y)
-    // {
-        // // tragen Sie hier den Code ein
-        
-    // }
+    //Getters und Setters
+
+    public int getLaenge() {
+        return laenge;
+    }
+
+    public void setLaenge(int laenge) {
+        this.laenge = laenge;
+    }
+
+    public double getGewicht() {
+        return gewicht;
+    }
+
+    public void setGewicht(double gewicht) {
+        this.gewicht = gewicht;
+    }
+
+    @Override
+    public String toString() {
+        return "Kunstgegenstand{" +
+                super.toString() +
+                "laenge=" + laenge +
+                ", gewicht=" + gewicht +
+                '}';
+    }
 }
