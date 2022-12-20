@@ -37,6 +37,8 @@ public class Ausstellungsverwaltung
      */
     public static void main(String args[])
     {
+        //test
+        
         // Abfragen der Eingabedateien
             //Datei.verarbeiteRaumDatei(String Dateipfad) --> raume.csv
             //Datei.verarbeiteKunstwerkeDatei(String Dateipfad) --> kunstwerke.csv
