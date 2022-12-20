@@ -31,8 +31,8 @@ public class Raumverwaltung
      */
     public void addRaum(Raum raum)
     {
-        // tragen Sie hier den Code ein
-        
+        //Anfügen eines Raumes
+        raeume.add(raum);
     }
     
     /**
