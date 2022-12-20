@@ -31,6 +31,7 @@ public class Datei
      * @param  dateipfad    als Eingabeparameter für die Methode ist der Dateipfad erforderlich, wo die einzulesende Datei zu finden ist
      * @return        die Methode besitzt keinen Rückgabewert, da lediglich Objekte der Klassen "Bild","Kunstgegenstand" und 
      * "Kunstinstallation" erzeugt und in der Museumsverwaltung gespeichert werden
+     * @author  Laura Perlbach
      */
     public void verarbeiteKunstwerkeDatei(String dateipfad)
     {
@@ -43,12 +44,13 @@ public class Datei
     }
     
     /**
-     * mit der Methode verarbeiteKunstwerkeDatei() werden die Eingabedateien für Kunstwerke eingelesen, 
-     * verarbeitet und entsprechende Objekte der Klassen "Bild","Kunstgegenstand" und "Kunstinstallation" erzeugt 
+     * mit der Methode verarbeiteRaumDatei() werden die Eingabedateien für Räume eingelesen, 
+     * verarbeitet und entsprechende Objekte der Klasse "Raum" 
      * 
      * @param  dateipfad    als Eingabeparameter für die Methode ist der Dateipfad erforderlich, wo die einzulesende Datei zu finden ist
      * @return        die Methode besitzt keinen Rückgabewert, da lediglich Objekte der Klassen "Bild","Kunstgegenstand" und 
      * "Kunstinstallation" erzeugt und in der Museumsverwaltung gespeichert werden
+     * @author  Laura Perlbach
      */
     public void verarbeiteRaumDatei(String dateipfad)
     {
@@ -67,6 +69,7 @@ public class Datei
      * @param  ausstellung der Parameter ausstellung beschreibt die Liste der ausgestellten Kunstwerke inklusive Raumzuordnung,
      * welche die fertige Planung darstellt. 
      * @return        die Methode gibt einen Integer wieder, welcher den Fehlercode der Verarbeitung beschreibt
+     * @author  Laura Perlbach
      */
     public int erzeugeLeihDatei(ArrayList ausstellung)
     {
@@ -87,6 +90,7 @@ public class Datei
      * @param  ausstellung der Parameter ausstellung beschreibt die Liste der ausgestellten Kunstwerke inklusive Raumzuordnung,
      * welche die fertige Planung darstellt. 
      * @return        die Methode gibt einen Integer wieder, welcher den Fehlercode der Verarbeitung beschreibt
+     * @author  Laura Perlbach
      */
     public int erzeugeZuordnungsDatei(ArrayList ausstellung)
     {
@@ -106,6 +110,7 @@ public class Datei
      * @param  ausstellung der Parameter ausstellung beschreibt die Liste der ausgestellten Kunstwerke inklusive Raumzuordnung,
      * welche die fertige Planung darstellt. 
      * @return        die Methode gibt einen Integer wieder, welcher den Fehlercode der Verarbeitung beschreibt
+     * @author  Laura Perlbach
      */
     public int erzeugeMuseumsführer(ArrayList ausstellung)
     {

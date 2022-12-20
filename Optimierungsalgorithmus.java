@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 /**
  * Beschreiben Sie hier die Klasse Optimierungsalgorithmus.
@@ -11,6 +12,7 @@ public class Optimierungsalgorithmus
     private int x;
     Kunstwerk k;
     Raum r;
+    Ausstellung a;
     /**
      * Konstruktor für Objekte der Klasse Optimierungsalgorithmus
      */
@@ -21,14 +23,18 @@ public class Optimierungsalgorithmus
     }
 
     /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
+     * Es benötigt die Methode optimiere, um aus den Anforderungen ein Objekt der Klasse Ausstellung zu erzeugen
      * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
+     * @param  r    eine Liste der Räume (aus der Raumverwaltung) muss eingegeben werden 
+     * @param  k    eine Liste der Kunstwerke (aus der Kunstwerksverwaltung) muss eingegeben werden 
+     * @param  thema    das vorgegebene Thema muss eingegeben werden 
+     * 
+     * @return        ein Objekt der Klasse Ausstellung wird zurückgegeben, welches die optimierte Zuordnung von Raum zu Kunstwerk beinhaltet
      */
-    public int beispielMethode(int y)
+    public Ausstellung optimiere(ArrayList<Raum> r, ArrayList<Kunstwerk> k, String thema)
     {
+        a = new Ausstellung();
         // tragen Sie hier den Code ein
-        return x + y;
+        return a;
     }
 }

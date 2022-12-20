@@ -13,23 +13,41 @@ C:\Program Files\BlueJ\jdk\bin\javadoc.exe
 -source
 17
 -classpath
-C:\Program Files\BlueJ\lib\bluejcore.jar;C:\Program Files\BlueJ\lib\junit-jupiter-5.5.2.jar;C:\Program Files\BlueJ\lib\junit-jupiter-api-5.5.2.jar;C:\Program Files\BlueJ\lib\junit-jupiter-engine-5.5.2.jar;C:\Program Files\BlueJ\lib\junit-jupiter-migrationsupport-5.5.2.jar;C:\Program Files\BlueJ\lib\junit-jupiter-params-5.5.2.jar;C:\Program Files\BlueJ\lib\junit-platform-commons-1.5.2.jar;C:\Program Files\BlueJ\lib\junit-platform-console-1.5.2.jar;C:\Program Files\BlueJ\lib\junit-platform-console-standalone-1.5.2.jar;C:\Program Files\BlueJ\lib\junit-platform-engine-1.5.2.jar;C:\Program Files\BlueJ\lib\junit-platform-launcher-1.5.2.jar;C:\Program Files\BlueJ\lib\junit-platform-reporting-1.5.2.jar;C:\Program Files\BlueJ\lib\junit-platform-runner-1.5.2.jar;C:\Program Files\BlueJ\lib\junit-platform-suite-api-1.5.2.jar;C:\Program Files\BlueJ\lib\junit-platform-testkit-1.5.2.jar;C:\Program Files\BlueJ\lib\junit-quickcheck-core-0.9.jar;C:\Program Files\BlueJ\lib\junit-vintage-engine-5.5.2.jar;C:\Program Files\BlueJ\lib\hamcrest-core-1.3.jar;C:\Program Files\BlueJ\lib\hamcrest-library-1.3.jar;C:\Program Files\BlueJ\lib\lang-stride.jar;C:\Program Files\BlueJ\lib\javafx\lib\javafx.base.jar;C:\Program Files\BlueJ\lib\javafx\lib\javafx.controls.jar;C:\Program Files\BlueJ\lib\javafx\lib\javafx.fxml.jar;C:\Program Files\BlueJ\lib\javafx\lib\javafx.graphics.jar;C:\Program Files\BlueJ\lib\javafx\lib\javafx.media.jar;C:\Program Files\BlueJ\lib\javafx\lib\javafx.properties.jar;C:\Program Files\BlueJ\lib\javafx\lib\javafx.swing.jar;C:\Program Files\BlueJ\lib\javafx\lib\javafx.web.jar;C:\Users\A642381\OneDrive - Atos\Master\22_23_WS\OSJAVA - Objektorientierte Softwareentwicklung in Java\Museumsverwaltung2\OSJAVA_MUSEUM
+C:\Program Files\BlueJ\lib\bluejcore.jar;C:\Program Files\BlueJ\lib\junit-jupiter-5.5.2.jar;C:\Program Files\BlueJ\lib\junit-jupiter-api-5.5.2.jar;C:\Program Files\BlueJ\lib\junit-jupiter-engine-5.5.2.jar;C:\Program Files\BlueJ\lib\junit-jupiter-migrationsupport-5.5.2.jar;C:\Program Files\BlueJ\lib\junit-jupiter-params-5.5.2.jar;C:\Program Files\BlueJ\lib\junit-platform-commons-1.5.2.jar;C:\Program Files\BlueJ\lib\junit-platform-console-1.5.2.jar;C:\Program Files\BlueJ\lib\junit-platform-console-standalone-1.5.2.jar;C:\Program Files\BlueJ\lib\junit-platform-engine-1.5.2.jar;C:\Program Files\BlueJ\lib\junit-platform-launcher-1.5.2.jar;C:\Program Files\BlueJ\lib\junit-platform-reporting-1.5.2.jar;C:\Program Files\BlueJ\lib\junit-platform-runner-1.5.2.jar;C:\Program Files\BlueJ\lib\junit-platform-suite-api-1.5.2.jar;C:\Program Files\BlueJ\lib\junit-platform-testkit-1.5.2.jar;C:\Program Files\BlueJ\lib\junit-quickcheck-core-0.9.jar;C:\Program Files\BlueJ\lib\junit-vintage-engine-5.5.2.jar;C:\Program Files\BlueJ\lib\hamcrest-core-1.3.jar;C:\Program Files\BlueJ\lib\hamcrest-library-1.3.jar;C:\Program Files\BlueJ\lib\lang-stride.jar;C:\Program Files\BlueJ\lib\javafx\lib\javafx.base.jar;C:\Program Files\BlueJ\lib\javafx\lib\javafx.controls.jar;C:\Program Files\BlueJ\lib\javafx\lib\javafx.fxml.jar;C:\Program Files\BlueJ\lib\javafx\lib\javafx.graphics.jar;C:\Program Files\BlueJ\lib\javafx\lib\javafx.media.jar;C:\Program Files\BlueJ\lib\javafx\lib\javafx.properties.jar;C:\Program Files\BlueJ\lib\javafx\lib\javafx.swing.jar;C:\Program Files\BlueJ\lib\javafx\lib\javafx.web.jar;C:\Users\A642381\OneDrive - Atos\Master\22_23_WS\OSJAVA - Objektorientierte Softwareentwicklung in Java\OSJAVA_Gruppe4\OSJAVA-Guppe4
 -d
-C:\Users\A642381\OneDrive - Atos\Master\22_23_WS\OSJAVA - Objektorientierte Softwareentwicklung in Java\Museumsverwaltung2\OSJAVA_MUSEUM\doc
+C:\Users\A642381\OneDrive - Atos\Master\22_23_WS\OSJAVA - Objektorientierte Softwareentwicklung in Java\OSJAVA_Gruppe4\OSJAVA-Guppe4\doc
 -encoding
 UTF-8
 -charset
 UTF-8
-C:\Users\A642381\OneDrive - Atos\Master\22_23_WS\OSJAVA - Objektorientierte Softwareentwicklung in Java\Museumsverwaltung2\OSJAVA_MUSEUM\Datei.java
+C:\Users\A642381\OneDrive - Atos\Master\22_23_WS\OSJAVA - Objektorientierte Softwareentwicklung in Java\OSJAVA_Gruppe4\OSJAVA-Guppe4\Datei.java
 <---- end of javadoc command ---->
-Loading source file C:\Users\A642381\OneDrive - Atos\Master\22_23_WS\OSJAVA - Objektorientierte Softwareentwicklung in Java\Museumsverwaltung2\OSJAVA_MUSEUM\Datei.java...
+Loading source file C:\Users\A642381\OneDrive - Atos\Master\22_23_WS\OSJAVA - Objektorientierte Softwareentwicklung in Java\OSJAVA_Gruppe4\OSJAVA-Guppe4\Datei.java...
 Constructing Javadoc information...
 Standard Doclet version 17.0.4+8
 Building tree for all the packages and classes...
-Generating C:\Users\A642381\OneDrive - Atos\Master\22_23_WS\OSJAVA - Objektorientierte Softwareentwicklung in Java\Museumsverwaltung2\OSJAVA_MUSEUM\doc\Datei.html...
-C:\Users\A642381\OneDrive - Atos\Master\22_23_WS\OSJAVA - Objektorientierte Softwareentwicklung in Java\Museumsverwaltung2\OSJAVA_MUSEUM\Datei.java:34: warning: @return tag cannot be used in method with void return type.
+Generating C:\Users\A642381\OneDrive - Atos\Master\22_23_WS\OSJAVA - Objektorientierte Softwareentwicklung in Java\OSJAVA_Gruppe4\OSJAVA-Guppe4\doc\Datei.html...
+C:\Users\A642381\OneDrive - Atos\Master\22_23_WS\OSJAVA - Objektorientierte Softwareentwicklung in Java\OSJAVA_Gruppe4\OSJAVA-Guppe4\Datei.java:34: warning: Tag @author cannot be used in method documentation.  It can only be used in the following types of documentation: overview, module, package, class/interface.
+     * @author  Laura Perlbach
+       ^
+C:\Users\A642381\OneDrive - Atos\Master\22_23_WS\OSJAVA - Objektorientierte Softwareentwicklung in Java\OSJAVA_Gruppe4\OSJAVA-Guppe4\Datei.java:36: warning: @return tag cannot be used in method with void return type.
     public void verarbeiteKunstwerkeDatei(String dateipfad)
                 ^
-Generating C:\Users\A642381\OneDrive - Atos\Master\22_23_WS\OSJAVA - Objektorientierte Softwareentwicklung in Java\Museumsverwaltung2\OSJAVA_MUSEUM\doc\package-summary.html...
-Generating C:\Users\A642381\OneDrive - Atos\Master\22_23_WS\OSJAVA - Objektorientierte Softwareentwicklung in Java\Museumsverwaltung2\OSJAVA_MUSEUM\doc\index.html...
-1 warning
+C:\Users\A642381\OneDrive - Atos\Master\22_23_WS\OSJAVA - Objektorientierte Softwareentwicklung in Java\OSJAVA_Gruppe4\OSJAVA-Guppe4\Datei.java:53: warning: Tag @author cannot be used in method documentation.  It can only be used in the following types of documentation: overview, module, package, class/interface.
+     * @author  Laura Perlbach
+       ^
+C:\Users\A642381\OneDrive - Atos\Master\22_23_WS\OSJAVA - Objektorientierte Softwareentwicklung in Java\OSJAVA_Gruppe4\OSJAVA-Guppe4\Datei.java:55: warning: @return tag cannot be used in method with void return type.
+    public void verarbeiteRaumDatei(String dateipfad)
+                ^
+C:\Users\A642381\OneDrive - Atos\Master\22_23_WS\OSJAVA - Objektorientierte Softwareentwicklung in Java\OSJAVA_Gruppe4\OSJAVA-Guppe4\Datei.java:72: warning: Tag @author cannot be used in method documentation.  It can only be used in the following types of documentation: overview, module, package, class/interface.
+     * @author  Laura Perlbach
+       ^
+C:\Users\A642381\OneDrive - Atos\Master\22_23_WS\OSJAVA - Objektorientierte Softwareentwicklung in Java\OSJAVA_Gruppe4\OSJAVA-Guppe4\Datei.java:93: warning: Tag @author cannot be used in method documentation.  It can only be used in the following types of documentation: overview, module, package, class/interface.
+     * @author  Laura Perlbach
+       ^
+C:\Users\A642381\OneDrive - Atos\Master\22_23_WS\OSJAVA - Objektorientierte Softwareentwicklung in Java\OSJAVA_Gruppe4\OSJAVA-Guppe4\Datei.java:113: warning: Tag @author cannot be used in method documentation.  It can only be used in the following types of documentation: overview, module, package, class/interface.
+     * @author  Laura Perlbach
+       ^
+Generating C:\Users\A642381\OneDrive - Atos\Master\22_23_WS\OSJAVA - Objektorientierte Softwareentwicklung in Java\OSJAVA_Gruppe4\OSJAVA-Guppe4\doc\package-summary.html...
+Generating C:\Users\A642381\OneDrive - Atos\Master\22_23_WS\OSJAVA - Objektorientierte Softwareentwicklung in Java\OSJAVA_Gruppe4\OSJAVA-Guppe4\doc\index.html...
+7 warnings

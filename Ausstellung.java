@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 /**
  * Eine Ausstellung enthält jeweils die in dieser Ausstellung präsentierten Kunstwerke und die Aufteilung der Kunstwerke in die einzelnen Räume. Eine 
@@ -9,27 +10,38 @@
  */
 public class Ausstellung
 {
-    // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
-    private int x;    
+    // Instanzvariablen 
+    // noch unsicher in welcher Form die Zuordnung gespeichert werden soll
+    // a) zusätzliche Attribute der Klasse Kunstwerk (wirdAusgestellt + ausstellungsraum)
+    // b) mehrdimensionales Array mit Kunstwerk + Raumzuordnung
+    
+    private ArrayList<Kunstwerk> ausstellung;    
     Datei d;
     /**
      * Konstruktor für Objekte der Klasse Ausstellung
      */
-    public Ausstellung()
+    public Ausstellung(ArrayList<Kunstwerk> kunstwerke)
     {
         // Instanzvariable initialisieren
-        x = 0;
+        ausstellung = new ArrayList<Kunstwerk>();
+        
+        /*for()
+        {
+            //jedes Objekt aus kunstwerke
+            //prüfen, ob wirdAusgestellt
+            //append an ausstellung
+        }*/
     }
 
     /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
+     * Um die Ausstellung aus anderen Klassen aufrufen zu können, wird eine get-Methode definiert
      * 
      * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
+     * @return       die Ausstellung
      */
-    public int beispielMethode(int y)
+    public ArrayList<Kunstwerk> getAustellung()
     {
         // tragen Sie hier den Code ein
-        return x + y;
+        return ausstellung;
     }
 }
