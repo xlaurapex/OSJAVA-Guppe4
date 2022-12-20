@@ -9,29 +9,78 @@
 public class Bild extends Kunstwerk
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
-    private int minTemp;
-    private int maxTemp;
-    private int minLuft;
-    private int maxLuft;
+    private double minTemperatur;
+    private double maxTemperatur;
+    private double minLuftfeuchtigkeit;
+    private double maxLuftfeuchtigkeit;
 
     /**
-     * Konstruktor für Objekte der Klasse Bild
+     * Konstruktor der Klasse Bild
+     *
+     * @param laufendeNummer
+     * @param bezeichnung
+     * @param kuenstlername
+     * @param jahresangabe
+     * @param thema
+     * @param attraktivitaet
+     * @param kosten
+     * @param nameMuseums
+     * @param anschriftMuseums
+     * @param hoehe
+     * @param breite
+     * @param minTemperatur
+     * @param maxTemperatur
+     * @param minLuftfeuchtigkeit
+     * @param maxLuftfeuchtigkeit
      */
-    public Bild()
-    {
-        // Instanzvariable initialisieren
-        
+    public Bild(long laufendeNummer, String bezeichnung, String kuenstlername, int jahresangabe, String thema, double attraktivitaet, int kosten, String nameMuseums, String anschriftMuseums, int hoehe, int breite, double minTemperatur, double maxTemperatur, double minLuftfeuchtigkeit, double maxLuftfeuchtigkeit) {
+        super(laufendeNummer, bezeichnung, kuenstlername, jahresangabe, thema, attraktivitaet, kosten, nameMuseums, anschriftMuseums, hoehe, breite);
+        this.minTemperatur = minTemperatur;
+        this.maxTemperatur = maxTemperatur;
+        this.minLuftfeuchtigkeit = minLuftfeuchtigkeit;
+        this.maxLuftfeuchtigkeit = maxLuftfeuchtigkeit;
     }
 
-    /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
-     * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
-     */
-    // public int beispielMethode(int y)
-    // {
-        // // tragen Sie hier den Code ein
-        
-    // }
+    public double getMinTemperatur() {
+        return minTemperatur;
+    }
+
+    public void setMinTemperatur(double minTemperatur) {
+        this.minTemperatur = minTemperatur;
+    }
+
+    public double getMaxTemperatur() {
+        return maxTemperatur;
+    }
+
+    public void setMaxTemperatur(double maxTemperatur) {
+        this.maxTemperatur = maxTemperatur;
+    }
+
+    public double getMinLuftfeuchtigkeit() {
+        return minLuftfeuchtigkeit;
+    }
+
+    public void setMinLuftfeuchtigkeit(double minLuftfeuchtigkeit) {
+        this.minLuftfeuchtigkeit = minLuftfeuchtigkeit;
+    }
+
+    public double getMaxLuftfeuchtigkeit() {
+        return maxLuftfeuchtigkeit;
+    }
+
+    public void setMaxLuftfeuchtigkeit(double maxLuftfeuchtigkeit) {
+        this.maxLuftfeuchtigkeit = maxLuftfeuchtigkeit;
+    }
+
+    @Override
+    public String toString() {
+        return "Bild{" +
+                super.toString() +
+                "minTemperatur=" + minTemperatur +
+                ", maxTemperatur=" + maxTemperatur +
+                ", minLuftfeuchtigkeit=" + minLuftfeuchtigkeit +
+                ", maxLuftfeuchtigkeit=" + maxLuftfeuchtigkeit +
+                '}';
+    }
 }
