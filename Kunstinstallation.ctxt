@@ -1,7 +1,19 @@
 #BlueJ class context
 comment0.target=Kunstinstallation
 comment0.text=\r\n\ Die\ Klasse\ \u201EKunstinstallation\u201C\ ist\ eine\ Child-Klasse\ der\ abstrakten\ Klasse\ \u201EKunstwerk\u201C,\ wel-che\ durch\ die\ Besonderheiten\ \r\n\ einer\ Kunstinstallation\ (z.B.\ alleinige\ Platzierung\ im\ Raum)\ erg\u00E4nzt\ wird.\ Die\ Klasse\ \u201EKunstinstallation\u201C\ ist\ somit\ eine\ Datentr\u00E4gerklasse.\r\n\ \r\n\ @author\ Darya\ Bialova\r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
-comment1.params=
-comment1.target=Kunstinstallation()
-comment1.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Kunstinstallation\r\n
-numComments=2
+comment1.params=laufendeNummer\ bezeichnung\ kuenstlername\ jahresangabe\ thema\ attraktivitaet\ kosten\ nameMuseums\ anschriftMuseums\ hoehe\ breite\ laenge\ gewicht
+comment1.target=Kunstinstallation(int,\ java.lang.String,\ java.lang.String,\ int,\ java.lang.String,\ double,\ int,\ java.lang.String,\ java.lang.String,\ int,\ int,\ int,\ double)
+comment1.text=\r\n\ Kontruktor\ f\u00FCr\ Objekte\ der\ abstrakten\ Klasse\ Kunstunstallation\r\n
+comment2.params=
+comment2.target=int\ getLaenge()
+comment2.text=\r\n\ Getters\ and\ setters\ -\ da\ wir\ alle\ Attributen\ als\ private\ deklariert\ haben,\ brauchen\ wir\ jetzt\ getters\ und\ setters,\ um\ den\ Zugang\ zu\ den\ Attributen\ zu\ gew\u00E4rhleisten\r\n
+comment3.params=laenge
+comment3.target=void\ setLaenge(int)
+comment4.params=
+comment4.target=double\ getGewicht()
+comment5.params=gewicht
+comment5.target=void\ setGewicht(double)
+comment6.params=
+comment6.target=java.lang.String\ toString()
+comment6.text=\r\n\ Representiert\ die\ Klasse\ als\ String\r\n
+numComments=7

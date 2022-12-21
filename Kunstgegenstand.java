@@ -10,7 +10,10 @@ public class Kunstgegenstand extends Kunstwerk {
     private int laenge;
     private double gewicht;
 
-    public Kunstgegenstand(long laufendeNummer, String bezeichnung,
+       /**
+ * Kontruktor für Objekte der abstrakten Klasse Kunstgegenstand
+ */
+public Kunstgegenstand(int laufendeNummer, String bezeichnung,
                            String kuenstlername, int jahresangabe,
                            String thema, double attraktivitaet, int kosten,
                            String nameMuseums, String anschriftMuseums, int hoehe,
@@ -21,9 +24,10 @@ public class Kunstgegenstand extends Kunstwerk {
         this.gewicht = gewicht;
     }
 
-    //Getters und Setters
-
-    public int getLaenge() {
+        /**
+ * Getters and setters - da wir alle Attributen als private deklariert haben, brauchen wir jetzt getters und setters, um den Zugang zu den Attributen zu gewärhleisten
+ */
+public int getLaenge() {
         return laenge;
     }
 
@@ -39,7 +43,9 @@ public class Kunstgegenstand extends Kunstwerk {
         this.gewicht = gewicht;
     }
 
-    @Override
+    /**
+ * Representiert die Klasse als String
+ */
     public String toString() {
         return "Kunstgegenstand{" +
                 super.toString() +
