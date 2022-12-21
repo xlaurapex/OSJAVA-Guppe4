@@ -114,7 +114,9 @@ public void setBreite(int breite) {
     this.breite = breite;
 }
 
-    @Override
+    /**
+ * Representiert die Klasse als String
+ */
     public String toString() {
         return "laufendeNummer=" + laufendeNummer +
                 ", bezeichnung='" + bezeichnung + '\'' +

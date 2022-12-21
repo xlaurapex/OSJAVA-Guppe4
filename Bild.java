@@ -41,7 +41,10 @@ public class Bild extends Kunstwerk
         this.maxLuftfeuchtigkeit = maxLuftfeuchtigkeit;
     }
 
-    public double getMinTemperatur() {
+        /**
+ * Getters and setters - da wir alle Attributen als private deklariert haben, brauchen wir jetzt getters und setters, um den Zugang zu den Attributen zu gewärhleisten
+ */
+public double getMinTemperatur() {
         return minTemperatur;
     }
 
@@ -73,7 +76,9 @@ public class Bild extends Kunstwerk
         this.maxLuftfeuchtigkeit = maxLuftfeuchtigkeit;
     }
 
-    @Override
+    /**
+ * Representiert die Klasse als String
+ */
     public String toString() {
         return "Bild{" +
                 super.toString() +
