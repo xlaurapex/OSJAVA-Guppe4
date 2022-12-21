@@ -3,7 +3,7 @@ import java.util.ArrayList;
 /**
  * Beschreiben Sie hier die Klasse Optimierungsalgorithmus.
  * 
- * Diese Klasse ist dafür zuständig die Ausstellungen zu planen.
+ * Diese Klasse Optimierungsalgorithmus ist dafür zuständig die Ausstellungen zu planen.
  * Dafür müssen die Kunstgegenständen mit allen vorgegebenen Bedingungen in den Räumen verteilt werden.
  * Dabei müssen die Maße der Räume und der Kunstgegenstände berücksichtigt werden sowie die Themen.
  * 
