@@ -3,16 +3,28 @@ import java.util.ArrayList;
 /**
  * Beschreiben Sie hier die Klasse Optimierungsalgorithmus.
  * 
+ * Diese Klasse ist dafür zuständig die Ausstellungen zu planen.
+ * Dafür müssen die Kunstgegenständen mit allen vorgegebenen Bedingungen in den Räumen verteilt werden.
+ * Dabei müssen die Maße der Räume und der Kunstgegenstände berücksichtigt werden sowie die Themen.
+ * 
+ * Alle Constraints/Bedindungen:
+ * Thema das mindestens in 50% der Räumen vertreten ist
+ * Höchstens 3 Themen pro Raum
+ * Kostenobergrenze
+ * Bild muss auf Wand passen
+ * Bilder 1m Abstand voneinander
+ * Kunstgegenstände 2m Abstand voneinander
+ * Kunstinstallationen stehen alleine in einem Raum
  * @author Marcell Wach
- * @version (eine Versionsnummer oder ein Datum)
+ * @version 1.0
  */
 public class Optimierungsalgorithmus
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
     private int x;
-    Kunstwerk k;
-    Raum r;
-    Ausstellung a;
+    private ArrayList<Kunstwerk> Kunstwerke;
+    private ArrayList<Raum> Raeume;
+
     /**
      * Konstruktor für Objekte der Klasse Optimierungsalgorithmus
      */
@@ -31,10 +43,10 @@ public class Optimierungsalgorithmus
      * 
      * @return        ein Objekt der Klasse Ausstellung wird zurückgegeben, welches die optimierte Zuordnung von Raum zu Kunstwerk beinhaltet
      */
-    public Ausstellung optimiere(ArrayList<Raum> r, ArrayList<Kunstwerk> k, String thema)
+    public static Ausstellung optimiere(ArrayList<Raum> r, ArrayList<Kunstwerk> k, String thema)
     {
-        // a = new Ausstellung();
+        //a = new Ausstellung();
         // 
-        return a;
+        return null;
     }
 }
