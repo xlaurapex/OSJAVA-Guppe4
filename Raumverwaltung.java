@@ -1,8 +1,10 @@
 import java.util.ArrayList;
 
 /**
- * Die Raumverwaltung erzeugt und verwaltet die Objekte der Klasse „Raum“ auf Basis der Planungsdatei der Räume für die jeweiligen Ausstellungszeiträume. 
- * Dadurch ist für jeden einzelnen Ausstellungszeitraum die Erstellung der dann gegebenen Räume und deren Di-mensionen möglich.
+ * Die Raumverwaltung erzeugt und verwaltet die Objekte der Klasse „Raum“ auf 
+ * Basis der Planungsdatei der Räume für die jeweiligen Ausstellungszeiträume. 
+ * Dadurch ist für jeden einzelnen Ausstellungszeitraum die Erstellung der dann
+ * gegebenen Räume und deren Dimensionen möglich.
  * 
  * @author Johannes Riedmeier 
  * @version (eine Versionsnummer oder ein Datum)
