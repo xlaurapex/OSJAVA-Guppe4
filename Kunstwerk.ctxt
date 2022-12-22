@@ -37,6 +37,7 @@ comment23.params=breite
 comment23.target=void\ setBreite(int)
 comment24.params=
 comment24.target=java.lang.String\ toString()
+comment24.text=\r\n\ Representiert\ die\ Klasse\ als\ String\r\n
 comment3.params=laufendeNummer
 comment3.target=void\ setLaufendeNummer(int)
 comment4.params=
