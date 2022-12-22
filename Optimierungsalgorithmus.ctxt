@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Optimierungsalgorithmus
-comment0.text=\r\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Optimierungsalgorithmus.\r\n\ \r\n\ @author\ Marcell\ Wach\r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
+comment0.text=\r\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Optimierungsalgorithmus.\r\n\ \r\n\ Diese\ Klasse\ Optimierungsalgorithmus\ ist\ daf\u00FCr\ zust\u00E4ndig\ die\ Ausstellungen\ zu\ planen.\r\n\ Daf\u00FCr\ m\u00FCssen\ die\ Kunstgegenst\u00E4nden\ mit\ allen\ vorgegebenen\ Bedingungen\ in\ den\ R\u00E4umen\ verteilt\ werden.\r\n\ Dabei\ m\u00FCssen\ die\ Ma\u00DFe\ der\ R\u00E4ume\ und\ der\ Kunstgegenst\u00E4nde\ ber\u00FCcksichtigt\ werden\ sowie\ die\ Themen.\r\n\ \r\n\ Alle\ Constraints/Bedindungen\:\r\n\ Thema\ das\ mindestens\ in\ 50%\ der\ R\u00E4umen\ vertreten\ ist\r\n\ H\u00F6chstens\ 3\ Themen\ pro\ Raum\r\n\ Kostenobergrenze\r\n\ Bild\ muss\ auf\ Wand\ passen\r\n\ Bilder\ 1m\ Abstand\ voneinander\r\n\ Kunstgegenst\u00E4nde\ 2m\ Abstand\ voneinander\r\n\ Kunstinstallationen\ stehen\ alleine\ in\ einem\ Raum\r\n\ @author\ Marcell\ Wach\r\n\ @version\ 1.0\r\n
 comment1.params=
 comment1.target=Optimierungsalgorithmus()
 comment1.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Optimierungsalgorithmus\r\n

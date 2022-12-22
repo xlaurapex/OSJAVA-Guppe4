@@ -14,6 +14,7 @@ import java.io.*;
 public class Datei
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
+    
     private File in_datei;
     private Kunstwerkverwaltung kVerw;
     private Raumverwaltung rVerw;
