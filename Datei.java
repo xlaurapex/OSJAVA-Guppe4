@@ -70,6 +70,8 @@ public class Datei
             //Speichern des Eingabedateipfads
             this.in_datei = new File(in_datei);
             
+            Kunstwerk k;
+            
             //Öffnen der Eingabedatei
             try{openInFile();}
             catch (IOException e)
@@ -165,44 +167,53 @@ public class Datei
                     int breite = Integer.parseInt(zwStr.substring(0,posKomma));
                     //Verkürzen des eingelesenen Strings um die Höhe
                     zwStr = zwStr.substring(posKomma+1);
+                    posKomma = zwStr.indexOf(",");
                     
-                    if(zwTyp == "B")
+                    if(zwTyp.equals("B"))
                     {
                         double minT = Double.parseDouble(zwStr.substring(0,posKomma));
                         //Verkürzen des eingelesenen Strings um die Minimaltemperatur
                         zwStr = zwStr.substring(posKomma+1);
+                        posKomma = zwStr.indexOf(",");
                         double maxT = Double.parseDouble(zwStr.substring(0,posKomma));
                         //Verkürzen des eingelesenen Strings um die Maximaltemperatur
                         zwStr = zwStr.substring(posKomma+1);
+                        posKomma = zwStr.indexOf(",");
                         double minLF = Double.parseDouble(zwStr.substring(0,posKomma));
                         //Verkürzen des eingelesenen Strings um die Minimalen Lufttemperatur
                         zwStr = zwStr.substring(posKomma+1);
+                        posKomma = zwStr.indexOf(",");
                         double maxLF = Double.parseDouble(zwStr.substring(0,posKomma));
-                        //Verkürzen des eingelesenen Strings um die maximalen Lufttemperatur
-                        zwStr = zwStr.substring(posKomma+1);;
                         
-                        kVerw.addKunstwerk(new Bild(lfdNr, bez, kuenstler, jahr, thema, attr, kosten, nMuseum, aMuseum, hoehe, breite, minT, maxT, minLF, maxLF));
-                        kVerw.addKunstwerk(new Bild(99, "bezeichnung", "kuenstler", "jahr", "thema", 45, 500, "nMuseum", "aMuseum", 50, 60, 70, 80, 81, 82));
-                        
+                        k = new Bild(lfdNr, bez, kuenstler, jahr, thema, attr, kosten, nMuseum, aMuseum, hoehe, breite, minT, maxT, minLF, maxLF);
+                        kVerw.addKunstwerk(k);
+                        System.out.println(k.toString());
+                         
                     }
-                    else if(zwTyp == "G")
+                    else if(zwTyp.equals("G"))
                     {
                         int laenge = Integer.parseInt(zwStr.substring(0,posKomma));
                         //Verkürzen des eingelesenen Strings um die Minimaltemperatur
                         zwStr = zwStr.substring(posKomma+1);
+                        posKomma = zwStr.indexOf(",");
                         double gewicht = Double.parseDouble(zwStr.substring(0,posKomma));
-
-                        kVerw.addKunstwerk(new Kunstgegenstand(lfdNr, bez, kuenstler, jahr, thema, attr, kosten, nMuseum, aMuseum, hoehe, breite, laenge, gewicht));
+                        
+                        k = new Kunstgegenstand(lfdNr, bez, kuenstler, jahr, thema, attr, kosten, nMuseum, aMuseum, hoehe, breite, laenge, gewicht);
+                        kVerw.addKunstwerk(k);
+                        System.out.println(k.toString());
                         
                     }
-                    else if(zwTyp == "I")
+                    else if(zwTyp.equals("I"))
                     {
                         int laenge = Integer.parseInt(zwStr.substring(0,posKomma));
                         //Verkürzen des eingelesenen Strings um die Minimaltemperatur
                         zwStr = zwStr.substring(posKomma+1);
+                        posKomma = zwStr.indexOf(",");
                         double gewicht = Double.parseDouble(zwStr.substring(0,posKomma));
-
-                        kVerw.addKunstwerk(new Kunstinstallation(lfdNr, bez, kuenstler, jahr, thema, attr, kosten, nMuseum, aMuseum, hoehe, breite, laenge, gewicht));
+                        
+                        k = new Kunstinstallation(lfdNr, bez, kuenstler, jahr, thema, attr, kosten, nMuseum, aMuseum, hoehe, breite, laenge, gewicht);
+                        kVerw.addKunstwerk(k);
+                        System.out.println(k.toString());
                     }
                     else
                     {

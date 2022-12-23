@@ -38,11 +38,13 @@ public class Ausstellungsverwaltung
      */
     public static void main(String args[])
     {
-
-        // Abfragen der Eingabedateien
-            //Datei.verarbeiteRaumDatei(String Dateipfad) --> raume.csv
-            //Datei.verarbeiteKunstwerkeDatei(String Dateipfad) --> kunstwerke.csv
         
+        // Abfragen der Eingabedateien
+        Datei d = new Datei();
+        //Test-/Defaultpfad
+        d.verarbeiteRaumDatei("raeume.csv");
+        //Test-/Defaultpfad
+        d.verarbeiteKunstwerkeDatei("kunstwerke.csv");
         // dadurch Erstellung der Raüme und Kunstwerke
         
         // Eingabe des Wunschthemas für die Ausstellung (und Kostenobergrenze)
