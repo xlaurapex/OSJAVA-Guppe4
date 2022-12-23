@@ -18,8 +18,6 @@ public class Datei
     private File in_datei;
     private Kunstwerkverwaltung kVerw;
     private Raumverwaltung rVerw;
-    private ArrayList<Kunstwerk> kunstwerke;
-    private ArrayList<Raum> raeume;
     
     // Enthält, wenn eine Eingabedatei ihr Ende erreicht true, ansonsten enthält eof immer false.
     // Um dies sicherzustellen kann nicht von ausserhalb auf dieses Attribut zugegriffen werden, 
@@ -62,131 +60,170 @@ public class Datei
          */
         public boolean verarbeiteKunstwerkeDatei(String in_datei)
         {
-            // //Erstelle neue Kunstwerkverwaltung
-            // kVerw = new Kunstwerkverwaltung();
-            // //Ermitteln der leeren Liste für Kunstwerke, um in Verlauf der Methode Räume anhängen zu können
-            // kunstwerke = kVerw.getKunstwerke();
-            // // Anlegen eines Strings, der innnerhalb diese Methode benoetigt wird
-            // String zwStr;
-            // // Anlegen eines Strings, der innnerhalb diese Methode benoetigt wird, um den Kunstwerkstyp zu unterscheiden
-            // String zwTyp;
-            // //Speichern des Eingabedateipfads
-            // this.in_datei = new File(in_datei);
-            
-            // //Öffnen der Eingabedatei
-            // try{openInFile();}
-            // catch (IOException e)
-            // {
-                // System.out.println("Fehler beim Einlesen der Datei");
-                // System.out.println(e.getMessage());
-                // return false;
-            // }
-            
-            // //Verarbeiten der Datei bis Ende erreicht
-            // while (!eof){
-                // //Ergänzen eines Zählers
-                // int count = 1;
-                
-                // //Einlesen der aktuellen Zeile der Datei
-                // try{zwStr = readLine();}
-                // catch (IOException e)
-                // {
-                    // System.out.println("Fehler beim Einlesen der "+ count + ". Zeile");
-                    // System.out.println(e.getMessage());
-                    // return false;
-                // }
-                
-                // if(!eof){
-                    // //Erhöhen des Zeilenzählers
-                    // count++;
-    
-                    // //Ermitteln der Position des Trennzeichens ","
-                    // int posKomma = zwStr.indexOf(",");
-                    // zwTyp = zwStr.substring(posKomma+1,posKomma+2);
-                    
-                    // //Lesen und setzen der Attribute, die für alle Kunstwerke identisch sind
-                    // //setzen der laufenden Nummer 
-                    // int lfdNr = Integer.parseInt(zwStr.substring(0,posKomma));
-                    // //Verkürzen des eingelesenen Strings um die laufende Nummer und den Typ des Kunstwerks
-                    // zwStr = zwStr.substring(posKomma+2);
-                    // posKomma = zwStr.indexOf(",");
-                    // //setzen der Bezeichnung 
-                    // String bez = zwStr.substring(0,posKomma);
-                    // //Verkürzen des eingelesenen Strings um die Bezeichnung
-                    // zwStr = zwStr.substring(posKomma+1);
-                    
-                    // //setzen des Künstlers 
-                    // String kuenstler = zwStr.substring(0,posKomma);
-                    // //Verkürzen des eingelesenen Strings um den Künstlernamen
-                    // zwStr = zwStr.substring(posKomma+1);
-                    
-                    // //setzen der Jahresangabe
-                    // String jahr = zwStr.substring(0,posKomma);
-                    // //Verkürzen des eingelesenen Strings um den die Jahresangabe
-                    // zwStr = zwStr.substring(posKomma+1);
-                    
-                    // //setzen das Thema
-                    // String thema = zwStr.substring(0,posKomma);
-                    // //Verkürzen des eingelesenen Strings um das Thema
-                    // zwStr = zwStr.substring(posKomma+1);
-                    
-                    // //setzen die Attraktivität
-                    // int attr = Integer.parseInt(zwStr.substring(0,posKomma));
-                    // //Verkürzen des eingelesenen Strings um die Attraktivität
-                    // zwStr = zwStr.substring(posKomma+1);
-                    
-                    // //setzen der Kosten
-                    // int kosten = Integer.parseInt(zwStr.substring(0,posKomma));
-                    // //Verkürzen des eingelesenen Strings um die Kosten
-                    // zwStr = zwStr.substring(posKomma+1);
-                    
-                    // //setzen des Museumsnamen
-                    // String nMuseum = zwStr.substring(0,posKomma);
-                    // //Verkürzen des eingelesenen Strings um den Museumsnamen
-                    // zwStr = zwStr.substring(posKomma+1);
-                    
-                    // //setzen des Museums (Adresse)
-                    // String aMuseum = zwStr.substring(0,posKomma);
-                    // //Verkürzen des eingelesenen Strings um die Museumsadresse
-                    // zwStr = zwStr.substring(posKomma+1);
-                    
-                    // //setzen der Hoehe
-                    // int hoehe = Integer.parseInt(zwStr.substring(0,posKomma));
-                    // //Verkürzen des eingelesenen Strings um die Höhe
-                    // zwStr = zwStr.substring(posKomma+1);
-                    
-                    // //setzen der Hoehe
-                    // int breite = Integer.parseInt(zwStr.substring(0,posKomma));
-                    // //Verkürzen des eingelesenen Strings um die Höhe
-                    // zwStr = zwStr.substring(posKomma+1);
-                    
-                    // if(zwTyp == "B")
-                    // {
-                        // double minT = Double.parseDouble(zwStr.substring(0,posKomma));
-                        // //Verkürzen des eingelesenen Strings um die Minimaltemperatur
-                        // zwStr = zwStr.substring(posKomma+1);
-                        // double maxT = Double.parseDouble(zwStr.substring(0,posKomma));
-                        // //Verkürzen des eingelesenen Strings um die Maximaltemperatur
-                        // zwStr = zwStr.substring(posKomma+1);
-                        // double minLF = Double.parseDouble(zwStr.substring(0,posKomma));
-                        // //Verkürzen des eingelesenen Strings um die Minimalen Lufttemperatur
-                        // zwStr = zwStr.substring(posKomma+1);
-                        // double maxLF = Double.parseDouble(zwStr.substring(0,posKomma));
-                        // //Verkürzen des eingelesenen Strings um die maximalen Lufttemperatur
-                        // zwStr = zwStr.substring(posKomma+1);;
-                        
-                        // new Bild(lfdNr, bez, kuenstler, jahr, thema, attr, kosten, nMuseum, aMuseum, hoehe, breite, minT, maxT, minLF, maxLF);
-     
-                    // }
+            //Erstelle neue Kunstwerkverwaltung
+            kVerw = new Kunstwerkverwaltung();
 
-                // }
+            // Anlegen eines Strings, der innnerhalb diese Methode benoetigt wird
+            String zwStr;
+            // Anlegen eines Strings, der innnerhalb diese Methode benoetigt wird, um den Kunstwerkstyp zu unterscheiden
+            String zwTyp;
+            //Speichern des Eingabedateipfads
+            this.in_datei = new File(in_datei);
+            
+            //Öffnen der Eingabedatei
+            try{openInFile();}
+            catch (IOException e)
+            {
+                System.out.println("Fehler beim Einlesen der Datei");
+                System.out.println(e.getMessage());
+                return false;
+            }
+            
+            //Verarbeiten der Datei bis Ende erreicht
+            while (!eof){
+                //Ergänzen eines Zählers
+                int count = 1;
+                
+                //Einlesen der aktuellen Zeile der Datei
+                try{zwStr = readLine();}
+                catch (IOException e)
+                {
+                    System.out.println("Fehler beim Einlesen der "+ count + ". Zeile");
+                    System.out.println(e.getMessage());
+                    return false;
+                }
+                
+                if(!eof){
+                    //Erhöhen des Zeilenzählers
+                    count++;
+    
+                    //Ermitteln der Position des Trennzeichens ","
+                    int posKomma = zwStr.indexOf(",");
+                    zwTyp = zwStr.substring(posKomma+1,posKomma+2);
+                    
+                    //Lesen und setzen der Attribute, die für alle Kunstwerke identisch sind
+                    //setzen der laufenden Nummer 
+                    int lfdNr = Integer.parseInt(zwStr.substring(0,posKomma));
+                    //Verkürzen des eingelesenen Strings um die laufende Nummer und den Typ des Kunstwerks
+                    zwStr = zwStr.substring(posKomma+3);
+                    posKomma = zwStr.indexOf(",");
+                    //setzen der Bezeichnung 
+                    String bez = zwStr.substring(0,posKomma);
+                    //Verkürzen des eingelesenen Strings um die Bezeichnung
+                    zwStr = zwStr.substring(posKomma+1);
+                    
+                    posKomma = zwStr.indexOf(",");
+                    //setzen des Künstlers 
+                    String kuenstler = zwStr.substring(0,posKomma);
+                    //Verkürzen des eingelesenen Strings um den Künstlernamen
+                    zwStr = zwStr.substring(posKomma+1);
+                    
+                    posKomma = zwStr.indexOf(",");
+                    //setzen der Jahresangabe
+                    String jahr = zwStr.substring(0,posKomma);
+                    //Verkürzen des eingelesenen Strings um den die Jahresangabe
+                    zwStr = zwStr.substring(posKomma+1);
+                    
+                    posKomma = zwStr.indexOf(",");
+                    //setzen das Thema
+                    String thema = zwStr.substring(0,posKomma);
+                    //Verkürzen des eingelesenen Strings um das Thema
+                    zwStr = zwStr.substring(posKomma+1);
+                    
+                    posKomma = zwStr.indexOf(",");
+                    //setzen die Attraktivität
+                    int attr = Integer.parseInt(zwStr.substring(0,posKomma));
+                    //Verkürzen des eingelesenen Strings um die Attraktivität
+                    zwStr = zwStr.substring(posKomma+1);
+                    
+                    posKomma = zwStr.indexOf(",");
+                    //setzen der Kosten
+                    int kosten = Integer.parseInt(zwStr.substring(0,posKomma));
+                    //Verkürzen des eingelesenen Strings um die Kosten
+                    zwStr = zwStr.substring(posKomma+1);
+                    
+                    posKomma = zwStr.indexOf(",");
+                    //setzen des Museumsnamen
+                    String nMuseum = zwStr.substring(0,posKomma);
+                    //Verkürzen des eingelesenen Strings um den Museumsnamen
+                    zwStr = zwStr.substring(posKomma+1);
+                    
+                    posKomma = zwStr.indexOf(",");
+                    //setzen des Museums (Adresse)
+                    String aMuseum = zwStr.substring(0,posKomma);
+                    //Verkürzen des eingelesenen Strings um die Museumsadresse
+                    zwStr = zwStr.substring(posKomma+1);
+                    
+                    posKomma = zwStr.indexOf(",");
+                    //setzen der Hoehe
+                    int hoehe = Integer.parseInt(zwStr.substring(0,posKomma));
+                    //Verkürzen des eingelesenen Strings um die Höhe
+                    zwStr = zwStr.substring(posKomma+1);
+                    
+                    posKomma = zwStr.indexOf(",");
+                    //setzen der Hoehe
+                    int breite = Integer.parseInt(zwStr.substring(0,posKomma));
+                    //Verkürzen des eingelesenen Strings um die Höhe
+                    zwStr = zwStr.substring(posKomma+1);
+                    
+                    if(zwTyp == "B")
+                    {
+                        double minT = Double.parseDouble(zwStr.substring(0,posKomma));
+                        //Verkürzen des eingelesenen Strings um die Minimaltemperatur
+                        zwStr = zwStr.substring(posKomma+1);
+                        double maxT = Double.parseDouble(zwStr.substring(0,posKomma));
+                        //Verkürzen des eingelesenen Strings um die Maximaltemperatur
+                        zwStr = zwStr.substring(posKomma+1);
+                        double minLF = Double.parseDouble(zwStr.substring(0,posKomma));
+                        //Verkürzen des eingelesenen Strings um die Minimalen Lufttemperatur
+                        zwStr = zwStr.substring(posKomma+1);
+                        double maxLF = Double.parseDouble(zwStr.substring(0,posKomma));
+                        //Verkürzen des eingelesenen Strings um die maximalen Lufttemperatur
+                        zwStr = zwStr.substring(posKomma+1);;
+                        
+                        kVerw.addKunstwerk(new Bild(lfdNr, bez, kuenstler, jahr, thema, attr, kosten, nMuseum, aMuseum, hoehe, breite, minT, maxT, minLF, maxLF));
+                        kVerw.addKunstwerk(new Bild(99, "bezeichnung", "kuenstler", "jahr", "thema", 45, 500, "nMuseum", "aMuseum", 50, 60, 70, 80, 81, 82));
+                        
+                    }
+                    else if(zwTyp == "G")
+                    {
+                        int laenge = Integer.parseInt(zwStr.substring(0,posKomma));
+                        //Verkürzen des eingelesenen Strings um die Minimaltemperatur
+                        zwStr = zwStr.substring(posKomma+1);
+                        double gewicht = Double.parseDouble(zwStr.substring(0,posKomma));
+
+                        kVerw.addKunstwerk(new Kunstgegenstand(lfdNr, bez, kuenstler, jahr, thema, attr, kosten, nMuseum, aMuseum, hoehe, breite, laenge, gewicht));
+                        
+                    }
+                    else if(zwTyp == "I")
+                    {
+                        int laenge = Integer.parseInt(zwStr.substring(0,posKomma));
+                        //Verkürzen des eingelesenen Strings um die Minimaltemperatur
+                        zwStr = zwStr.substring(posKomma+1);
+                        double gewicht = Double.parseDouble(zwStr.substring(0,posKomma));
+
+                        kVerw.addKunstwerk(new Kunstinstallation(lfdNr, bez, kuenstler, jahr, thema, attr, kosten, nMuseum, aMuseum, hoehe, breite, laenge, gewicht));
+                    }
+                    else
+                    {
+                        System.out.println("Fehler beim Einlesen der " + count + ". Zeile. Unbekannte Art des Kunstwerks");
+                        //return false;
+                    }
+
+                }
             
                 
-                // //Einlesen der Datei für die Raumdatei
-                // //Trennen der einzelnen Datensätze
-                // //Für jeden Datensatz prüfen, ob Art des Kunstwerks "B", "I" oder "G". 
-                // //Entsprechende Anlage von Bildern, Kunstgegenständen und Kunstinstallationen in der Kunstwerksverwaltung und Anhängen in der ?Liste?
-            // }
+            }
+            
+            //Schließen der Eingabedatei
+            try{closeInFile();}
+            catch (IOException e)
+            {
+                System.out.println("Fehler beim Schließen der Datei");
+                System.out.println(e.getMessage());
+                return false;
+            }
+            
             return true;
     }
     
@@ -201,111 +238,107 @@ public class Datei
      */
     public boolean verarbeiteRaumDatei(String in_datei) 
     {
-        // //Erstelle neue Raumverwaltung
-        // rVerw = new Raumverwaltung();
-        // //Ermitteln der leeren Liste für Räume, um in Verlauf der Methode Räume anhängen zu können
-        // raeume = rVerw.getRaeume();
-        // // Anlegen eines Strings, der innnerhalb diese Methode benoetigt wird
-        // String zwStr;
-        // //Speichern des Eingabedateipfads
-        // this.in_datei = new File(in_datei);
+        //Erstelle neue Raumverwaltung
+        rVerw = new Raumverwaltung();
+
+        // Anlegen eines Strings, der innnerhalb diese Methode benoetigt wird
+        String zwStr;
+        //Speichern des Eingabedateipfads
+        this.in_datei = new File(in_datei);
         
                
-        // //Öffnen der Eingabedatei
-        // try{openInFile();}
-        // catch (IOException e)
-        // {
-            // System.out.println("Fehler beim Einlesen der Datei");
-            // System.out.println(e.getMessage());
-            // return false;
-        // }
+        //Öffnen der Eingabedatei
+        try{openInFile();}
+        catch (IOException e)
+        {
+            System.out.println("Fehler beim Einlesen der Datei");
+            System.out.println(e.getMessage());
+            return false;
+        }
         
-        // //Verarbeiten der Datei bis Ende erreicht
-        // while (!eof){
-            // //Ergänzen eines Zählers
-            // int count = 1;
+        //Verarbeiten der Datei bis Ende erreicht
+        while (!eof){
+            //Ergänzen eines Zählers
+            int count = 1;
             
-            // //Einlesen der aktuellen Zeile der Datei
-            // try{zwStr = readLine();}
-            // catch (IOException e)
-            // {
-            // System.out.println("Fehler beim Einlesen der "+ count + ". Zeile");
-            // System.out.println(e.getMessage());
-            // return false;
-            // }
+            //Einlesen der aktuellen Zeile der Datei
+            try{zwStr = readLine();}
+            catch (IOException e)
+            {
+            System.out.println("Fehler beim Einlesen der "+ count + ". Zeile");
+            System.out.println(e.getMessage());
+            return false;
+            }
             
-            // if(!eof){
-                // //Erhöhen des Zeilenzählers
-                // count++;
+            if(!eof){
+                //Erhöhen des Zeilenzählers
+                count++;
 
-                // //Ermitteln der Position des Trennzeichens ","
-                // int posKomma = zwStr.indexOf(",");
-                // //setzen der laufenden Nummer 
-                // int lfdNr = Integer.parseInt(zwStr.substring(0,posKomma));
-                // //Verkürzen des eingelesenen Strings um die laufende Nummer
-                // zwStr = zwStr.substring(posKomma+1);
+                //Ermitteln der Position des Trennzeichens ","
+                int posKomma = zwStr.indexOf(",");
+                //setzen der laufenden Nummer 
+                int lfdNr = Integer.parseInt(zwStr.substring(0,posKomma));
+                //Verkürzen des eingelesenen Strings um die laufende Nummer
+                zwStr = zwStr.substring(posKomma+1);
                 
-                // posKomma = zwStr.indexOf(",");
-                // //Setzen der Bezeichnung
-                // String bezeichnung = zwStr.substring(0,posKomma);
-                // zwStr = zwStr.substring(posKomma+1);
+                posKomma = zwStr.indexOf(",");
+                //Setzen der Bezeichnung
+                String bezeichnung = zwStr.substring(0,posKomma);
+                zwStr = zwStr.substring(posKomma+1);
                 
-                // posKomma = zwStr.indexOf(",");
-                // //Setzen der Länge
-                // int laenge = Integer.parseInt(zwStr.substring(0,posKomma));
-                // zwStr = zwStr.substring(posKomma+1);
+                posKomma = zwStr.indexOf(",");
+                //Setzen der Länge
+                int laenge = Integer.parseInt(zwStr.substring(0,posKomma));
+                zwStr = zwStr.substring(posKomma+1);
                 
-                // posKomma = zwStr.indexOf(",");
-                // //Setzen der Breite
-                // int breite = Integer.parseInt(zwStr.substring(0,posKomma));
-                // zwStr = zwStr.substring(posKomma+1);
+                posKomma = zwStr.indexOf(",");
+                //Setzen der Breite
+                int breite = Integer.parseInt(zwStr.substring(0,posKomma));
+                zwStr = zwStr.substring(posKomma+1);
                 
-                // posKomma = zwStr.indexOf(",");
-                // //Setzen der Höhe
-                // int hoehe = Integer.parseInt(zwStr.substring(0,posKomma));
-                // zwStr = zwStr.substring(posKomma+1);
+                posKomma = zwStr.indexOf(",");
+                //Setzen der Höhe
+                int hoehe = Integer.parseInt(zwStr.substring(0,posKomma));
+                zwStr = zwStr.substring(posKomma+1);
                 
-                // posKomma = zwStr.indexOf(",");
-                // //Setzen der Türbreite Nord
-                // int tNord = Integer.parseInt(zwStr.substring(0,posKomma));
-                // zwStr = zwStr.substring(posKomma+1);
+                posKomma = zwStr.indexOf(",");
+                //Setzen der Türbreite Nord
+                int tNord = Integer.parseInt(zwStr.substring(0,posKomma));
+                zwStr = zwStr.substring(posKomma+1);
                 
-                // posKomma = zwStr.indexOf(",");
-                // //Setzen der Türbreite Ost
-                // int tOst = Integer.parseInt(zwStr.substring(0,posKomma));
-                // zwStr = zwStr.substring(posKomma+1);
+                posKomma = zwStr.indexOf(",");
+                //Setzen der Türbreite Ost
+                int tOst = Integer.parseInt(zwStr.substring(0,posKomma));
+                zwStr = zwStr.substring(posKomma+1);
                 
-                // posKomma = zwStr.indexOf(",");
-                // //Setzen der Türbreite Süd
-                // int tSued = Integer.parseInt(zwStr.substring(0,posKomma));
-                // zwStr = zwStr.substring(posKomma+1);
+                posKomma = zwStr.indexOf(",");
+                //Setzen der Türbreite Süd
+                int tSued = Integer.parseInt(zwStr.substring(0,posKomma));
+                zwStr = zwStr.substring(posKomma+1);
 
-                // //Setzen der Türbreite West
-                // int tWest = Integer.parseInt(zwStr);
+                //Setzen der Türbreite West
+                int tWest = Integer.parseInt(zwStr);
                 
-                // //Erzeuge neuen Raum
-                // rVerw.addRaum(new Raum(lfdNr, bezeichnung, laenge, breite, hoehe, tNord, tOst, tSued, tWest));
-            // }
+                //Erzeuge neuen Raum
+                rVerw.addRaum(new Raum(lfdNr, bezeichnung, laenge, breite, hoehe, tNord, tOst, tSued, tWest));
+            }
         
             
-        // }
+        }
         
         
-        // //Schließen der Eingabedatei
-        // try{closeInFile();}
-        // catch (IOException e)
-        // {
-            // System.out.println("Fehler beim Schließen der Datei");
-            // System.out.println(e.getMessage());
-            // return false;
-        // }
+        //Schließen der Eingabedatei
+        try{closeInFile();}
+        catch (IOException e)
+        {
+            System.out.println("Fehler beim Schließen der Datei");
+            System.out.println(e.getMessage());
+            return false;
+        }
         
               
-         return true;
-        // //Einlesen der Datei für die Raumdatei
-        // //Trennen der einzelnen Datensätze
-        // //Für jeden Datensatz Anlage eines Objekts der Klasse Raum (+zugehörige Objekte der Klasse Wand) 
-        // //Anhängen der Objekte in der ?Liste? zur Raumverwaltung
+        return true;
+
     }
     
     /**

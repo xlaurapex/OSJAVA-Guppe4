@@ -12,6 +12,7 @@ public class Kunstwerkverwaltung {
     private ArrayList<Kunstwerk> ListeKunstwerk;
 
     public Kunstwerkverwaltung() {
+        ListeKunstwerk = new ArrayList<Kunstwerk>();
     }
 
     /**
