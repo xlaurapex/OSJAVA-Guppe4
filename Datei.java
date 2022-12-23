@@ -361,10 +361,9 @@ public class Datei
      * @return        ddie Methode gibt je nach Erfolg true oder false zurück
      * @author  Laura Perlbach
      */
-    public boolean erzeugeLeihDatei(ArrayList ausstellung)
+    public boolean erzeugeLeihDatei(Ausstellung ausstellung)
     {
-        int error = 0;
-        
+                
         //die Eingabewerte sind eine Liste der Objekte Kunstwerke (bzw. der Unterklassen)
         //Sortieren der Objekte nach Leih-Quelle
         //diese werden einzeln mit den relevanten Informationen in eine Datei geschrieben
@@ -382,7 +381,7 @@ public class Datei
      * @return        die Methode gibt je nach Erfolg true oder false zurück
      * @author  Laura Perlbach
      */
-    public boolean erzeugeZuordnungsDatei(ArrayList ausstellung)
+    public boolean erzeugeZuordnungsDatei(Ausstellung ausstellung)
     {
         int error = 0;
         
@@ -402,7 +401,7 @@ public class Datei
      * @return        die Methode gibt je nach Erfolg true oder false zurück
      * @author  Laura Perlbach
      */
-    public boolean erzeugeMuseumsführer(ArrayList ausstellung)
+    public boolean erzeugeMuseumsführer(Ausstellung ausstellung)
     {
         int error = 0;
         
