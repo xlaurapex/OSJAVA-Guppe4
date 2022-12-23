@@ -42,9 +42,9 @@ public class Bild extends Kunstwerk
     }
 
         /**
- * Getters and setters - da wir alle Attributen als private deklariert haben, brauchen wir jetzt getters und setters, um den Zugang zu den Attributen zu gewärhleisten
- */
-public double getMinTemperatur() {
+     * Getters and setters - da wir alle Attributen als private deklariert haben, brauchen wir jetzt getters und setters, um den Zugang zu den Attributen zu gewärhleisten
+         */
+    public double getMinTemperatur() {
         return minTemperatur;
     }
 
@@ -77,8 +77,8 @@ public double getMinTemperatur() {
     }
 
     /**
- * Representiert die Klasse als String
- */
+     * Representiert die Klasse als String
+     */
     public String toString() {
         return "Bild{" +
                 super.toString() +
@@ -88,4 +88,5 @@ public double getMinTemperatur() {
                 ", maxLuftfeuchtigkeit=" + maxLuftfeuchtigkeit +
                 '}';
     }
-}
+
+}  

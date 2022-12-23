@@ -5,6 +5,6 @@ comment1.params=ausstellung
 comment1.target=Ausstellung(java.util.HashMap)
 comment1.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Ausstellung\r\n\ @param\ \u00DCbergeben\ wird\ die\ Zuordnung\ von\ Kunstwerk\ zu\ Raum,\ \r\n\ welche\ im\ Optimierungsalgorithmus\ erstellt\ wird\r\n
 comment2.params=
-comment2.target=java.util.HashMap\ getAustellung()
+comment2.target=java.util.HashMap\ getAusstellung()
 comment2.text=\r\n\ Um\ die\ Ausstellung\ aus\ anderen\ Klassen\ aufrufen\ zu\ k\u00F6nnen,\ wird\ eine\ get-Methode\ definiert\r\n\ \r\n\ @return\ \ \ \ \ \ \ die\ Ausstellung\r\n
 numComments=3

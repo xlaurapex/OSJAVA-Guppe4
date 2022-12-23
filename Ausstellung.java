@@ -37,7 +37,7 @@ public class Ausstellung
      * 
      * @return       die Ausstellung
      */
-    public HashMap<Kunstwerk, Raum> getAustellung()
+    public HashMap<Kunstwerk, Raum> getAusstellung()
     {
         // tragen Sie hier den Code ein
         return ausstellung;

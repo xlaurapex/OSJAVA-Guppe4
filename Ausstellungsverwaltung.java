@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.HashMap;
 
 /**
  * Die Klasse Ausstellungsverwaltung Die Klasse „Ausstellungsverwaltung“ stellt die Kernaufgabe des Systems dar. 
@@ -17,7 +18,7 @@ public class Ausstellungsverwaltung
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
     
     Ausstellung a;
-    Kunstwerkverwaltung kwv;
+    public Kunstwerkverwaltung kwv;
     Raumverwaltung rvw;
     Optimierungsalgorithmus y;
     /**
@@ -42,10 +43,11 @@ public class Ausstellungsverwaltung
         // Abfragen der Eingabedateien
         Datei d = new Datei();
         //Test-/Defaultpfad
-        d.verarbeiteRaumDatei("raeume.csv");
+        Raumverwaltung rv = d.verarbeiteRaumDatei("raeume.csv");
         //Test-/Defaultpfad
-        d.verarbeiteKunstwerkeDatei("kunstwerke.csv");
+        Kunstwerkverwaltung kv = d.verarbeiteKunstwerkeDatei("kunstwerke.csv");
         // dadurch Erstellung der Raüme und Kunstwerke
+        
         
         // Eingabe des Wunschthemas für die Ausstellung (und Kostenobergrenze)
         
@@ -54,6 +56,19 @@ public class Ausstellungsverwaltung
         // dadurch Erzeugung der Ausstellung (Zuordnung Raum und Kunstwerke)
         
         // Ausstellung erzeugt Ausgabedateien
+        
+        //Test-Erzeugung einer Ausstellung (kommt eigentlich aus Optimierungsalgorithmus
+        Raum r1 = new Raum(1, "Raum1", 1000,100,300, 0,0,0,200);
+        Raum r2 = new Raum(1, "Raum1", 1000,100,300, 0,0,0,200);
+        Bild b1 = new Bild(1, "Bild1", "künstler","2000er","thema", 50, 5000,"nMuseum", "aMuseum", 20, 40, 5,30,50,60);
+        Kunstgegenstand g1 = new Kunstgegenstand(2, "Kunstgegenstand2", "künstler2","2002er","thema2", 52, 5002,"nMuseum2", "aMuseum2",22, 42, 150,60);
+        
+        HashMap<Kunstwerk, Raum> a = new HashMap<Kunstwerk, Raum>();
+        a.put(b1, r1);
+        a.put(g1, r2);
+        Ausstellung ausstellung = new Ausstellung(a);
+        
+        d.erzeugeLeihDatei(ausstellung, "leihdatei.txt");
     
     }
 }
