@@ -15,7 +15,7 @@ public class Kunstinstallation extends Kunstwerk
  * Kontruktor für Objekte der abstrakten Klasse Kunstunstallation
  */
 public Kunstinstallation(int laufendeNummer, String bezeichnung, String kuenstlername,
-                             int jahresangabe, String thema, double attraktivitaet, int kosten,
+                             String jahresangabe, String thema, double attraktivitaet, int kosten,
                              String nameMuseums, String anschriftMuseums, int hoehe,
                              int breite, int laenge, double gewicht) {
         super(laufendeNummer, bezeichnung, kuenstlername, jahresangabe, thema,

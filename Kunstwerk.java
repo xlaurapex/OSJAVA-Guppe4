@@ -12,7 +12,7 @@ public abstract class Kunstwerk
     private int laufendeNummer;
     private String bezeichnung;
     private String kuenstlername;
-    private int jahresangabe;
+    private String jahresangabe;
     private String thema;
     private double attraktivitaet;
     private int kosten;
@@ -26,7 +26,7 @@ public abstract class Kunstwerk
  */     
     
     public Kunstwerk (int laufendeNummer, String bezeichnung,
-                String kuenstlername, int jahresangabe,
+                String kuenstlername, String jahresangabe,
                 String thema, double attraktivitaet,
                 int kosten, String nameMuseums,
                 String anschriftMuseums, int hoehe, int breite) {
@@ -65,10 +65,10 @@ public String getKuenstlername() {
 public void setKuenstlername(String kuenstlername) {
     this.kuenstlername = kuenstlername;}
 
-public int getJahresangabe() {
+public String getJahresangabe() {
     return jahresangabe;}
 
-public void setJahresangabe(int jahresangabe) {
+public void setJahresangabe(String jahresangabe) {
     this.jahresangabe = jahresangabe;}
 
 public String getThema() {

@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Raumverwaltung
-comment0.text=\r\n\ Die\ Raumverwaltung\ erzeugt\ und\ verwaltet\ die\ Objekte\ der\ Klasse\ \u201ERaum\u201C\ auf\ Basis\ der\ Planungsdatei\ der\ R\u00E4ume\ f\u00FCr\ die\ jeweiligen\ Ausstellungszeitr\u00E4ume.\ \r\n\ Dadurch\ ist\ f\u00FCr\ jeden\ einzelnen\ Ausstellungszeitraum\ die\ Erstellung\ der\ dann\ gegebenen\ R\u00E4ume\ und\ deren\ Di-mensionen\ m\u00F6glich.\r\n\ \r\n\ @author\ Johannes\ Riedmeier\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
+comment0.text=\r\n\ Die\ Raumverwaltung\ erzeugt\ und\ verwaltet\ die\ Objekte\ der\ Klasse\ \u201ERaum\u201C\ auf\ \r\n\ Basis\ der\ Planungsdatei\ der\ R\u00E4ume\ f\u00FCr\ die\ jeweiligen\ Ausstellungszeitr\u00E4ume.\ \r\n\ Dadurch\ ist\ f\u00FCr\ jeden\ einzelnen\ Ausstellungszeitraum\ die\ Erstellung\ der\ dann\r\n\ gegebenen\ R\u00E4ume\ und\ deren\ Dimensionen\ m\u00F6glich.\r\n\ \r\n\ @author\ Johannes\ Riedmeier\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
 comment1.params=
 comment1.target=Raumverwaltung()
 comment1.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Raumverwaltung\r\n

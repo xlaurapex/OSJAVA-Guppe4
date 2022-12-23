@@ -51,33 +51,143 @@ public class Datei
     }
     
 
-    /**
-     * mit der Methode verarbeiteKunstwerkeDatei() werden die Eingabedateien für Kunstwerke eingelesen, 
-     * verarbeitet und entsprechende Objekte der Klassen "Bild","Kunstgegenstand" und "Kunstinstallation" erzeugt 
-     * 
-     * @param  dateipfad    als Eingabeparameter für die Methode ist der Dateipfad erforderlich, wo die einzulesende Datei zu finden ist
-     * @return        die Methode besitzt keinen Rückgabewert, da lediglich Objekte der Klassen "Bild","Kunstgegenstand" und 
-     * "Kunstinstallation" erzeugt und in der Museumsverwaltung gespeichert werden
-     * @author  Laura Perlbach
-     */
-    public boolean verarbeiteKunstwerkeDatei(String in_datei)
-    {
-        //Erstelle neue Kunstwerkverwaltung
-        kVerw = new Kunstwerkverwaltung();
-        //Ermitteln der leeren Liste für Kunstwerke, um in Verlauf der Methode Räume anhängen zu können
-        kunstwerke = kVerw.getKunstwerke();
-        //Speichern des Eingabedateipfads
-        this.in_datei = new File(in_datei);
-        
-        //Öffnen der Eingabedatei
-        //openInFile();
-        
-        
-        return true;
-        //Einlesen der Datei für die Raumdatei
-        //Trennen der einzelnen Datensätze
-        //Für jeden Datensatz prüfen, ob Art des Kunstwerks "B", "I" oder "G". 
-        //Entsprechende Anlage von Bildern, Kunstgegenständen und Kunstinstallationen in der Kunstwerksverwaltung und Anhängen in der ?Liste?
+        /**
+         * mit der Methode verarbeiteKunstwerkeDatei() werden die Eingabedateien für Kunstwerke eingelesen, 
+         * verarbeitet und entsprechende Objekte der Klassen "Bild","Kunstgegenstand" und "Kunstinstallation" erzeugt 
+         * 
+         * @param  dateipfad    als Eingabeparameter für die Methode ist der Dateipfad erforderlich, wo die einzulesende Datei zu finden ist
+         * @return        die Methode besitzt keinen Rückgabewert, da lediglich Objekte der Klassen "Bild","Kunstgegenstand" und 
+         * "Kunstinstallation" erzeugt und in der Museumsverwaltung gespeichert werden
+         * @author  Laura Perlbach
+         */
+        public boolean verarbeiteKunstwerkeDatei(String in_datei)
+        {
+            //Erstelle neue Kunstwerkverwaltung
+            kVerw = new Kunstwerkverwaltung();
+            //Ermitteln der leeren Liste für Kunstwerke, um in Verlauf der Methode Räume anhängen zu können
+            kunstwerke = kVerw.getKunstwerke();
+            // Anlegen eines Strings, der innnerhalb diese Methode benoetigt wird
+            String zwStr;
+            // Anlegen eines Strings, der innnerhalb diese Methode benoetigt wird, um den Kunstwerkstyp zu unterscheiden
+            String zwTyp;
+            //Speichern des Eingabedateipfads
+            this.in_datei = new File(in_datei);
+            
+            //Öffnen der Eingabedatei
+            try{openInFile();}
+            catch (IOException e)
+            {
+                System.out.println("Fehler beim Einlesen der Datei");
+                System.out.println(e.getMessage());
+                return false;
+            }
+            
+            //Verarbeiten der Datei bis Ende erreicht
+            while (!eof){
+                //Ergänzen eines Zählers
+                int count = 1;
+                
+                //Einlesen der aktuellen Zeile der Datei
+                try{zwStr = readLine();}
+                catch (IOException e)
+                {
+                    System.out.println("Fehler beim Einlesen der "+ count + ". Zeile");
+                    System.out.println(e.getMessage());
+                    return false;
+                }
+                
+                if(!eof){
+                    //Erhöhen des Zeilenzählers
+                    count++;
+    
+                    //Ermitteln der Position des Trennzeichens ","
+                    int posKomma = zwStr.indexOf(",");
+                    zwTyp = zwStr.substring(posKomma+1,posKomma+2);
+                    
+                    //Lesen und setzen der Attribute, die für alle Kunstwerke identisch sind
+                    //setzen der laufenden Nummer 
+                    int lfdNr = Integer.parseInt(zwStr.substring(0,posKomma));
+                    //Verkürzen des eingelesenen Strings um die laufende Nummer und den Typ des Kunstwerks
+                    zwStr = zwStr.substring(posKomma+2);
+                    posKomma = zwStr.indexOf(",");
+                    //setzen der Bezeichnung 
+                    String bez = zwStr.substring(0,posKomma);
+                    //Verkürzen des eingelesenen Strings um die Bezeichnung
+                    zwStr = zwStr.substring(posKomma+1);
+                    
+                    //setzen des Künstlers 
+                    String kuenstler = zwStr.substring(0,posKomma);
+                    //Verkürzen des eingelesenen Strings um den Künstlernamen
+                    zwStr = zwStr.substring(posKomma+1);
+                    
+                    //setzen der Jahresangabe
+                    String jahr = zwStr.substring(0,posKomma);
+                    //Verkürzen des eingelesenen Strings um den die Jahresangabe
+                    zwStr = zwStr.substring(posKomma+1);
+                    
+                    //setzen das Thema
+                    String thema = zwStr.substring(0,posKomma);
+                    //Verkürzen des eingelesenen Strings um das Thema
+                    zwStr = zwStr.substring(posKomma+1);
+                    
+                    //setzen die Attraktivität
+                    int attr = Integer.parseInt(zwStr.substring(0,posKomma));
+                    //Verkürzen des eingelesenen Strings um die Attraktivität
+                    zwStr = zwStr.substring(posKomma+1);
+                    
+                    //setzen der Kosten
+                    int kosten = Integer.parseInt(zwStr.substring(0,posKomma));
+                    //Verkürzen des eingelesenen Strings um die Kosten
+                    zwStr = zwStr.substring(posKomma+1);
+                    
+                    //setzen des Museumsnamen
+                    String nMuseum = zwStr.substring(0,posKomma);
+                    //Verkürzen des eingelesenen Strings um den Museumsnamen
+                    zwStr = zwStr.substring(posKomma+1);
+                    
+                    //setzen des Museums (Adresse)
+                    String aMuseum = zwStr.substring(0,posKomma);
+                    //Verkürzen des eingelesenen Strings um die Museumsadresse
+                    zwStr = zwStr.substring(posKomma+1);
+                    
+                    //setzen der Hoehe
+                    int hoehe = Integer.parseInt(zwStr.substring(0,posKomma));
+                    //Verkürzen des eingelesenen Strings um die Höhe
+                    zwStr = zwStr.substring(posKomma+1);
+                    
+                    //setzen der Hoehe
+                    int breite = Integer.parseInt(zwStr.substring(0,posKomma));
+                    //Verkürzen des eingelesenen Strings um die Höhe
+                    zwStr = zwStr.substring(posKomma+1);
+                    
+                    if(zwTyp == "B")
+                    {
+                        double minT = Double.parseDouble(zwStr.substring(0,posKomma));
+                        //Verkürzen des eingelesenen Strings um die Minimaltemperatur
+                        zwStr = zwStr.substring(posKomma+1);
+                        double maxT = Double.parseDouble(zwStr.substring(0,posKomma));
+                        //Verkürzen des eingelesenen Strings um die Maximaltemperatur
+                        zwStr = zwStr.substring(posKomma+1);
+                        double minLF = Double.parseDouble(zwStr.substring(0,posKomma));
+                        //Verkürzen des eingelesenen Strings um die Minimalen Lufttemperatur
+                        zwStr = zwStr.substring(posKomma+1);
+                        double maxLF = Double.parseDouble(zwStr.substring(0,posKomma));
+                        //Verkürzen des eingelesenen Strings um die maximalen Lufttemperatur
+                        zwStr = zwStr.substring(posKomma+1);;
+                        
+                        new Bild(lfdNr, bez, kuenstler, jahr, thema, attr, kosten, nMuseum, aMuseum, hoehe, breite, minT, maxT, minLF, maxLF);
+     
+                    }
+
+                }
+            
+                
+                //Einlesen der Datei für die Raumdatei
+                //Trennen der einzelnen Datensätze
+                //Für jeden Datensatz prüfen, ob Art des Kunstwerks "B", "I" oder "G". 
+                //Entsprechende Anlage von Bildern, Kunstgegenständen und Kunstinstallationen in der Kunstwerksverwaltung und Anhängen in der ?Liste?
+            }
+            return true;
     }
     
     /**
@@ -113,7 +223,7 @@ public class Datei
         //Verarbeiten der Datei bis Ende erreicht
         while (!eof){
             //Ergänzen eines Zählers
-            int count = 0;
+            int count = 1;
             
             //Einlesen der aktuellen Zeile der Datei
             try{zwStr = readLine();}

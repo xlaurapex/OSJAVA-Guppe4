@@ -14,7 +14,7 @@ public class Kunstgegenstand extends Kunstwerk {
  * Kontruktor für Objekte der abstrakten Klasse Kunstgegenstand
  */
 public Kunstgegenstand(int laufendeNummer, String bezeichnung,
-                           String kuenstlername, int jahresangabe,
+                           String kuenstlername, String jahresangabe,
                            String thema, double attraktivitaet, int kosten,
                            String nameMuseums, String anschriftMuseums, int hoehe,
                            int breite, int laenge, double gewicht) {
