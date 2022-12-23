@@ -1,11 +1,14 @@
 
 /**
- * Die Klasse Raum dient der Datenhaltung einzelner Räume und definiert deren Attribute, wie z.B. Ausmaße. Die Klasse Raum ist somit eine 
- * Datenträgerklasse. Auf die Klasse „Raumverwaltung“ wird durch die Klasse „Ausstellungsverwaltung“ zugegriffen, um auf Ba-sis der 
- * Räume eine Ausstellung erstellen zu können. Zudem wird die Klasse „Datei“ ver-wendet, um die Raumdatei einlesen und verarbeiten zu können.
+ * Die Klasse Raum dient der Datenhaltung einzelner Räume und definiert deren 
+ * Attribute, wie z.B. Ausmaße. Die Klasse Raum ist somit eine Datenträgerklasse.
+ * Auf die Klasse „Raumverwaltung“ wird durch die Klasse „Ausstellungsverwaltung“
+ * zugegriffen, um auf Basis der Räume eine Ausstellung erstellen zu können. 
+ * Zudem wird die Klasse „Datei“ verwendet, um die Raumdatei einlesen und 
+ * verarbeiten zu können.
  * 
  * @author Johannes Riedmeier
- * @version (eine Versionsnummer oder ein Datum)
+ * @version (1.1 22.12.2022)
  */
 public class Raum
 {
@@ -15,10 +18,13 @@ public class Raum
     private int laenge;
     private int breite;
     private int hoehe; 
-    private int tNord;
-    private int tOst;
-    private int tSued;
-    private int tWest;
+    private int tuerNord;
+    private int tuerOst;
+    private int tuerSued;
+    private int tuerWest;
+    private String schwerpunktThema;
+    private int temperatur;
+    private int luftfeuchtigkeit;
     
     
     /**
@@ -40,22 +46,102 @@ public class Raum
         this.laenge = laenge;
         this.breite = breite;
         this.hoehe = hoehe;
-        this.tNord = tNord;
-        this.tOst = tOst;
-        this.tSued = tSued;
-        this.tWest = tWest;
+        this.tuerNord = tuerNord;
+        this.tuerOst = tuerOst;
+        this.tuerSued = tuerSued;
+        this.tuerWest = tuerWest;
+        this.schwerpunktThema = schwerpunktThema;
+        this.temperatur = temperatur;
+        this.luftfeuchtigkeit = luftfeuchtigkeit;
         
     }
 
     /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
+     * Diese Methode ermöglicht das Setzen einer Bezeichnung in einem Raum.
      * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
+     * @param     bezeichung für einen Raum
      */
-    // public int beispielMethode(int y)
-    // {
-        // // tragen Sie hier den Code ein
-        
-    // }
+    
+    public void setBezeichnung(String bezeichnung)
+    {
+        this.bezeichnung = bezeichnung;
+
+    }
+    
+    /** 
+     * Diese Methode ermöglicht die Ausgabe einer Bezeichnung eines Objekts der Kalsse
+     * Raum.
+     * 
+     * @return        beichnung eines Raums
+     */
+    public String getBezeichnung()
+    {
+        return this.bezeichnung;
+    }
+    
+    /**
+     * Diese Methode ermöglicht es einem Objekt Raum ein Thema (Schwerpunkthema)
+     * zuzuweisen.
+     * 
+     * @param  schwerpunktThema    Thema, welches den Schwerpunkt in einem 
+     * Raum bildet
+     */
+    public void setSchwerpunktThema(String schwerpunktThema)
+    {
+        this.schwerpunktThema = schwerpunktThema;
+    }
+    
+    /**
+     * Diese Methode ermöglicht die Ausgabe eines Themas eines Objekts der Kalsse
+     * Raum.
+     * 
+     * @return     schwerpunktThema eines Raums
+     */
+    public String getSchwerpunktThema()
+    {
+        return this.schwerpunktThema;
+    }
+    
+    /**
+     * Diese Methode ermöglicht das Setzen einer Temperatur in einem Raum.
+     * 
+     * @param  temperatur    Temeperatur in einem Raum
+     */
+    public void setTemperatur (int temperatur)
+    {
+        this.temperatur = temperatur;
+    }
+    
+    /**
+     * Diese Methode ermöglicht es die Temeeperatur in einem Raum auszugeben.
+     * 
+     * @return     temperatur eines Raums
+     */
+    public int getTemperatur ()
+    {
+        return 
+        this.temperatur;
+    }
+    
+    /**
+     * Diese Methode ermöglicht das Setzen einer Luftfeuchtigkeit in einem Raum.
+     * 
+     * @param  luftfeuchtigkeit    Luftfeuchtigkeit in einem Raum
+     */
+    public void setLuftfeuchtigkeit(int luftfeuchtigkeit)
+    { 
+        this.luftfeuchtigkeit = luftfeuchtigkeit;
+    }
+    
+    /**
+     * Diese Methode ermöglicht es die Luftfeuchtigkeit in einem Raum auszugeben.
+     * 
+     *  @return     luftfeuchtigkeit eines Raums
+     */
+    public int getLuftfeuchtigkeit()
+    {
+        return this.luftfeuchtigkeit;
+    }
 }
+
+
