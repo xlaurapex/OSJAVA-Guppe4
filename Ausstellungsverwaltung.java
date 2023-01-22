@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import java.util.HashMap;
+import java.util.ArrayList;
 
 /**
  * Die Klasse Ausstellungsverwaltung Die Klasse „Ausstellungsverwaltung“ stellt die Kernaufgabe des Systems dar. 
@@ -61,14 +62,23 @@ public class Ausstellungsverwaltung
         Raum r1 = new Raum(1, "Raum1", 1000,100,300, 0,0,0,200);
         Raum r2 = new Raum(1, "Raum1", 1000,100,300, 0,0,0,200);
         Bild b1 = new Bild(1, "Bild1", "künstler","2000er","thema", 50, 5000,"nMuseum", "aMuseum", 20, 40, 5,30,50,60);
+        b1.setWirdAusgestellt(true);
+        b1.setinRaum(r1);
+        b1.setXAufhaengung(100);
+        b1.setYAufhaengung(100);
         Kunstgegenstand g1 = new Kunstgegenstand(2, "Kunstgegenstand2", "künstler2","2002er","thema2", 52, 5002,"nMuseum2", "aMuseum2",22, 42, 150,60);
+        g1.setWirdAusgestellt(true);
+        g1.setinRaum(r1);
+        g1.setXPlatzierung(100);
+        g1.setYPlatzierung(100);
         
-        HashMap<Kunstwerk, Raum> a = new HashMap<Kunstwerk, Raum>();
-        a.put(b1, r1);
-        a.put(g1, r2);
+        ArrayList<Kunstwerk> a = new ArrayList<Kunstwerk>();
+        a.add(b1);
+        a.add(g1);
+
         Ausstellung ausstellung = new Ausstellung(a);
         
-        d.erzeugeLeihDatei(ausstellung, "leihdatei.txt");
+        //d.erzeugeLeihDatei(ausstellung, "leihdatei.txt");
     
     }
 }

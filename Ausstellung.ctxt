@@ -2,10 +2,10 @@
 comment0.target=Ausstellung
 comment0.text=\r\n\ Eine\ Ausstellung\ enth\u00E4lt\ jeweils\ die\ in\ dieser\ Ausstellung\ pr\u00E4sentierten\ Kunstwerke\ und\ die\ Aufteilung\ der\ Kunstwerke\ in\ die\ einzelnen\ R\u00E4ume.\ Eine\ \r\n\ Ausstellung\ nutzt\ daher\ die\ Ge-gebenheiten\ der\ R\u00E4ume\ und\ beinhaltet\ Objekte\ der\ Klassen\ \u201EBild\u201C,\ \r\n\ \u201EKunstgegenstand\u201C\ und\ \u201EKunstinstallation\u201C.\ Zudem\ erzeugt\ die\ Klasse\ \u201EAusstellung\u201C\ anschlie\u00DFend\ die\ Dateien\ Mu-seumsf\u00FChrer,\ Leih\u00FCbersicht\ und\ Raumplan.\r\n\ \r\n\ @author\ Laura\ Perlbach\r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
 comment1.params=ausstellung
-comment1.target=Ausstellung(java.util.HashMap)
+comment1.target=Ausstellung(java.util.ArrayList)
 comment1.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Ausstellung\r\n\ @param\ \u00DCbergeben\ wird\ die\ Zuordnung\ von\ Kunstwerk\ zu\ Raum,\ \r\n\ welche\ im\ Optimierungsalgorithmus\ erstellt\ wird\r\n
 comment2.params=
-comment2.target=java.util.HashMap\ getAusstellung()
+comment2.target=java.util.ArrayList\ getAusstellung()
 comment2.text=\r\n\ Um\ die\ Ausstellung\ aus\ anderen\ Klassen\ aufrufen\ zu\ k\u00F6nnen,\ wird\ eine\ get-Methode\ definiert\r\n\ \r\n\ @return\ \ \ \ \ \ \ die\ Ausstellung\r\n
 comment3.params=
 comment3.target=void\ addKunstwerk()

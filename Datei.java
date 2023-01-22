@@ -360,14 +360,7 @@ public class Datei
     public boolean erzeugeLeihDatei(Ausstellung ausstellung, String out_datei)
     {
         //Get der HashMap der Ausstellung
-        HashMap<Kunstwerk, Raum> a = ausstellung.getAusstellung();
-        // Für die Leihdatei werden nur die Kunstwerke benötigt, dahe rextrahieren der Kunstwerke in ArrayList
-        ArrayList<Kunstwerk> k = new ArrayList<Kunstwerk>();
-        //Durchlaufen jedes Objekts der HashMap
-        for ( Kunstwerk key : a.keySet() ) {
-            //Speichern des Key-werts der HashMap in der ArrayList
-            k.add( key );
-        }
+        ArrayList<Kunstwerk> a = ausstellung.getAusstellung();
         
         //Anlegen einer neuen Outputdatei
         this.out_datei = new File(out_datei);
@@ -380,7 +373,7 @@ public class Datei
         
         //Erzeuge Überschriften
         writeLine("Laufende Nummer: Bezeichnung, Name des Museums, Anschrift des Museums, Kosten");
-        for(Kunstwerk kw: k)
+        for(Kunstwerk kw: a)
         {
             //schreibe einzelne Objekte in die Ausgabedatei
             // !! bisher noch nicht sortiert nach Museum

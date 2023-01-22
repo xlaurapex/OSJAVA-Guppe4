@@ -17,7 +17,7 @@ public class Ausstellung
     // a) zusätzliche Attribute der Klasse Kunstwerk (wirdAusgestellt + ausstellungsraum)
     // b) mehrdimensionales Array mit Kunstwerk + Raumzuordnung
     
-    private HashMap<Kunstwerk, Raum> ausstellung;
+    private ArrayList<Kunstwerk> ausstellung;
     
     
     /**
@@ -25,7 +25,7 @@ public class Ausstellung
      * @param Übergeben wird die Zuordnung von Kunstwerk zu Raum, 
      * welche im Optimierungsalgorithmus erstellt wird
      */
-    public Ausstellung(HashMap<Kunstwerk, Raum> ausstellung)
+    public Ausstellung(ArrayList<Kunstwerk> ausstellung)
     {
 
         this.ausstellung = ausstellung;
@@ -37,7 +37,7 @@ public class Ausstellung
      * 
      * @return       die Ausstellung
      */
-    public HashMap<Kunstwerk, Raum> getAusstellung()
+    public ArrayList<Kunstwerk> getAusstellung()
     {
         // tragen Sie hier den Code ein
         return ausstellung;
