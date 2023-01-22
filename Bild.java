@@ -13,6 +13,11 @@ public class Bild extends Kunstwerk
     private double maxTemperatur;
     private double minLuftfeuchtigkeit;
     private double maxLuftfeuchtigkeit;
+    //neue Attribute
+    private String wand;
+    //Platzierung an der Wand in cm ausgehend von der oberen linken Ecke
+    private int xAufhaengung;
+    private int yAufhaengung;
 
     /**
      * Konstruktor der Klasse Bild
@@ -39,6 +44,9 @@ public class Bild extends Kunstwerk
         this.maxTemperatur = maxTemperatur;
         this.minLuftfeuchtigkeit = minLuftfeuchtigkeit;
         this.maxLuftfeuchtigkeit = maxLuftfeuchtigkeit;
+        this.wand = "";
+        this.xAufhaengung = 0;
+        this.yAufhaengung = 0; 
     }
 
         /**
@@ -87,6 +95,14 @@ public class Bild extends Kunstwerk
                 ", minLuftfeuchtigkeit=" + minLuftfeuchtigkeit +
                 ", maxLuftfeuchtigkeit=" + maxLuftfeuchtigkeit +
                 '}';
+    }
+    
+    public void clearZuordnung(){
+        super.clearZuordnung();
+        this.wand = "";
+        xAufhaengung = 0;
+        yAufhaengung = 0; 
+        
     }
 
 }  

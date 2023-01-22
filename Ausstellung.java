@@ -42,4 +42,19 @@ public class Ausstellung
         // tragen Sie hier den Code ein
         return ausstellung;
     }
+    
+        public void addKunstwerk()
+    {
+        //ein Kunstwerk mit Zuordnung der Ausstellung hinzufügen
+        //Attribute bei Kunstwerk setzen
+        //freiFläche Räume anpassen
+        
+    }
+    
+        public void removeKunstwerk()
+    {
+        //ein Kunstwerk mit Zuordnung aus der Ausstellung entfernen
+        //Kunstwerk clearen
+        //freieFläche Räume anpassen
+    }
 }

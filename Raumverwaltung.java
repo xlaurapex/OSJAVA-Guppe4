@@ -60,7 +60,8 @@ public class Raumverwaltung
     {
         return raeume;
     }
-     
+
+
     // /**
      // * Es braucht eine Methode, um aus der bestehende Liste der Räume einen neuen Raum zu entfernen.
      // * 

@@ -20,6 +20,11 @@ public abstract class Kunstwerk
     private String anschriftMuseums;
     private int hoehe;
     private int breite;
+    //neue Attribute
+    private boolean wirdAusgestellt;
+    private Raum inRaum;
+
+    
     
     /**
  * Kontruktor für Objekte der abstrakten Klasse Kunstwerk
@@ -130,6 +135,15 @@ public void setBreite(int breite) {
                 ", hoehe=" + hoehe +
                 ", breite=" + breite +
                 '}';
+    }
+    
+    /**
+ * Zuordnung des Kunstwerks zu einem Raum in der Ausstellung aufheben (Zurücksetzen der zugehörigen Attribute)
+ */
+    public void clearZuordnung()
+    {
+        wirdAusgestellt = false;
+        inRaum = null; 
     }
     
 
