@@ -119,6 +119,20 @@ public void setBreite(int breite) {
     this.breite = breite;
 }
 
+public boolean getWirdAusgestellt() {
+    return wirdAusgestellt;}
+
+public void setWirdAusgestellt(boolean wirdAusgestellt) {
+    this.wirdAusgestellt = wirdAusgestellt;
+}
+
+public Raum getInRaum() {
+    return inRaum;}
+
+public void setinRaum(Raum inRaum) {
+    this.inRaum = inRaum;
+}
+
     /**
  * Representiert die Klasse als String
  */

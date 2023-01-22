@@ -46,6 +46,22 @@ public class Kunstgegenstand extends Kunstwerk {
     public void setGewicht(double gewicht) {
         this.gewicht = gewicht;
     }
+    
+    public int getXPlatzierung() {
+        return xPlatzierung;
+    }
+
+    public void setXPlatzierung(int xPlatzierung) {
+        this.xPlatzierung = xPlatzierung;
+    }
+    
+    public int getYPlatzierung() {
+        return yPlatzierung;
+    }
+
+    public void setYPlatzierung(int yPlatzierung) {
+        this.yPlatzierung = yPlatzierung;
+    }
 
     /**
      * Representiert die Klasse als String

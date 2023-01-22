@@ -83,6 +83,22 @@ public class Bild extends Kunstwerk
     public void setMaxLuftfeuchtigkeit(double maxLuftfeuchtigkeit) {
         this.maxLuftfeuchtigkeit = maxLuftfeuchtigkeit;
     }
+    
+    public int getXAufhaengung() {
+        return xAufhaengung;
+    }
+
+    public void setXAufhaengung(int xAufhaengung) {
+        this.xAufhaengung = xAufhaengung;
+    }
+    
+    public int getYAufhaengung() {
+        return xAufhaengung;
+    }
+
+    public void setYAufhaengung(int YAufhaengung) {
+        this.yAufhaengung = yAufhaengung;
+    }
 
     /**
      * Representiert die Klasse als String
