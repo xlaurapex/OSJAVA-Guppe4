@@ -99,6 +99,14 @@ public class Bild extends Kunstwerk
     public void setYAufhaengung(int YAufhaengung) {
         this.yAufhaengung = yAufhaengung;
     }
+    
+        public String getWand() {
+        return wand;
+    }
+
+    public void setWand(String wand) {
+        this.wand = wand;
+    }
 
     /**
      * Representiert die Klasse als String

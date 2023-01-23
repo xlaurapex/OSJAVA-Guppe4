@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.HashMap;
+import java.util.*;
 
 /**
  * Eine Ausstellung enthält jeweils die in dieser Ausstellung präsentierten Kunstwerke und die Aufteilung der Kunstwerke in die einzelnen Räume. Eine 
@@ -18,7 +19,7 @@ public class Ausstellung
     // b) mehrdimensionales Array mit Kunstwerk + Raumzuordnung
     
     private ArrayList<Kunstwerk> ausstellung;
-    
+    private int gesamtKosten;
     
     /**
      * Konstruktor für Objekte der Klasse Ausstellung
@@ -29,6 +30,10 @@ public class Ausstellung
     {
 
         this.ausstellung = ausstellung;
+        for(Kunstwerk kw: ausstellung)
+        {
+            this.gesamtKosten = this.gesamtKosten + kw.getKosten();
+        }
 
     }
 
@@ -56,5 +61,35 @@ public class Ausstellung
         //ein Kunstwerk mit Zuordnung aus der Ausstellung entfernen
         //Kunstwerk clearen
         //freieFläche Räume anpassen
+    }
+    
+    /**
+     * Um die Gesamtkosten de rAusstellung aus anderen Klassen aufrufen zu können, wird eine get-Methode definiert
+     * 
+     * @return       Summe der Kosten der Ausstellung
+     */
+    public int getGesamtKosten()
+    {
+        return gesamtKosten;
+    }
+    
+    /**
+     * Sortieren der Ausstellungsliste nach Museum
+     * 
+     * @return       Summe der Kosten der Ausstellung
+     */
+    public void sortNachMuseum()
+    {
+        Collections.sort(ausstellung, Comparator.comparing(Kunstwerk::getNameMuseums));
+    }
+    
+        /**
+     * Sortieren der Ausstellungsliste nach Museum
+     * 
+     * @return       Summe der Kosten der Ausstellung
+     */
+    public void sortNachRaum()
+    {
+        //Collections.sort(ausstellung, Comparator.comparing(Kunstwerk::getInRaum));
     }
 }

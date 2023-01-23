@@ -1,7 +1,9 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.*;
+import java.util.*;
 import java.util.HashMap;
+import java.util.Collections;
 
 
 /**
@@ -359,9 +361,11 @@ public class Datei
      */
     public boolean erzeugeLeihDatei(Ausstellung ausstellung, String out_datei)
     {
-        //Get der HashMap der Ausstellung
+        //Sortieren der Ausstellung 
+        ausstellung.sortNachMuseum();
+        //Get der Liste der Ausstellung
         ArrayList<Kunstwerk> a = ausstellung.getAusstellung();
-        
+              
         //Anlegen einer neuen Outputdatei
         this.out_datei = new File(out_datei);
         try{openOutFile();}
@@ -379,6 +383,8 @@ public class Datei
             // !! bisher noch nicht sortiert nach Museum
             writeLine(kw.getLaufendeNummer() + ": " + kw.getBezeichnung() + ", " + kw.getNameMuseums() + ", " + kw.getAnschriftMuseums() + ", " + kw.getKosten());
         }
+        //Ausgeben der Gesamtkosten
+        writeLine("Gesamtkosten:" + ausstellung.getGesamtKosten());
         
         //Schließen der Ausgabedatei
         closeOutFile();
@@ -404,10 +410,79 @@ public class Datei
     public boolean erzeugeZuordnungsDatei(Ausstellung ausstellung)
     {
         int error = 0;
-        
+        //Sortieren der Ausstellung 
+        ausstellung.sortNachRaum();
+        //Get der Liste der Ausstellung
+        ArrayList<Kunstwerk> a = ausstellung.getAusstellung();
+        Raum aktRaum = null;
+                       
         //die Eingabewerte sind eine Liste der Objekte Kunstwerke (bzw. der Unterklassen)
         //Sortieren der Objekte nach Ausstellungsraum
         //diese werden einzeln mit den relevanten Informationen in eine Datei geschrieben
+                //Anlegen einer neuen Outputdatei
+        this.out_datei = new File("ausstellungsplan.html");
+        try{openOutFile();}
+        catch (IOException e)
+        {
+            System.out.println("Fehler beim Öffnen der Datei");
+            System.out.println(e.getMessage());
+        }
+        
+        //Erzeuge HTML-Template Beginn
+        writeLine("<!DOCTYPE html>");
+        writeLine("<html>");
+        writeLine("<head>");
+        writeLine("<meta charset=\"UTF-8\">");
+        writeLine("<title>Ausstellungplan</title>");
+        writeLine("</head>");
+        writeLine("<body>");
+        //Erzeuge Datei-Inhalt
+        writeLine("<h1>VAWi-Museum - Ausstellungsplan</h1>");
+        writeLine("Im folgenden wird werden die einzelnen Ausstellungsstücke nach den Räumen sortiert aufgelistet und die notwendigen Raum-Paramter angegeben");
+        
+        for(Kunstwerk kw: a)
+        {
+            //wenn neuer Raum, Raumdetails listen
+            if (aktRaum != kw.getInRaum()){
+                aktRaum = kw.getInRaum();
+                writeLine("<h2>Raum: "+aktRaum.getBezeichnung()+"</h2>");
+                writeLine("Temperatur       : "+aktRaum.getTemperatur());
+                writeLine("Luftfeuchtigkeit : "+aktRaum.getLuftfeuchtigkeit());
+                writeLine("");
+                
+            } 
+            //schreibe einzelne Objekte in die Ausgabedatei
+            if (kw instanceof Bild){
+                writeLine("<h4>Bild: "+kw.getBezeichnung()+"</h4>");
+                //writeLine("Wand: "+kw.getWand());
+                //writeLine("Aufhängung in Zentimetern von der linken Wandseite: "+kw.getXAufhaengung());
+                writeLine("");
+            }
+            
+            if (kw instanceof Kunstgegenstand){
+                writeLine("<h4>Kunstgegenstand: "+kw.getBezeichnung()+"</h4>");
+                //writeLine("Platzierung horizontal im Raum in cm ausgehend von der Nordwest-Ecke: "+kw.getXPlatzierung());
+                //writeLine("Platzierung vertikal im Raum in cm ausgehend von der Nordwest-Ecke: "+kw.getYPlatzierung());
+                writeLine("");
+            }
+            
+            if (kw instanceof Kunstinstallation){
+                writeLine("<h4>Kunstinstallation: "+kw.getBezeichnung()+"</h4>");
+                writeLine("");
+            }
+            
+        }
+        //Daten des ersten Raums in die Datei schreiben
+        //alle Kunstwerke des ersten Raums auflisten (bei jedem Kunstwerk Raum mit akt. Raum vergleichen)
+        
+        //Erzeuge HTML-Template Ende
+        writeLine("</body>");
+        writeLine("</html>");
+        
+        //Schließen der Ausgabedatei
+        closeOutFile();
+
+        
                 
         return true;
     }
@@ -510,4 +585,5 @@ public class Datei
         dAus.write(in_str+"\n");
 
     }
+    
 }
