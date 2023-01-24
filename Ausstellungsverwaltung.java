@@ -40,18 +40,27 @@ public class Ausstellungsverwaltung
      */
     public static void main(String args[])
     {
-        
+        Scanner in = new Scanner(System.in);
         // Abfragen der Eingabedateien
+        System.out.println("Bitte geben Sie die Input-Datei für die Räume ein");
+        String raumdatei = in.next();
         Datei d = new Datei();
         //Test-/Defaultpfad
-        Raumverwaltung rv = d.verarbeiteRaumDatei("raeume.csv");
+        //Raumverwaltung rv = d.verarbeiteRaumDatei("raeume.csv");
+        Raumverwaltung rv = d.verarbeiteRaumDatei(raumdatei);
         //Test-/Defaultpfad
-        Kunstwerkverwaltung kv = d.verarbeiteKunstwerkeDatei("kunstwerke.csv");
+        System.out.println("Bitte geben Sie die Input-Datei für die Kunstwerke ein");
+        String kunstwerksdatei = in.next();
+        //Kunstwerkverwaltung kv = d.verarbeiteKunstwerkeDatei("kunstwerke.csv");
+        Kunstwerkverwaltung kv = d.verarbeiteKunstwerkeDatei(kunstwerksdatei);
         // dadurch Erstellung der Raüme und Kunstwerke
-        
-        
+                
         // Eingabe des Wunschthemas für die Ausstellung (und Kostenobergrenze)
+        System.out.println("Bitte geben Sie Ihr Wunschthema für die bevorstehende Ausstellung ein!");
+        String thema = in.next();
         
+        System.out.println("Bitte geben Sie Ihre Kostenobergrenze für die bevorstehende Ausstellung ein!");
+        String kostengrenze = in.next();
         // Starten des Optimierungsalgorithmus (mit Eingabe der Liste der Kunstwerke, der Liste der Räume und der Themenwahl)
         
         // dadurch Erzeugung der Ausstellung (Zuordnung Raum und Kunstwerke)
@@ -76,11 +85,13 @@ public class Ausstellungsverwaltung
         a.add(b1);
         a.add(g1);
 
-        Ausstellung ausstellung = new Ausstellung(a);
+        Ausstellung ausstellung = new Ausstellung(a, "Rokoko");
         
         d.erzeugeZuordnungsDatei(ausstellung);
-        d.erzeugeLeihDatei(ausstellung, "Leihdatei.txt");
-    
+        d.erzeugeLeihDatei(ausstellung, "output/Leihdatei.txt");
+        d.erzeugeMuseumsführer(ausstellung);
+        
+        System.out.println("Vielen Dank! Bitte finden Sie Ihre Ausgabedateien im Output-Ordner.");
     }
 }
 

@@ -20,16 +20,18 @@ public class Ausstellung
     
     private ArrayList<Kunstwerk> ausstellung;
     private int gesamtKosten;
+    private String thema;
     
     /**
      * Konstruktor für Objekte der Klasse Ausstellung
      * @param Übergeben wird die Zuordnung von Kunstwerk zu Raum, 
      * welche im Optimierungsalgorithmus erstellt wird
      */
-    public Ausstellung(ArrayList<Kunstwerk> ausstellung)
+    public Ausstellung(ArrayList<Kunstwerk> ausstellung, String thema)
     {
 
         this.ausstellung = ausstellung;
+        this.thema  = thema;
         for(Kunstwerk kw: ausstellung)
         {
             this.gesamtKosten = this.gesamtKosten + kw.getKosten();
@@ -74,6 +76,16 @@ public class Ausstellung
     }
     
     /**
+     * Um die Gesamtkosten de rAusstellung aus anderen Klassen aufrufen zu können, wird eine get-Methode definiert
+     * 
+     * @return       Summe der Kosten der Ausstellung
+     */
+    public String getThema()
+    {
+        return thema;
+    }
+    
+    /**
      * Sortieren der Ausstellungsliste nach Museum
      * 
      * @return       Summe der Kosten der Ausstellung
@@ -92,4 +104,6 @@ public class Ausstellung
     {
         //Collections.sort(ausstellung, Comparator.comparing(Kunstwerk::getInRaum));
     }
+    
+    
 }
