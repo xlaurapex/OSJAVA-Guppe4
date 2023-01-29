@@ -34,7 +34,8 @@ public abstract class Kunstwerk
                 String kuenstlername, String jahresangabe,
                 String thema, double attraktivitaet,
                 int kosten, String nameMuseums,
-                String anschriftMuseums, int hoehe, int breite) {
+                String anschriftMuseums, int hoehe, int breite, boolean wirdAusgestellt,
+                Raum inRaum) {
         this.laufendeNummer = laufendeNummer;
         this.bezeichnung = bezeichnung;
         this.kuenstlername = kuenstlername;
@@ -46,13 +47,15 @@ public abstract class Kunstwerk
         this.anschriftMuseums = anschriftMuseums;
         this.hoehe = hoehe;
         this.breite = breite;
+        this.wirdAusgestellt = wirdAusgestellt;
+        this.inRaum = inRaum;
     }
 
     /**
  * Getters and setters - da wir alle Attributen als private deklariert haben, brauchen wir jetzt getters und setters, um den Zugang zu den Attributen zu gewärhleisten
  */
 
-    public int getLaufendeNummer() {
+public int getLaufendeNummer() {
     return laufendeNummer;}
 
 public void setLaufendeNummer(int laufendeNummer) {
