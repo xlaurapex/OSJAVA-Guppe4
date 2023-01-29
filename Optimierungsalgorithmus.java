@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-
+import java.util.HashMap; 
 /**
  * Beschreiben Sie hier die Klasse Optimierungsalgorithmus.
  * 
@@ -24,6 +24,7 @@ public class Optimierungsalgorithmus
     private int x;
     private ArrayList<Kunstwerk> Kunstwerke;
     private ArrayList<Raum> Raeume;
+    private static HashMap<Raum,ArrayList<Kunstwerk>> Ausstellung; 
 
     /**
      * Konstruktor für Objekte der Klasse Optimierungsalgorithmus
@@ -42,12 +43,35 @@ public class Optimierungsalgorithmus
      * @param  thema    das vorgegebene Thema muss eingegeben werden 
      * 
      * @return        ein Objekt der Klasse Ausstellung wird zurückgegeben, welches die optimierte Zuordnung von Raum zu Kunstwerk beinhaltet
+     * Liste mit Kunstwerken -> Kunstwerk hat eine RaumID
      */
-    public static Ausstellung optimiere(ArrayList<Raum> r, ArrayList<Kunstwerk> k, String thema)
+    public static HashMap<Raum,ArrayList<Kunstwerk>> optimiere(ArrayList<Raum> r, ArrayList<Kunstwerk> k, String thema)
     {
-        // Rückgabetyp Dictionary
-        // 
-        //test
+        //Initialisiere die gebrauchten Datenstrukturen
+        double ThemaInRaeumen = 0.00;
+        Ausstellung = new HashMap<Raum, ArrayList<Kunstwerk>>();
+        // Vergebe die ersten Werte
+        for(Raum fr : r)
+        {
+            Ausstellung.put(fr, null);
+        }
+        // Berechne mögliche Arraygrößen für Räume
+        // Prüfe ob die Contraints überhaupt eingehalten werden können
+        // Schaue ob Kunst in Raum passt
         return null;
+    }
+
+    private double berechneThemaInAllenRaeumen()
+    {
+        return -1;
+    }
+
+    private String berechneThemaImRaum(ArrayList<Kunstwerk> pRaum){
+        return null;
+    }
+
+    private boolean berechneRaumgroeßeAusreichend()
+    {
+        return false;
     }
 }
