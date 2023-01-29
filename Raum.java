@@ -30,17 +30,17 @@ public class Raum
     private int freieFlaecheWest;
     private int freieFlaecheNord;
     private int freieFlaecheOst;
-    
-    
+    private boolean IstRaumVoll;
+
     /**
      * Konstruktor für Objekte der Klasse Raum
      */
     public Raum()
     {
         // Instanzvariable initialisieren
-        
+
     }
-    
+
     /**
      * Konstruktor für Objekte der Klasse Raum
      */
@@ -58,7 +58,7 @@ public class Raum
         this.schwerpunktThema = schwerpunktThema;
         this.temperatur = temperatur;
         this.luftfeuchtigkeit = luftfeuchtigkeit;
-        
+
     }
 
     /**
@@ -66,13 +66,13 @@ public class Raum
      * 
      * @param     bezeichung für einen Raum
      */
-    
+
     public void setBezeichnung(String bezeichnung)
     {
         this.bezeichnung = bezeichnung;
 
     }
-    
+
     /** 
      * Diese Methode ermöglicht die Ausgabe einer Bezeichnung eines Objekts der Kalsse
      * Raum.
@@ -83,7 +83,7 @@ public class Raum
     {
         return this.bezeichnung;
     }
-    
+
     /**
      * Diese Methode ermöglicht es einem Objekt Raum ein Thema (Schwerpunkthema)
      * zuzuweisen.
@@ -95,7 +95,7 @@ public class Raum
     {
         this.schwerpunktThema = schwerpunktThema;
     }
-    
+
     /**
      * Diese Methode ermöglicht die Ausgabe eines Themas eines Objekts der Kalsse
      * Raum.
@@ -106,7 +106,7 @@ public class Raum
     {
         return this.schwerpunktThema;
     }
-    
+
     /**
      * Diese Methode ermöglicht das Setzen einer Temperatur in einem Raum.
      * 
@@ -116,7 +116,7 @@ public class Raum
     {
         this.temperatur = temperatur;
     }
-    
+
     /**
      * Diese Methode ermöglicht es die Temeeperatur in einem Raum auszugeben.
      * 
@@ -127,7 +127,7 @@ public class Raum
         return 
         this.temperatur;
     }
-    
+
     /**
      * Diese Methode ermöglicht das Setzen einer Luftfeuchtigkeit in einem Raum.
      * 
@@ -137,7 +137,7 @@ public class Raum
     { 
         this.luftfeuchtigkeit = luftfeuchtigkeit;
     }
-    
+
     /**
      * Diese Methode ermöglicht es die Luftfeuchtigkeit in einem Raum auszugeben.
      * 
@@ -147,10 +147,11 @@ public class Raum
     {
         return this.luftfeuchtigkeit;
     }
-    
+
     /**
      * diese Methode aktualisiert die freie Fläche einer Wand, wenn ein Bild hinzugefügt wird
      */
+    // SWITCH BENUTZEN, NUR BILD BERÜCKSICHTIGT?
     public void updateFreieFlaeche(String wand, int breiteBild)
     {
         if (wand == "sued")
@@ -204,5 +205,4 @@ public class Raum
     }
 
 }
-
 
