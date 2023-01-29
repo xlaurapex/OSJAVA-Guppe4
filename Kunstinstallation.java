@@ -53,4 +53,6 @@ public int getLaenge() {
                 ", gewicht=" + gewicht +
                 '}';
     }
+    
+
 }

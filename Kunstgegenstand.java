@@ -9,11 +9,15 @@
 public class Kunstgegenstand extends Kunstwerk {
     private int laenge;
     private double gewicht;
+    //neue Attribute
+    //Platzierung im Raum in cm ausgehend von der Nordwest-Ecke
+    private int xPlatzierung;
+    private int yPlatzierung;
 
        /**
- * Kontruktor für Objekte der abstrakten Klasse Kunstgegenstand
- */
-public Kunstgegenstand(int laufendeNummer, String bezeichnung,
+     * Kontruktor für Objekte der abstrakten Klasse Kunstgegenstand
+     */
+    public Kunstgegenstand(int laufendeNummer, String bezeichnung,
                            String kuenstlername, String jahresangabe,
                            String thema, double attraktivitaet, int kosten,
                            String nameMuseums, String anschriftMuseums, int hoehe,
@@ -25,9 +29,9 @@ public Kunstgegenstand(int laufendeNummer, String bezeichnung,
     }
 
         /**
- * Getters and setters - da wir alle Attributen als private deklariert haben, brauchen wir jetzt getters und setters, um den Zugang zu den Attributen zu gewärhleisten
- */
-public int getLaenge() {
+     * Getters and setters - da wir alle Attributen als private deklariert haben, brauchen wir jetzt getters und setters, um den Zugang zu den Attributen zu gewärhleisten
+     */
+    public int getLaenge() {
         return laenge;
     }
 
@@ -42,15 +46,37 @@ public int getLaenge() {
     public void setGewicht(double gewicht) {
         this.gewicht = gewicht;
     }
+    
+    public int getXPlatzierung() {
+        return xPlatzierung;
+    }
+
+    public void setXPlatzierung(int xPlatzierung) {
+        this.xPlatzierung = xPlatzierung;
+    }
+    
+    public int getYPlatzierung() {
+        return yPlatzierung;
+    }
+
+    public void setYPlatzierung(int yPlatzierung) {
+        this.yPlatzierung = yPlatzierung;
+    }
 
     /**
- * Representiert die Klasse als String
- */
+     * Representiert die Klasse als String
+     */
     public String toString() {
         return "Kunstgegenstand{" +
                 super.toString() +
                 "laenge=" + laenge +
                 ", gewicht=" + gewicht +
                 '}';
+    }
+    
+    public void clearZuordnung(){
+        super.clearZuordnung();
+        xPlatzierung = 0;
+        yPlatzierung = 0; 
     }
 }

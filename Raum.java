@@ -25,6 +25,11 @@ public class Raum
     private String schwerpunktThema;
     private int temperatur;
     private int luftfeuchtigkeit;
+    //neue Attribute
+    private int freieFlaecheSued;
+    private int freieFlaecheWest;
+    private int freieFlaecheNord;
+    private int freieFlaecheOst;
     
     
     /**
@@ -142,6 +147,62 @@ public class Raum
     {
         return this.luftfeuchtigkeit;
     }
+    
+    /**
+     * diese Methode aktualisiert die freie Fläche einer Wand, wenn ein Bild hinzugefügt wird
+     */
+    public void updateFreieFlaeche(String wand, int breiteBild)
+    {
+        if (wand == "sued")
+        {
+            if (freieFlaecheSued == laenge) {
+                //Abzug der Bildbreite, Türbreite und 1m Puffer auf beiden Seiten
+                freieFlaecheSued = freieFlaecheSued - breiteBild - tuerSued - 200;
+            }
+            else 
+            {
+                //Abzug der Bildbreite und 1m Puffer
+                freieFlaecheSued = freieFlaecheSued - breiteBild - 100;
+            }
+        }
+        if (wand == "west")
+        {
+            if (freieFlaecheWest == breite) {
+                //Abzug der Bildbreite, Türbreite und 1m Puffer auf beiden Seiten
+                freieFlaecheWest = freieFlaecheWest - breiteBild - tuerWest - 200;
+            }
+            else 
+            {
+                //Abzug der Bildbreite und 1m Puffer
+                freieFlaecheWest = freieFlaecheWest - breiteBild - 100;
+            }
+        }
+        if (wand == "nord")
+        {
+            if (freieFlaecheNord == laenge) {
+                //Abzug der Bildbreite, Türbreite und 1m Puffer auf beiden Seiten
+                freieFlaecheNord = freieFlaecheNord - breiteBild - tuerNord - 200;
+            }
+            else 
+            {
+                //Abzug der Bildbreite und 1m Puffer
+                freieFlaecheNord = freieFlaecheNord - breiteBild - 100;
+            }
+        }
+        if (wand == "ost")
+        {
+            if (freieFlaecheOst == breite) {
+                //Abzug der Bildbreite, Türbreite und 1m Puffer auf beiden Seiten
+                freieFlaecheOst = freieFlaecheOst - breiteBild - tuerOst - 200;
+            }
+            else 
+            {
+                //Abzug der Bildbreite und 1m Puffer
+                freieFlaecheOst = freieFlaecheOst - breiteBild - 100;
+            }
+        }
+    }
+
 }
 
 

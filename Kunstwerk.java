@@ -20,6 +20,11 @@ public abstract class Kunstwerk
     private String anschriftMuseums;
     private int hoehe;
     private int breite;
+    //neue Attribute
+    private boolean wirdAusgestellt;
+    private Raum inRaum;
+
+    
     
     /**
  * Kontruktor für Objekte der abstrakten Klasse Kunstwerk
@@ -114,6 +119,20 @@ public void setBreite(int breite) {
     this.breite = breite;
 }
 
+public boolean getWirdAusgestellt() {
+    return wirdAusgestellt;}
+
+public void setWirdAusgestellt(boolean wirdAusgestellt) {
+    this.wirdAusgestellt = wirdAusgestellt;
+}
+
+public Raum getInRaum() {
+    return inRaum;}
+
+public void setinRaum(Raum inRaum) {
+    this.inRaum = inRaum;
+}
+
     /**
  * Representiert die Klasse als String
  */
@@ -130,6 +149,15 @@ public void setBreite(int breite) {
                 ", hoehe=" + hoehe +
                 ", breite=" + breite +
                 '}';
+    }
+    
+    /**
+ * Zuordnung des Kunstwerks zu einem Raum in der Ausstellung aufheben (Zurücksetzen der zugehörigen Attribute)
+ */
+    public void clearZuordnung()
+    {
+        wirdAusgestellt = false;
+        inRaum = null; 
     }
     
 
