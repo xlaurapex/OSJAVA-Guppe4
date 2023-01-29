@@ -1,4 +1,3 @@
-
 /**
  * Die Klasse „Bild“ ist eine Child-Klasse der abstrakten Klasse „Kunstwerk“, welche durch die besonderen Attribute eines Bildes 
  * (z.B. Luftfeuchtigkeit) ergänzt wird. Die Klasse „Bild“ ist somit eine Datenträgerklasse.
@@ -37,9 +36,14 @@ public class Bild extends Kunstwerk
      * @param maxTemperatur
      * @param minLuftfeuchtigkeit
      * @param maxLuftfeuchtigkeit
+     * @param wirdAusgestellt
+     * @param inRaum
      */
-    public Bild(int laufendeNummer, String bezeichnung, String kuenstlername, String jahresangabe, String thema, double attraktivitaet, int kosten, String nameMuseums, String anschriftMuseums, int hoehe, int breite, double minTemperatur, double maxTemperatur, double minLuftfeuchtigkeit, double maxLuftfeuchtigkeit) {
-        super(laufendeNummer, bezeichnung, kuenstlername, jahresangabe, thema, attraktivitaet, kosten, nameMuseums, anschriftMuseums, hoehe, breite);
+    public Bild(int laufendeNummer, String bezeichnung, String kuenstlername, String jahresangabe, String thema,
+     double attraktivitaet, int kosten, String nameMuseums, String anschriftMuseums,
+      int hoehe, int breite, double minTemperatur, double maxTemperatur, double minLuftfeuchtigkeit,
+       double maxLuftfeuchtigkeit, boolean wirdAusgestellt,Raum inRaum) {
+        super(laufendeNummer, bezeichnung, kuenstlername, jahresangabe, thema, attraktivitaet, kosten, nameMuseums, anschriftMuseums, hoehe, breite, wirdAusgestellt, inRaum);
         this.minTemperatur = minTemperatur;
         this.maxTemperatur = maxTemperatur;
         this.minLuftfeuchtigkeit = minLuftfeuchtigkeit;
