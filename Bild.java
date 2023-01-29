@@ -1,5 +1,3 @@
-import apple.laf.JRSUIConstants.Widget;
-
 /**
  * Die Klasse „Bild“ ist eine Child-Klasse der abstrakten Klasse „Kunstwerk“, welche durch die besonderen Attribute eines Bildes 
  * (z.B. Luftfeuchtigkeit) ergänzt wird. Die Klasse „Bild“ ist somit eine Datenträgerklasse.
