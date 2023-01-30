@@ -34,8 +34,7 @@ public abstract class Kunstwerk
                 String kuenstlername, String jahresangabe,
                 String thema, double attraktivitaet,
                 int kosten, String nameMuseums,
-                String anschriftMuseums, int hoehe, int breite, boolean wirdAusgestellt,
-                Raum inRaum) {
+                String anschriftMuseums, int hoehe, int breite) {
         this.laufendeNummer = laufendeNummer;
         this.bezeichnung = bezeichnung;
         this.kuenstlername = kuenstlername;
@@ -47,8 +46,8 @@ public abstract class Kunstwerk
         this.anschriftMuseums = anschriftMuseums;
         this.hoehe = hoehe;
         this.breite = breite;
-        this.wirdAusgestellt = wirdAusgestellt;
-        this.inRaum = inRaum;
+        //this.wirdAusgestellt = wirdAusgestellt;
+        //this.inRaum = inRaum;
     }
 
     /**
