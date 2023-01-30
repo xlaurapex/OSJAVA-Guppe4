@@ -45,19 +45,63 @@ public class Optimierungsalgorithmus
      * @return        ein Objekt der Klasse Ausstellung wird zurückgegeben, welches die optimierte Zuordnung von Raum zu Kunstwerk beinhaltet
      * Liste mit Kunstwerken -> Kunstwerk hat eine RaumID
      */
-    public static HashMap<Raum,ArrayList<Kunstwerk>> optimiere(ArrayList<Raum> r, ArrayList<Kunstwerk> k, String thema)
+    public static HashMap<Raum,ArrayList<Kunstwerk>> optimiere(ArrayList<Raum> parameterRaeume, ArrayList<Kunstwerk> parameterKunstwerke, String parameterThema)
     {
+        //Prüfe ob es mehr Kunstinstallationen als Räume gibt
+        for(Kunstwerk pk : parameterKunstwerke)
+        {
+            int AnzahlKunstinstallationen = 0;
+            if(pk instanceof Kunstinstallation)
+            {
+                AnzahlKunstinstallationen++;
+                if(AnzahlKunstinstallationen > parameterRaeume.size())
+                {
+                    return null;
+                }
+            }
+        }
         //Initialisiere die gebrauchten Datenstrukturen
         double ThemaInRaeumen = 0.00;
+        boolean RaumOptimiert = false;
         Ausstellung = new HashMap<Raum, ArrayList<Kunstwerk>>();
-        // Vergebe die ersten Werte
-        for(Raum fr : r)
+        // Speichere alle Räume und ordne den ersten Räumen alle Kunstinstallationen zu
+        while(true != RaumOptimiert)
         {
-            Ausstellung.put(fr, null);
+            for(Raum fr : parameterRaeume)
+            {
+                Ausstellung.put(fr, null);
+                for(Kunstwerk pk : parameterKunstwerke)
+                {        
+                    // fr get anzahl themen
+                    // get freie flächen
+                    // thema in allen räumchen berechnen
+                    if(pk instanceof Kunstinstallation)
+                    {
+                        // nur in leere räume
+                        ArrayList<Kunstwerk> temporaereKunstwerke = Ausstellung.get(fr);
+                        temporaereKunstwerke.add(pk);
+                        parameterKunstwerke.remove(pk);
+                        break;
+                    }
+                    if(pk instanceof Kunstgegenstand)
+                    {
+                        //nur an wände mit genug platz und 3 Themen + Schwerpunktthema
+                        ArrayList<Kunstwerk> temporaereKunstwerke = Ausstellung.get(fr);
+                        temporaereKunstwerke.add(pk);
+                        parameterKunstwerke.remove(pk);
+
+                    }
+                    if(pk instanceof Bild)
+                    {
+                        //nur an wände mit genug platz und 3 Themen + Schwerpunktthema
+                        ArrayList<Kunstwerk> temporaereKunstwerke = Ausstellung.get(fr);
+                        temporaereKunstwerke.add(pk);
+                        parameterKunstwerke.remove(pk);
+                        break;
+                    }
+                }            
+            }
         }
-        // Berechne mögliche Arraygrößen für Räume
-        // Prüfe ob die Contraints überhaupt eingehalten werden können
-        // Schaue ob Kunst in Raum passt
         return null;
     }
 
