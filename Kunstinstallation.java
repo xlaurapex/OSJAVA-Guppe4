@@ -17,10 +17,9 @@ public class Kunstinstallation extends Kunstwerk
 public Kunstinstallation(int laufendeNummer, String bezeichnung, String kuenstlername,
                              String jahresangabe, String thema, double attraktivitaet, int kosten,
                              String nameMuseums, String anschriftMuseums, int hoehe,
-                             int breite, int laenge, double gewicht, boolean wirdAusgestellt,
-                             Raum inRaum) {
+                             int breite, int laenge, double gewicht) {
         super(laufendeNummer, bezeichnung, kuenstlername, jahresangabe, thema,
-                attraktivitaet, kosten, nameMuseums, anschriftMuseums, hoehe, breite, wirdAusgestellt, inRaum);
+                attraktivitaet, kosten, nameMuseums, anschriftMuseums, hoehe, breite);
         this.laenge = laenge;
         this.gewicht = gewicht;
     }

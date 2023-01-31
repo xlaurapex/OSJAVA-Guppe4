@@ -42,8 +42,8 @@ public class Bild extends Kunstwerk
     public Bild(int laufendeNummer, String bezeichnung, String kuenstlername, String jahresangabe, String thema,
      double attraktivitaet, int kosten, String nameMuseums, String anschriftMuseums,
       int hoehe, int breite, double minTemperatur, double maxTemperatur, double minLuftfeuchtigkeit,
-       double maxLuftfeuchtigkeit, boolean wirdAusgestellt,Raum inRaum) {
-        super(laufendeNummer, bezeichnung, kuenstlername, jahresangabe, thema, attraktivitaet, kosten, nameMuseums, anschriftMuseums, hoehe, breite, wirdAusgestellt, inRaum);
+       double maxLuftfeuchtigkeit) {
+        super(laufendeNummer, bezeichnung, kuenstlername, jahresangabe, thema, attraktivitaet, kosten, nameMuseums, anschriftMuseums, hoehe, breite);
         this.minTemperatur = minTemperatur;
         this.maxTemperatur = maxTemperatur;
         this.minLuftfeuchtigkeit = minLuftfeuchtigkeit;

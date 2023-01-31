@@ -17,8 +17,8 @@ public class Kunstwerkverwaltung {
     private String[] KunstwerkTyp = {"Bild", "Kunstgegenstand", "Kunstinstallation"};
 
 
-    public Kunstwerkverwaltung(ArrayList<Kunstwerk> ListeKunstwerk) {
-        this.ListeKunstwerk = ListeKunstwerk;
+    public Kunstwerkverwaltung() {
+        this.ListeKunstwerk = new ArrayList<Kunstwerk>();
     }
 
     /**
