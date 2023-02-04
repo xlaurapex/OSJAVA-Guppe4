@@ -35,26 +35,15 @@ public class Raum
     /**
      * Konstruktor für Objekte der Klasse Raum
      */
-    public Raum()
-    {
-        // Instanzvariable initialisieren
-
-    }
-
-    /**
-     * Konstruktor für Objekte der Klasse Raum
-     */
     public Raum(int lfdNr, String bezeichnung, int laenge, int breite, int hoehe, int tNord, int tOst, int tSued, int tWest)
     {
         this.lfdNr = lfdNr;
         this.bezeichnung = bezeichnung;
-        this.laenge = laenge;
-        this.breite = breite;
+        this.freieFlaecheNord = laenge - tNord;
+        this.freieFlaecheSued = laenge - tSued;
+        this.freieFlaecheWest = breite - tWest;
+        this.freieFlaecheOst = breite - tOst;
         this.hoehe = hoehe;
-        this.tuerNord = tuerNord;
-        this.tuerOst = tuerOst;
-        this.tuerSued = tuerSued;
-        this.tuerWest = tuerWest;
         this.schwerpunktThema = schwerpunktThema;
         this.temperatur = temperatur;
         this.luftfeuchtigkeit = luftfeuchtigkeit;
@@ -146,61 +135,116 @@ public class Raum
     public int getLuftfeuchtigkeit()
     {
         return this.luftfeuchtigkeit;
+
+    }
+
+    /**
+     * Diese Methode ermöglicht das Setzen einer Luftfeuchtigkeit in einem Raum.
+     * 
+     * @param  luftfeuchtigkeit    Luftfeuchtigkeit in einem Raum
+     */
+    public void setFreieFlaecheNord(int pFlaeche)
+    { 
+        this.freieFlaecheNord = pFlaeche;
+    }
+
+    /**
+     * Diese Methode ermöglicht es die Luftfeuchtigkeit in einem Raum auszugeben.
+     * 
+     *  @return     luftfeuchtigkeit eines Raums
+     */
+    public int getFreieFlaecheNord()
+    {
+        return this.freieFlaecheNord;
+    }
+
+    /**
+     * Diese Methode ermöglicht das Setzen einer Luftfeuchtigkeit in einem Raum.
+     * 
+     * @param  luftfeuchtigkeit    Luftfeuchtigkeit in einem Raum
+     */
+    public void setFreieFlaecheSued(int pFlaeche)
+    { 
+        this.freieFlaecheSued = pFlaeche;
+    }
+
+    /**
+     * Diese Methode ermöglicht es die Luftfeuchtigkeit in einem Raum auszugeben.
+     * 
+     *  @return     luftfeuchtigkeit eines Raums
+     */
+    public int getFreieFlaecheSued()
+    {
+        return this.freieFlaecheSued;
+    }
+
+    /**
+     * Diese Methode ermöglicht das Setzen einer Luftfeuchtigkeit in einem Raum.
+     * 
+     * @param  luftfeuchtigkeit    Luftfeuchtigkeit in einem Raum
+     */
+    public void setFreieFlaecheWest(int pFlaeche)
+    { 
+        this.freieFlaecheWest = pFlaeche;
+    }
+
+    /**
+     * Diese Methode ermöglicht es die Luftfeuchtigkeit in einem Raum auszugeben.
+     * 
+     *  @return     luftfeuchtigkeit eines Raums
+     */
+    public int getFreieFlaecheWest()
+    {
+        return this.freieFlaecheWest;
+    }
+
+    /**
+     * Diese Methode ermöglicht das Setzen einer Luftfeuchtigkeit in einem Raum.
+     * 
+     * @param  luftfeuchtigkeit    Luftfeuchtigkeit in einem Raum
+     */
+    public void setFreieFlaecheOst(int pFlaeche)
+    { 
+        this.freieFlaecheOst = pFlaeche;
+    }
+
+    /**
+     * Diese Methode ermöglicht es die Luftfeuchtigkeit in einem Raum auszugeben.
+     * 
+     *  @return     luftfeuchtigkeit eines Raums
+     */
+    public int getFreieFlaecheOst()
+    {
+        return this.freieFlaecheOst;
     }
 
     /**
      * diese Methode aktualisiert die freie Fläche einer Wand, wenn ein Bild hinzugefügt wird
      */
     // SWITCH BENUTZEN, NUR BILD BERÜCKSICHTIGT?
-    public void updateFreieFlaeche(String wand, int breiteBild)
+    public void updateFreieFlaeche(String wand, int breiteBild, int Puffer)
     {
         if (wand == "sued")
         {
-            if (freieFlaecheSued == laenge) {
-                //Abzug der Bildbreite, Türbreite und 1m Puffer auf beiden Seiten
-                freieFlaecheSued = freieFlaecheSued - breiteBild - tuerSued - 200;
-            }
-            else 
-            {
-                //Abzug der Bildbreite und 1m Puffer
-                freieFlaecheSued = freieFlaecheSued - breiteBild - 100;
-            }
+            //Abzug der Bildbreite und Puffer
+            this.setFreieFlaecheSued(getFreieFlaecheSued() - breiteBild - Puffer);
         }
         if (wand == "west")
         {
-            if (freieFlaecheWest == breite) {
-                //Abzug der Bildbreite, Türbreite und 1m Puffer auf beiden Seiten
-                freieFlaecheWest = freieFlaecheWest - breiteBild - tuerWest - 200;
-            }
-            else 
-            {
-                //Abzug der Bildbreite und 1m Puffer
-                freieFlaecheWest = freieFlaecheWest - breiteBild - 100;
-            }
+            //Abzug der Bildbreite und Puffer
+            this.setFreieFlaecheWest(getFreieFlaecheWest() - breiteBild - Puffer);
+
         }
         if (wand == "nord")
         {
-            if (freieFlaecheNord == laenge) {
-                //Abzug der Bildbreite, Türbreite und 1m Puffer auf beiden Seiten
-                freieFlaecheNord = freieFlaecheNord - breiteBild - tuerNord - 200;
-            }
-            else 
-            {
-                //Abzug der Bildbreite und 1m Puffer
-                freieFlaecheNord = freieFlaecheNord - breiteBild - 100;
-            }
+            //Abzug der Bildbreite und Puffer
+            this.setFreieFlaecheNord(getFreieFlaecheNord() - breiteBild - Puffer);
+
         }
         if (wand == "ost")
         {
-            if (freieFlaecheOst == breite) {
-                //Abzug der Bildbreite, Türbreite und 1m Puffer auf beiden Seiten
-                freieFlaecheOst = freieFlaecheOst - breiteBild - tuerOst - 200;
-            }
-            else 
-            {
-                //Abzug der Bildbreite und 1m Puffer
-                freieFlaecheOst = freieFlaecheOst - breiteBild - 100;
-            }
+            //Abzug der Bildbreite und Puffer
+            this.setFreieFlaecheOst(getFreieFlaecheOst() - breiteBild - Puffer);
         }
     }
 
