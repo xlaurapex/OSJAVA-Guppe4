@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.target=Kunstwerkverwaltung
 comment0.text=\r\n\ Die\ Kunstwerkverwaltung\ enth\u00E4lt\ die\ jeweils\ verf\u00FCgbaren\ Kunstwerke\ der\ anderen\ Museen,\ welche\ f\u00FCr\ Ausstellungen\ genutzt\ werden\ k\u00F6nnen.\ Die\ Klasse\ \r\n\ \u201EAusstellungsverwaltung\u201C\ greift\ auf\ diese\ verf\u00FCgbaren\ Kunstwerke\ zu,\ um\ die\ entsprechenden\ Kunstwerke\ f\u00FCr\ eine\ Ausstellung\ einplanen\ zu\ k\u00F6nnen.\r\n\ \r\n\ @author\ Darya\ Bialova\r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
-comment1.params=ListeKunstwerk
-comment1.target=Kunstwerkverwaltung(java.util.ArrayList)
+comment1.params=
+comment1.target=Kunstwerkverwaltung()
 comment2.params=
 comment2.target=java.util.ArrayList\ getKunstwerke()
 comment2.text=\r\n\ Gibt\ die\ Liste\ der\ Kunstwerken\ zur\u00FCck\r\n\r\n\ @return\ List<Kunstwerk>\r\n

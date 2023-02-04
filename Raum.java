@@ -74,6 +74,29 @@ public class Raum
     }
 
     /**
+     * Diese Methode ermöglicht das Setzen einer Bezeichnung in einem Raum.
+     * 
+     * @param     bezeichung für einen Raum
+     */
+
+    public void setHoehe(int pHoehe)
+    {
+        this.hoehe = pHoehe;
+
+    }
+
+    /** 
+     * Diese Methode ermöglicht die Ausgabe einer Bezeichnung eines Objekts der Kalsse
+     * Raum.
+     * 
+     * @return        beichnung eines Raums
+     */
+    public int getHoehe()
+    {
+        return this.hoehe;
+    }
+    
+    /**
      * Diese Methode ermöglicht es einem Objekt Raum ein Thema (Schwerpunkthema)
      * zuzuweisen.
      * 
