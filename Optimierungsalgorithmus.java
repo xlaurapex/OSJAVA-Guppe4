@@ -45,9 +45,10 @@ public class Optimierungsalgorithmus
      * @return        ein Objekt der Klasse Ausstellung wird zurückgegeben, welches die optimierte Zuordnung von Raum zu Kunstwerk beinhaltet
      * Liste mit Kunstwerken -> Kunstwerk hat eine RaumID
      */
-    public static HashMap<Raum,ArrayList<Kunstwerk>> optimiere(ArrayList<Raum> parameterRaeume, ArrayList<Kunstwerk> parameterKunstwerke, String parameterThema)
+    public static ArrayList<Kunstwerk> optimiere(ArrayList<Raum> parameterRaeume, ArrayList<Kunstwerk> parameterKunstwerke, String parameterThema)
     {
         //Prüfe ob es mehr Kunstinstallationen als Räume gibt
+        ArrayList<Kunstwerk> ReturnList = new ArrayList<Kunstwerk>();
         for(Kunstwerk pk : parameterKunstwerke)
         {
             int AnzahlKunstinstallationen = 0;
@@ -70,6 +71,7 @@ public class Optimierungsalgorithmus
             for(Raum fr : parameterRaeume)
             {
                 Ausstellung.put(fr, null);
+                parameterRaeume.remove(fr);
                 for(Kunstwerk pk : parameterKunstwerke)
                 {        
                     //hoehe vergleichen? pk.getHoehe >= fr.getHoehe
@@ -81,7 +83,7 @@ public class Optimierungsalgorithmus
                             // nur in leere räume
                             ArrayList<Kunstwerk> temporaereKunstwerke = Ausstellung.get(fr);
                             //Raum leer?
-                            if(this.getThemenImRaum(temporaereKunstwerke).size() == 0)
+                            if(temporaereKunstwerke.size() == 0)
                             {
                                 temporaereKunstwerke.add(pk);
                                 parameterKunstwerke.remove(pk);
@@ -97,7 +99,7 @@ public class Optimierungsalgorithmus
                             {
                                 //Nord,West, Süd, ost
                                 if(fr.getNord... >= pk.getBreite)
-                                {}else if(fr.getOst... >= pk.getBreite)
+                                {}else if (fr.getOst... >= pk.getBreite)
                                 {
 
                                 }else if(fr.getSued... >= pk.getBreite)
@@ -122,7 +124,6 @@ public class Optimierungsalgorithmus
                             break;
                         }
                     }
-
                 }          
                 if(parameterKunstwerke.size() == 0)
                 {
@@ -130,7 +131,7 @@ public class Optimierungsalgorithmus
                 }
             }
         }
-        return Ausstellung;
+        return ReturnList;
     }
 
     private double berechneThemaInAllenRaeumen()
