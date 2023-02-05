@@ -26,16 +26,15 @@ public abstract class Kunstwerk
  
 
     
-    
     /**
- * Kontruktor für Objekte der abstrakten Klasse Kunstwerk
- */     
-    
+     * Kontruktor für Objekte der abstrakten Klasse Kunstwerk
+     */     
+
     public Kunstwerk (int laufendeNummer, String bezeichnung,
-                String kuenstlername, String jahresangabe,
-                String thema, double attraktivitaet,
-                int kosten, String nameMuseums,
-                String anschriftMuseums, int hoehe, int breite) {
+    String kuenstlername, String jahresangabe,
+    String thema, double attraktivitaet,
+    int kosten, String nameMuseums,
+    String anschriftMuseums, int hoehe, int breite) {
         this.laufendeNummer = laufendeNummer;
         this.bezeichnung = bezeichnung;
         this.kuenstlername = kuenstlername;
@@ -48,122 +47,123 @@ public abstract class Kunstwerk
         this.hoehe = hoehe;
         this.breite = breite;
         //this.wirdAusgestellt = wirdAusgestellt;
-        //this.inRaum = inRaum;
+        this.inRaum = null;
     }
 
     /**
- * Getters and setters - da wir alle Attributen als private deklariert haben, brauchen wir jetzt getters und setters, um den Zugang zu den Attributen zu gewärhleisten
- */
+     * Getters and setters - da wir alle Attributen als private deklariert haben, brauchen wir jetzt getters und setters, um den Zugang zu den Attributen zu gewärhleisten
+     */
 
-public int getLaufendeNummer() {
-    return laufendeNummer;}
+    public int getLaufendeNummer() {
+        return laufendeNummer;}
 
-public void setLaufendeNummer(int laufendeNummer) {
-    this.laufendeNummer = laufendeNummer;}
+    public void setLaufendeNummer(int laufendeNummer) {
+        this.laufendeNummer = laufendeNummer;}
 
-public String getBezeichnung() {
-    return bezeichnung;}
+    public String getBezeichnung() {
+        return bezeichnung;}
 
-public void setBezeichnung(String bezeichnung) {
-    this.bezeichnung = bezeichnung;}
+    public void setBezeichnung(String bezeichnung) {
+        this.bezeichnung = bezeichnung;}
 
-public String getKuenstlername() {
-    return kuenstlername;}
+    public String getKuenstlername() {
+        return kuenstlername;}
 
-public void setKuenstlername(String kuenstlername) {
-    this.kuenstlername = kuenstlername;}
+    public void setKuenstlername(String kuenstlername) {
+        this.kuenstlername = kuenstlername;}
 
-public String getJahresangabe() {
-    return jahresangabe;}
+    public String getJahresangabe() {
+        return jahresangabe;}
 
-public void setJahresangabe(String jahresangabe) {
-    this.jahresangabe = jahresangabe;}
+    public void setJahresangabe(String jahresangabe) {
+        this.jahresangabe = jahresangabe;}
 
-public String getThema() {
-    return thema;}
+    public String getThema() {
+        return thema;}
 
-public void setThema(String thema) {
-    this.thema = thema;}
+    public void setThema(String thema) {
+        this.thema = thema;}
 
-public double getAttraktivitaet() {
-    return attraktivitaet;}
+    public double getAttraktivitaet() {
+        return attraktivitaet;}
 
-public void setAttraktivitaet(double attraktivitaet) {
-    this.attraktivitaet = attraktivitaet;}
+    public void setAttraktivitaet(double attraktivitaet) {
+        this.attraktivitaet = attraktivitaet;}
 
-public int getKosten() {
-    return kosten;}
+    public int getKosten() {
+        return kosten;}
 
-public void setKosten(int kosten) {
-    this.kosten = kosten;}
+    public void setKosten(int kosten) {
+        this.kosten = kosten;}
 
-public String getNameMuseums() {
-    return nameMuseums;}
+    public String getNameMuseums() {
+        return nameMuseums;}
 
-public void setNameMuseums(String nameMuseums) {
-    this.nameMuseums = nameMuseums;}
+    public void setNameMuseums(String nameMuseums) {
+        this.nameMuseums = nameMuseums;}
 
-public String getAnschriftMuseums() {
-    return anschriftMuseums;}
+    public String getAnschriftMuseums() {
+        return anschriftMuseums;}
 
-public void setAnschriftMuseums(String anschriftMuseums) {
-    this.anschriftMuseums = anschriftMuseums;}
+    public void setAnschriftMuseums(String anschriftMuseums) {
+        this.anschriftMuseums = anschriftMuseums;}
 
-public int getHoehe() {
-    return hoehe;}
+    public int getHoehe() {
+        return hoehe;}
 
-public void setHoehe(int hoehe) {
-    this.hoehe = hoehe;}
+    public void setHoehe(int hoehe) {
+        this.hoehe = hoehe;}
 
-public int getBreite() {
-    return breite;}
+    public int getBreite() {
+        return breite;}
 
-public void setBreite(int breite) {
-    this.breite = breite;
-}
+    public void setBreite(int breite) {
+        this.breite = breite;
+    }
 
-public boolean getWirdAusgestellt() {
-    return wirdAusgestellt;}
+    public boolean getWirdAusgestellt() {
+        return wirdAusgestellt;}
 
-public void setWirdAusgestellt(boolean wirdAusgestellt) {
-    this.wirdAusgestellt = wirdAusgestellt;
-}
+    public void setWirdAusgestellt(boolean wirdAusgestellt) {
+        this.wirdAusgestellt = wirdAusgestellt;
+    }
 
-public Raum getInRaum() {
-    return inRaum;}
+    public Raum getInRaum() {
+        return inRaum;}
+
 
 public void setinRaum(Raum inRaum) {
     this.inRaum = inRaum;
     
 }
 
+
+
     /**
- * Representiert die Klasse als String
- */
+     * Representiert die Klasse als String
+     */
     public String toString() {
         return "laufendeNummer=" + laufendeNummer +
-                ", bezeichnung='" + bezeichnung + '\'' +
-                ", kuenstlername='" + kuenstlername + '\'' +
-                ", jahresangabe=" + jahresangabe +
-                ", thema='" + thema + '\'' +
-                ", attraktivitaet=" + attraktivitaet +
-                ", kosten=" + kosten +
-                ", nameMuseums='" + nameMuseums + '\'' +
-                ", anschriftMuseums='" + anschriftMuseums + '\'' +
-                ", hoehe=" + hoehe +
-                ", breite=" + breite +
-                '}';
+        ", bezeichnung='" + bezeichnung + '\'' +
+        ", kuenstlername='" + kuenstlername + '\'' +
+        ", jahresangabe=" + jahresangabe +
+        ", thema='" + thema + '\'' +
+        ", attraktivitaet=" + attraktivitaet +
+        ", kosten=" + kosten +
+        ", nameMuseums='" + nameMuseums + '\'' +
+        ", anschriftMuseums='" + anschriftMuseums + '\'' +
+        ", hoehe=" + hoehe +
+        ", breite=" + breite +
+        '}';
     }
-    
+
     /**
- * Zuordnung des Kunstwerks zu einem Raum in der Ausstellung aufheben (Zurücksetzen der zugehörigen Attribute)
- */
+     * Zuordnung des Kunstwerks zu einem Raum in der Ausstellung aufheben (Zurücksetzen der zugehörigen Attribute)
+     */
     public void clearZuordnung()
     {
         wirdAusgestellt = false;
         inRaum = null; 
     }
-    
 
-    }
-
+}
