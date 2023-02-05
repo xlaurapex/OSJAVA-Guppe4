@@ -102,7 +102,34 @@ public class Ausstellung
      */
     public void sortNachRaum()
     {
-        //Collections.sort(ausstellung, Comparator.comparing(Kunstwerk::getInRaum));
+            //Collections.sort(ausstellung, Comparator.comparing(Kunstwerk::getInRaumNr));
+            ArrayList<Kunstwerk> tmp = new ArrayList<Kunstwerk>();
+            Raum tmpRaum = null;
+            ArrayList<Raum> r = new ArrayList<Raum>(); 
+             for(Kunstwerk kw: ausstellung)
+            {
+                if (tmpRaum == null)
+                {
+                    tmpRaum = kw.getInRaum();
+                }
+                else if(r.contains(kw.getInRaum()) == true){
+                    continue;
+                }
+                else if(r.contains(kw.getInRaum()) == false){
+                    tmpRaum = kw.getInRaum();
+                }
+                
+                for (Kunstwerk kw2: ausstellung)
+                {
+                    if(kw2.getInRaum() == tmpRaum)
+                    {
+                        tmp.add(kw2);
+                    }
+                }
+                r.add(tmpRaum);
+            }
+            
+            ausstellung = tmp;
     }
     
     

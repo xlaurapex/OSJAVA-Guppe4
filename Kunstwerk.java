@@ -23,6 +23,7 @@ public abstract class Kunstwerk
     //neue Attribute
     private boolean wirdAusgestellt;
     private Raum inRaum;
+ 
 
     
     
@@ -133,6 +134,7 @@ public Raum getInRaum() {
 
 public void setinRaum(Raum inRaum) {
     this.inRaum = inRaum;
+    
 }
 
     /**

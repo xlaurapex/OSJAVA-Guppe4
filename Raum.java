@@ -61,6 +61,18 @@ public class Raum
 
     }
 
+        /** 
+     * Diese Methode ermöglicht die Ausgabe der laufenden Nummer eines Objekts der Klasse
+     * Raum.
+     * 
+     * @return        beichnung eines Raums
+     */
+    public int getLfdNr()
+    {
+        return this.lfdNr;
+        
+    }
+    
     /**
      * Diese Methode ermöglicht das Setzen einer Bezeichnung in einem Raum.
      * 
