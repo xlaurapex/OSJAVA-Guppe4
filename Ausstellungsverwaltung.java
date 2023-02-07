@@ -43,24 +43,24 @@ public class Ausstellungsverwaltung
         Scanner in = new Scanner(System.in);
         // Abfragen der Eingabedateien
         System.out.println("Bitte geben Sie die Input-Datei für die Räume ein");
-        //String raumdatei = in.next();
+        String raumdatei = in.next();
         Datei d = new Datei();
         //Test-/Defaultpfad
-        Raumverwaltung rv = d.verarbeiteRaumDatei("raeume.csv");
-        //Raumverwaltung rv = d.verarbeiteRaumDatei(raumdatei);
+        //Raumverwaltung rv = d.verarbeiteRaumDatei("raeume.csv");
+        Raumverwaltung rv = d.verarbeiteRaumDatei(raumdatei);
         //Test-/Defaultpfad
         System.out.println("Bitte geben Sie die Input-Datei für die Kunstwerke ein");
-        //String kunstwerksdatei = in.next();
-        Kunstwerkverwaltung kv = d.verarbeiteKunstwerkeDatei("kunstwerke.csv");
-        //Kunstwerkverwaltung kv = d.verarbeiteKunstwerkeDatei(kunstwerksdatei);
+        String kunstwerksdatei = in.next();
+        //Kunstwerkverwaltung kv = d.verarbeiteKunstwerkeDatei("kunstwerke.csv");
+        Kunstwerkverwaltung kv = d.verarbeiteKunstwerkeDatei(kunstwerksdatei);
         // dadurch Erstellung der Raüme und Kunstwerke
                 
         // Eingabe des Wunschthemas für die Ausstellung (und Kostenobergrenze)
         System.out.println("Bitte geben Sie Ihr Wunschthema für die bevorstehende Ausstellung ein!");
-        //String thema = in.next();
+        String thema = in.next();
         
         System.out.println("Bitte geben Sie Ihre Kostenobergrenze für die bevorstehende Ausstellung ein!");
-        //String kostengrenze = in.next();
+        String kostengrenze = in.next();
         // Starten des Optimierungsalgorithmus (mit Eingabe der Liste der Kunstwerke, der Liste der Räume und der Themenwahl)
         
         // dadurch Erzeugung der Ausstellung (Zuordnung Raum und Kunstwerke)

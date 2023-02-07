@@ -445,6 +445,8 @@ public class Datei
         writeLine("Luftfeuchtigkeit : "+aktRaum.getLuftfeuchtigkeit());
         writeLine("");
         
+        //Daten des ersten Raums in die Datei schreiben
+        //alle Kunstwerke des ersten Raums auflisten (bei jedem Kunstwerk Raum mit akt. Raum vergleichen)
         for(Kunstwerk kw: a)
         {
             //wenn neuer Raum, Raumdetails listen
@@ -479,8 +481,6 @@ public class Datei
             }
             
         }
-        //Daten des ersten Raums in die Datei schreiben
-        //alle Kunstwerke des ersten Raums auflisten (bei jedem Kunstwerk Raum mit akt. Raum vergleichen)
         
         //Erzeuge HTML-Template Ende
         writeLine("</body>");
