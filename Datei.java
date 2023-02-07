@@ -453,16 +453,18 @@ public class Datei
             } 
             //schreibe einzelne Objekte in die Ausgabedatei
             if (kw instanceof Bild){
-                writeLine("<h4>Bild: "+kw.getBezeichnung()+"</h4>");
-                //writeLine("Wand: "+kw.getWand());
-                //writeLine("Aufhängung in Zentimetern von der linken Wandseite: "+kw.getXAufhaengung());
+                Bild bild = (Bild) kw;
+                writeLine("<h4>Bild: "+bild.getBezeichnung()+"</h4>");
+                writeLine("Wand: "+bild.getWand());
+                writeLine("Aufhängung in Zentimetern von der linken Wandseite: "+bild.getXAufhaengung());
                 writeLine("");
             }
             
             if (kw instanceof Kunstgegenstand){
-                writeLine("<h4>Kunstgegenstand: "+kw.getBezeichnung()+"</h4>");
-                //writeLine("Platzierung horizontal im Raum in cm ausgehend von der Nordwest-Ecke: "+kw.getXPlatzierung());
-                //writeLine("Platzierung vertikal im Raum in cm ausgehend von der Nordwest-Ecke: "+kw.getYPlatzierung());
+                Kunstgegenstand kg = (Kunstgegenstand) kw;
+                writeLine("<h4>Kunstgegenstand: "+kg.getBezeichnung()+"</h4>");
+                writeLine("Platzierung horizontal im Raum in cm ausgehend von der Nordwest-Ecke: "+kg.getXPlatzierung());
+                writeLine("Platzierung vertikal im Raum in cm ausgehend von der Nordwest-Ecke: "+kg.getYPlatzierung());
                 writeLine("");
             }
             
