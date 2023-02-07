@@ -75,11 +75,6 @@ public class Ausstellungsverwaltung
         b1.setinRaum(r1);
         b1.setXAufhaengung(100);
         b1.setYAufhaengung(100);
-        Bild b2 = new Bild(1, "Bild2", "künstler2","2002er","thema2", 52, 5002,"nMuseum2", "aMuseum2", 20, 40, 5,30,50,60);
-        b1.setWirdAusgestellt(true);
-        b1.setinRaum(r2);
-        b1.setXAufhaengung(102);
-        b1.setYAufhaengung(120);
         Kunstgegenstand g1 = new Kunstgegenstand(2, "Kunstgegenstand2", "künstler2","2002er","thema2", 52, 5002,"aMuseum2", "aMuseum2",22, 42, 150,60);
         g1.setWirdAusgestellt(true);
         g1.setinRaum(r1);
@@ -88,9 +83,7 @@ public class Ausstellungsverwaltung
         
         ArrayList<Kunstwerk> a = new ArrayList<Kunstwerk>();
         a.add(b1);
-        a.add(b2);
         a.add(g1);
-        
 
         Ausstellung ausstellung = new Ausstellung(a, "Rokoko");
         
