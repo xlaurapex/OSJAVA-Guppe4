@@ -414,7 +414,7 @@ public class Datei
         ausstellung.sortNachRaum();
         //Get der Liste der Ausstellung
         ArrayList<Kunstwerk> a = ausstellung.getAusstellung();
-        Raum aktRaum = null;
+        Raum aktRaum = a.get(0).getInRaum();
                        
         //die Eingabewerte sind eine Liste der Objekte Kunstwerke (bzw. der Unterklassen)
         //Sortieren der Objekte nach Ausstellungsraum
@@ -440,6 +440,11 @@ public class Datei
         writeLine("<h1>VAWi-Museum - Ausstellungsplan</h1>");
         writeLine("Im folgenden wird werden die einzelnen Ausstellungsstücke nach den Räumen sortiert aufgelistet und die notwendigen Raum-Paramter angegeben");
         
+        writeLine("<h2>Raum: "+aktRaum.getBezeichnung()+"</h2>");
+        writeLine("Temperatur       : "+aktRaum.getTemperatur());
+        writeLine("Luftfeuchtigkeit : "+aktRaum.getLuftfeuchtigkeit());
+        writeLine("");
+        
         for(Kunstwerk kw: a)
         {
             //wenn neuer Raum, Raumdetails listen
@@ -452,17 +457,19 @@ public class Datei
                 
             } 
             //schreibe einzelne Objekte in die Ausgabedatei
-            if (kw instanceof Bild){
-                writeLine("<h4>Bild: "+kw.getBezeichnung()+"</h4>");
-                //writeLine("Wand: "+kw.getWand());
-                //writeLine("Aufhängung in Zentimetern von der linken Wandseite: "+kw.getXAufhaengung());
+                        if (kw instanceof Bild){
+                Bild bild = (Bild) kw;
+                writeLine("<h4>Bild: "+bild.getBezeichnung()+"</h4>");
+                writeLine("Wand: "+bild.getWand());
+                writeLine("Aufhängung in Zentimetern von der linken Wandseite: "+bild.getXAufhaengung());
                 writeLine("");
             }
             
             if (kw instanceof Kunstgegenstand){
-                writeLine("<h4>Kunstgegenstand: "+kw.getBezeichnung()+"</h4>");
-                //writeLine("Platzierung horizontal im Raum in cm ausgehend von der Nordwest-Ecke: "+kw.getXPlatzierung());
-                //writeLine("Platzierung vertikal im Raum in cm ausgehend von der Nordwest-Ecke: "+kw.getYPlatzierung());
+                Kunstgegenstand kg = (Kunstgegenstand) kw;
+                writeLine("<h4>Kunstgegenstand: "+kg.getBezeichnung()+"</h4>");
+                writeLine("Platzierung horizontal im Raum in cm ausgehend von der Nordwest-Ecke: "+kg.getXPlatzierung());
+                writeLine("Platzierung vertikal im Raum in cm ausgehend von der Nordwest-Ecke: "+kg.getYPlatzierung());
                 writeLine("");
             }
             

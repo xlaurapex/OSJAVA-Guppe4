@@ -1,4 +1,5 @@
 Laufende Nummer: Bezeichnung, Name des Museums, Anschrift des Museums, Kosten
 2: Kunstgegenstand2, aMuseum2, aMuseum2, 5002
 1: Bild1, nMuseum, aMuseum, 5000
-Gesamtkosten:10002
+1: Bild2, nMuseum, aMuseum, 5000
+Gesamtkosten:15002
