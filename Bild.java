@@ -53,61 +53,114 @@ public class Bild extends Kunstwerk
         this.yAufhaengung = 0; 
     }
 
-        /**
-     * Getters and setters - da wir alle Attributen als private deklariert haben, brauchen wir jetzt getters und setters, um den Zugang zu den Attributen zu gewärhleisten
-         */
+    /**
+     * Da das Attribut MinTemperatur als private deklariert wurde, brauchen wir Getter Methode, um die Objektvariable abzurufen
+     */
+    
     public double getMinTemperatur() {
         return minTemperatur;
     }
 
+    /**
+     * Da das Attribut MinTemperatur als private deklariert wurde, brauchen wir Setter Methode, die die Veränderung der Objektvariablen ermöglicht
+     */
+    
     public void setMinTemperatur(double minTemperatur) {
         this.minTemperatur = minTemperatur;
     }
 
+    /**
+     * Da das Attribut MaxTemperatur als private deklariert wurde, brauchen wir Getter Methode, um die Objektvariable abzurufen
+     */
+    
     public double getMaxTemperatur() {
         return maxTemperatur;
     }
 
+    /**
+     * Da das Attribut MaxTemperatur als private deklariert wurde, brauchen wir Setter Methode, die die Veränderung der Objektvariablen ermöglicht
+     */
+    
     public void setMaxTemperatur(double maxTemperatur) {
         this.maxTemperatur = maxTemperatur;
     }
 
+    /**
+     * Da das Attribut MinLuftfeuchtigkeit als private deklariert wurde, brauchen wir Getter Methode, um die Objektvariable abzurufen
+     */
+    
     public double getMinLuftfeuchtigkeit() {
         return minLuftfeuchtigkeit;
     }
 
+    /**
+     * Da das Attribut MinLuftfeuchtigkeit als private deklariert wurde, brauchen wir Setter Methode, die die Veränderung der Objektvariablen ermöglicht
+     */
+    
     public void setMinLuftfeuchtigkeit(double minLuftfeuchtigkeit) {
         this.minLuftfeuchtigkeit = minLuftfeuchtigkeit;
     }
 
+    /**
+     * Da das Attribut MaxLuftfeuchtigkeit als private deklariert wurde, brauchen wir Getter Methode, um die Objektvariable abzurufen
+     */
+    
     public double getMaxLuftfeuchtigkeit() {
         return maxLuftfeuchtigkeit;
     }
 
+    /**
+     * Da das Attribut MaxLuftfeuchtigkeit als private deklariert wurde, brauchen wir Setter Methode, die die Veränderung der Objektvariablen ermöglicht
+     */
+    
     public void setMaxLuftfeuchtigkeit(double maxLuftfeuchtigkeit) {
         this.maxLuftfeuchtigkeit = maxLuftfeuchtigkeit;
     }
+    
+    /**
+     * Da das Attribut XAufhaengung als private deklariert wurde, brauchen wir Getter Methode, um die Objektvariable abzurufen
+     */
     
     public int getXAufhaengung() {
         return xAufhaengung;
     }
 
+    /**
+     * Da das Attribut XAufhaengung als private deklariert wurde, brauchen wir Setter Methode, die die Veränderung der Objektvariablen ermöglicht
+     */
+    
     public void setXAufhaengung(int xAufhaengung) {
         this.xAufhaengung = xAufhaengung;
     }
+    
+    /**
+     * Da das Attribut YAufhaengung als private deklariert wurde, brauchen wir Getter Methode, um die Objektvariable abzurufen
+     */
     
     public int getYAufhaengung() {
         return xAufhaengung;
     }
 
+    /**
+     * Da das Attribut YAufhaengung als private deklariert wurde, brauchen wir Setter Methode, die die Veränderung der Objektvariablen ermöglicht
+     */
+    
     public void setYAufhaengung(int YAufhaengung) {
         this.yAufhaengung = yAufhaengung;
     }
     
-        public String getWand() {
+    /**
+     * Da das Attribut Wand als private deklariert wurde, brauchen wir Getter Methode, um die Objektvariable abzurufen
+     */
+    
+    public String getWand() {
         return wand;
     }
 
+    /**
+     * Da das Attribut Wand als private deklariert wurde, brauchen wir Setter Methode, die die Veränderung der Objektvariablen ermöglicht
+     */
+    
     public void setWand(String wand) {
         this.wand = wand;
     }
