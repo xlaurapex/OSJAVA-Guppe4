@@ -1,5 +1,7 @@
 Laufende Nummer: Bezeichnung, Name des Museums, Anschrift des Museums, Kosten
-2: Kunstgegenstand2, aMuseum2, aMuseum2, 5002
-1: Bild1, nMuseum, aMuseum, 5000
-1: Bild2, nMuseum, aMuseum, 5000
-Gesamtkosten:15002
+100: Vase, Bode-Museum, Am Kupfergraben/10117 Berlin/Deutschland, 3638
+97: Portrait of a German Officer, Museo del Prado, C. de Ruiz de Alarcón 23/28014 Madrid/Spanien, 4265
+99: Form in Contortion over Thread (Forme en Contorsion sur Trame), National Gallery, Trafalgar Square/London WC2N 5DN/Vereinigtes Königreich, 4428
+98: Nebula, Rijksmuseum Amsterdam, Museumstraat 1/1071 XX Amsterdam/Niederlande, 3825
+96: Woman with a Cat, The British Museum, Great Russell St/London WC1B 3DG/Vereinigtes Königreich, 3055
+Gesamtkosten:19211
