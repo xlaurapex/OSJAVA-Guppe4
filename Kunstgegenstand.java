@@ -28,37 +28,66 @@ public class Kunstgegenstand extends Kunstwerk {
         this.gewicht = gewicht;
     }
 
-        /**
-     * Getters and setters - da wir alle Attributen als private deklariert haben, brauchen wir jetzt getters und setters, um den Zugang zu den Attributen zu gewärhleisten
+     /**
+     * Da das Attribut Laenge als private deklariert wurde, brauchen wir Getter Methode, um die Objektvariable abzurufen
      */
+    
     public int getLaenge() {
         return laenge;
     }
 
+    /**
+     * Da das Attribut Laenge als private deklariert wurde, brauchen wir Setter Methode, die die Veränderung der Objektvariablen ermöglicht
+     */
+    
     public void setLaenge(int laenge) {
         this.laenge = laenge;
     }
 
+    /**
+     * Da das Attribut Gewicht als private deklariert wurde, brauchen wir Getter Methode, um die Objektvariable abzurufen
+     */
+    
     public double getGewicht() {
         return gewicht;
     }
 
+    /**
+     * Da das Attribut Gewicht als private deklariert wurde, brauchen wir Setter Methode, die die Veränderung der Objektvariablen ermöglicht
+     */
+    
     public void setGewicht(double gewicht) {
         this.gewicht = gewicht;
     }
+    
+    /**
+     * Da das Attribut XPlatzierung als private deklariert wurde, brauchen wir Getter Methode, um die Objektvariable abzurufen
+     */
     
     public int getXPlatzierung() {
         return xPlatzierung;
     }
 
+    /**
+     * Da das Attribut XPlatzierung als private deklariert wurde, brauchen wir Setter Methode, die die Veränderung der Objektvariablen ermöglicht
+     */
+    
     public void setXPlatzierung(int xPlatzierung) {
         this.xPlatzierung = xPlatzierung;
     }
+    
+    /**
+     * Da das Attribut YPlatzierung als private deklariert wurde, brauchen wir Getter Methode, um die Objektvariable abzurufen
+     */
     
     public int getYPlatzierung() {
         return yPlatzierung;
     }
 
+    /**
+     * Da das Attribut YPlatzierung als private deklariert wurde, brauchen wir Setter Methode, die die Veränderung der Objektvariablen ermöglicht
+     */
+    
     public void setYPlatzierung(int yPlatzierung) {
         this.yPlatzierung = yPlatzierung;
     }

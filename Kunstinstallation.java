@@ -24,21 +24,35 @@ public Kunstinstallation(int laufendeNummer, String bezeichnung, String kuenstle
         this.gewicht = gewicht;
     }
 
-            /**
- * Getters and setters - da wir alle Attributen als private deklariert haben, brauchen wir jetzt getters und setters, um den Zugang zu den Attributen zu gewärhleisten
- */
-public int getLaenge() {
+    /**
+     * Da das Attribut Laenge als private deklariert wurde, brauchen wir Getter Methode, um die Objektvariable abzurufen
+     */
+    
+    public int getLaenge() {
         return laenge;
     }
 
+    /**
+     * Da das Attribut Laenge als private deklariert wurde, brauchen wir Setter Methode, die die Veränderung der Objektvariablen ermöglicht
+     */
+    
     public void setLaenge(int laenge) {
         this.laenge = laenge;
     }
 
+    /**
+     * Da das Attribut Gewicht als private deklariert wurde, brauchen wir Getter Methode, um die Objektvariable abzurufen
+     */
+    
     public double getGewicht() {
         return gewicht;
     }
 
+    
+    /**
+     * Da das Attribut Gewicht als private deklariert wurde, brauchen wir Setter Methode, die die Veränderung der Objektvariablen ermöglicht
+     */
+    
     public void setGewicht(double gewicht) {
         this.gewicht = gewicht;
     }
