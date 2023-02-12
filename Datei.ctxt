@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Datei
-comment0.text=\r\n\ Die\ Klasse\ Datei\ dient\ dem\ Einlesen\ und\ Ausgeben\ von\ Dateien\ und\ bietet\ Standardfunk-tionen\ zur\ Dateiverarbeitung.\ \r\n\ Diese\ wird\ durch\ die\ Klassen\ \u201EAusstellungsverwaltung\u201C\ (z.B.\ Erstellen\ des\ Ausstellungsf\u00FChrers),\ \r\n\ Raumverwaltung\ (z.B.\ Einlesen\ der\ Raumdatei)\ und\ Kunstwerksverwaltung\ (z.B.\ Einlesen\ der\ verf\u00FCgbaren\ Kunstwerke)\ verwendet.\r\n\ \r\n\ @author\ Laura\ Perlbach\r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
+comment0.text=\r\n\ Die\ Klasse\ Datei\ dient\ dem\ Einlesen\ und\ Ausgeben\ von\ Dateien\ und\ bietet\ Standardfunktionen\ zur\ Dateiverarbeitung.\ \r\n\ Diese\ wird\ durch\ die\ Klassen\ \u201EAusstellungsverwaltung\u201C\ (z.B.\ Erstellen\ des\ Ausstellungsf\u00FChrers),\ \r\n\ Raumverwaltung\ (z.B.\ Einlesen\ der\ Raumdatei)\ und\ Kunstwerksverwaltung\ (z.B.\ Einlesen\ der\ verf\u00FCgbaren\ Kunstwerke)\ verwendet.\r\n\ \r\n\ @author\ Laura\ Perlbach\r\n\ @version\ 12.02.2023\r\n
 comment1.params=
 comment1.target=Datei()
 comment1.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Datei\r\n\ test\r\n
@@ -13,6 +13,8 @@ comment11.text=\r\n\ Schlie\u00DFt\ eine\ Ausgabedatei.\r\n\ \r\n
 comment12.params=in_str
 comment12.target=void\ writeLine(java.lang.String)
 comment12.text=\r\n\ Schreibt\ einen\ String\ als\ Zeile\ in\ eine\ Datei.\r\n\ \r\n\ @param\ \ in_str\ Zeichenkette\ die\ in\ die\ Datei\ geschrieben\ \r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ werden\ soll.\r\n
+comment13.params=
+comment13.target=int\ errorMessage()
 comment2.params=in_datei
 comment2.target=Kunstwerkverwaltung\ verarbeiteKunstwerkeDatei(java.lang.String)
 comment2.text=\r\n\ mit\ der\ Methode\ verarbeiteKunstwerkeDatei()\ werden\ die\ Eingabedateien\ f\u00FCr\ Kunstwerke\ eingelesen,\ \r\n\ verarbeitet\ und\ entsprechende\ Objekte\ der\ Klassen\ "Bild","Kunstgegenstand"\ und\ "Kunstinstallation"\ erzeugt\ \r\n\ \r\n\ @param\ \ in_datei\ \ \ \ als\ Eingabeparameter\ f\u00FCr\ die\ Methode\ ist\ der\ Dateipfad\ erforderlich,\ wo\ die\ einzulesende\ Datei\ zu\ finden\ ist\r\n\ @return\ \ \ \ \ \ \ \ die\ Methode\ gibt\ ein\ Objekt\ Kunstwerkverwaltung\ zur\u00FCck\ mit\ den\ eingelesenen\ Kunstwerken\r\n\ @author\ \ Laura\ Perlbach\r\n
@@ -37,4 +39,4 @@ comment8.text=\r\n\ Schlie\u00DFt\ eine\ Eingabedatei.\r\n\ \r\n\ @exception\ IO
 comment9.params=
 comment9.target=java.lang.String\ readLine()
 comment9.text=\r\n\ Liest\ eine\ Zeile\ aus\ einer\ Eingabedatei.\r\n\ \r\n\ @return\ ausgelesene\ Zeile.\r\n\ @exception\ IOException\ Wenn\ beim\ Zugriff\ auf\ die\ Datei\ ein\ Fehler\ aufgetreten\ ist\r\n
-numComments=13
+numComments=14
