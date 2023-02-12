@@ -444,8 +444,7 @@ public class Datei
         
         //Daten des ersten Raums in die Datei schreiben
         writeLine("<h2>Raum: "+aktRaum.getBezeichnung()+"</h2>");
-        writeLine("Temperatur       : "+aktRaum.getTemperatur());
-        writeLine("Luftfeuchtigkeit : "+aktRaum.getLuftfeuchtigkeit());
+
         writeLine("");
         
         //alle Kunstwerke des ersten Raums auflisten (bei jedem Kunstwerk Raum mit akt. Raum vergleichen)
@@ -456,8 +455,7 @@ public class Datei
             if (aktRaum != kw.getInRaum()){
                 aktRaum = kw.getInRaum();
                 writeLine("<h2>Raum: "+aktRaum.getBezeichnung()+"</h2>");
-                writeLine("Temperatur       : "+aktRaum.getTemperatur());
-                writeLine("Luftfeuchtigkeit : "+aktRaum.getLuftfeuchtigkeit());
+
                 writeLine("");
                 
             } 
