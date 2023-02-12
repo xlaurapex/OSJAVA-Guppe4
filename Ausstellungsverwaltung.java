@@ -42,24 +42,24 @@ public class Ausstellungsverwaltung
     {
         Scanner in = new Scanner(System.in);
         // Abfragen der Eingabedateien
-        System.out.println("Bitte geben Sie die Input-Datei für die Räume ein");
+        System.out.println("Bitte geben Sie die Input-Datei für die Räume ein (Format: raeume.csv)");
         String raumdatei = in.next();
         Datei d = new Datei();
         //Test-/Defaultpfad
         //Raumverwaltung rv = d.verarbeiteRaumDatei("raeume.csv");
         Raumverwaltung rv = d.verarbeiteRaumDatei(raumdatei);
         //Test-/Defaultpfad
-        System.out.println("Bitte geben Sie die Input-Datei für die Kunstwerke ein");
+        System.out.println("Bitte geben Sie die Input-Datei für die Kunstwerke ein (Format: kunstwerke.csv)");
         String kunstwerksdatei = in.next();
         //Kunstwerkverwaltung kv = d.verarbeiteKunstwerkeDatei("kunstwerke.csv");
         Kunstwerkverwaltung kv = d.verarbeiteKunstwerkeDatei(kunstwerksdatei);
         // dadurch Erstellung der Raüme und Kunstwerke
 
         // Eingabe des Wunschthemas für die Ausstellung (und Kostenobergrenze)
-        System.out.println("Bitte geben Sie Ihr Wunschthema für die bevorstehende Ausstellung ein!");
+        System.out.println("Bitte geben Sie Ihr Wunschthema für die bevorstehende Ausstellung ein! (Format: Rokoko)");
         String thema = in.next();
 
-        System.out.println("Bitte geben Sie Ihre Kostenobergrenze für die bevorstehende Ausstellung ein!");
+        System.out.println("Bitte geben Sie Ihre Kostenobergrenze für die bevorstehende Ausstellung ein! (Format: 15000)");
         String kostengrenze = in.next();
         // Starten des Optimierungsalgorithmus (mit Eingabe der Liste der Kunstwerke, der Liste der Räume und der Themenwahl)
 
@@ -88,12 +88,13 @@ public class Ausstellungsverwaltung
         // Ausstellung ausstellung = new Ausstellung(a, "Rokoko");
 
         //TESTING!!!!!!!!!!!!!!
-        ArrayList<Kunstwerk> ZugeordneteKunstwerke = Optimierungsalgorithmus.optimiere(rv.getRaeume(), kv.getKunstwerke(),"Stillleben");
-        Ausstellung ausstellung = new Ausstellung(ZugeordneteKunstwerke, "Stillleben");
+        ArrayList<Kunstwerk> ZugeordneteKunstwerke = Optimierungsalgorithmus.optimiere2(rv.getRaeume(), kv.getKunstwerke(),thema,Integer.parseInt(kostengrenze));
+        Ausstellung ausstellung = new Ausstellung(ZugeordneteKunstwerke, thema);
         d.erzeugeZuordnungsDatei(ausstellung);
         d.erzeugeLeihDatei(ausstellung, "output/Leihdatei.txt");
         d.erzeugeMuseumsführer(ausstellung);
         //TESTING!!!!!!!!!!!!!!
+        d.errorMessage();
         System.out.println("Vielen Dank! Bitte finden Sie Ihre Ausgabedateien im Output-Ordner.");
     }
 }
