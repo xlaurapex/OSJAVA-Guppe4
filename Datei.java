@@ -7,17 +7,16 @@ import java.util.Collections;
 
 
 /**
- * Die Klasse Datei dient dem Einlesen und Ausgeben von Dateien und bietet Standardfunk-tionen zur Dateiverarbeitung. 
+ * Die Klasse Datei dient dem Einlesen und Ausgeben von Dateien und bietet Standardfunktionen zur Dateiverarbeitung. 
  * Diese wird durch die Klassen „Ausstellungsverwaltung“ (z.B. Erstellen des Ausstellungsführers), 
  * Raumverwaltung (z.B. Einlesen der Raumdatei) und Kunstwerksverwaltung (z.B. Einlesen der verfügbaren Kunstwerke) verwendet.
  * 
  * @author Laura Perlbach
- * @version (eine Versionsnummer oder ein Datum)
+ * @version 12.02.2023
  */
 public class Datei
 {
-    // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
-    
+      
     private File in_datei;
     private File out_datei;
     private Kunstwerkverwaltung kVerw;
@@ -81,6 +80,7 @@ public class Datei
             {
                 System.out.println("Fehler beim Einlesen der Kunstwerke-Datei");
                 System.out.println(e.getMessage());
+                errorCode = 1;
             }
             
             //Verarbeiten der Datei bis Ende erreicht
@@ -94,6 +94,7 @@ public class Datei
                 {
                     System.out.println("Fehler beim Einlesen der "+ count + ". Zeile");
                     System.out.println(e.getMessage());
+                    errorCode = 2;
                  }
                 
                 if(!eof){
@@ -186,6 +187,7 @@ public class Datei
                         posKomma = zwStr.indexOf(",");
                         double maxLF = Double.parseDouble(zwStr.substring(0,posKomma));
                         
+                        //Erstellen eines neues Bildes mit den relevanten Parametern und Anhängen an die Kunstwerksliste
                         k = new Bild(lfdNr, bez, kuenstler, jahr, thema, attr, kosten, nMuseum, aMuseum, hoehe, breite, minT, maxT, minLF, maxLF);
                         kVerw.addKunstwerk(k);
                         System.out.println(k.toString());
@@ -199,6 +201,7 @@ public class Datei
                         posKomma = zwStr.indexOf(",");
                         double gewicht = Double.parseDouble(zwStr.substring(0,posKomma));
                         
+                        //Erstellen eines neues Kunstgegenstand mit den relevanten Parametern und Anhängen an die Kunstwerksliste
                         k = new Kunstgegenstand(lfdNr, bez, kuenstler, jahr, thema, attr, kosten, nMuseum, aMuseum, hoehe, breite, laenge, gewicht);
                         kVerw.addKunstwerk(k);
                         System.out.println(k.toString());
@@ -212,6 +215,7 @@ public class Datei
                         posKomma = zwStr.indexOf(",");
                         double gewicht = Double.parseDouble(zwStr.substring(0,posKomma));
                         
+                        //Erstellen einer neuen Kunstinstallation mit den relevanten Parametern und Anhängen an die Kunstwerksliste
                         k = new Kunstinstallation(lfdNr, bez, kuenstler, jahr, thema, attr, kosten, nMuseum, aMuseum, hoehe, breite, laenge, gewicht);
                         kVerw.addKunstwerk(k);
                         System.out.println(k.toString());
@@ -232,6 +236,7 @@ public class Datei
             {
                 System.out.println("Fehler beim Schließen der Kunstwerke-Datei");
                 System.out.println(e.getMessage());
+                errorCode = 3;
             }
             
             return kVerw;
@@ -263,6 +268,7 @@ public class Datei
         {
             System.out.println("Fehler beim Einlesen der Raum-Datei");
             System.out.println(e.getMessage());
+            errorCode = 4;
         }
         
         //Verarbeiten der Datei bis Ende erreicht
@@ -341,6 +347,7 @@ public class Datei
         {
             System.out.println("Fehler beim Schließen der Raum-Datei");
             System.out.println(e.getMessage());
+            errorCode = 5;
         }
         
               
@@ -373,6 +380,7 @@ public class Datei
         {
             System.out.println("Fehler beim Öffnen der Datei");
             System.out.println(e.getMessage());
+            errorCode = 6;
         }
         
         //Erzeuge Überschriften
@@ -389,10 +397,6 @@ public class Datei
         //Schließen der Ausgabedatei
         closeOutFile();
 
-        
-        //die Eingabewerte sind eine Liste der Objekte Kunstwerke (bzw. der Unterklassen)
-        //Sortieren der Objekte nach Leih-Quelle
-        //diese werden einzeln mit den relevanten Informationen in eine Datei geschrieben
                 
         return true;
     }
@@ -416,16 +420,14 @@ public class Datei
         ArrayList<Kunstwerk> a = ausstellung.getAusstellung();
         Raum aktRaum = a.get(0).getInRaum();
                        
-        //die Eingabewerte sind eine Liste der Objekte Kunstwerke (bzw. der Unterklassen)
-        //Sortieren der Objekte nach Ausstellungsraum
-        //diese werden einzeln mit den relevanten Informationen in eine Datei geschrieben
-                //Anlegen einer neuen Outputdatei
+        //Anlegen einer neuen Outputdatei
         this.out_datei = new File("output/ausstellungsplan.html");
         try{openOutFile();}
         catch (IOException e)
         {
             System.out.println("Fehler beim Öffnen der Datei");
             System.out.println(e.getMessage());
+            errorCode = 7;
         }
         
         //Erzeuge HTML-Template Beginn
@@ -440,13 +442,14 @@ public class Datei
         writeLine("<h1>VAWi-Museum - Ausstellungsplan</h1>");
         writeLine("Im folgenden wird werden die einzelnen Ausstellungsstücke nach den Räumen sortiert aufgelistet und die notwendigen Raum-Paramter angegeben");
         
+        //Daten des ersten Raums in die Datei schreiben
         writeLine("<h2>Raum: "+aktRaum.getBezeichnung()+"</h2>");
         writeLine("Temperatur       : "+aktRaum.getTemperatur());
         writeLine("Luftfeuchtigkeit : "+aktRaum.getLuftfeuchtigkeit());
         writeLine("");
         
-        //Daten des ersten Raums in die Datei schreiben
         //alle Kunstwerke des ersten Raums auflisten (bei jedem Kunstwerk Raum mit akt. Raum vergleichen)
+        //Kunstwerke bereits nach Raum sortiert
         for(Kunstwerk kw: a)
         {
             //wenn neuer Raum, Raumdetails listen
@@ -459,7 +462,7 @@ public class Datei
                 
             } 
             //schreibe einzelne Objekte in die Ausgabedatei
-                        if (kw instanceof Bild){
+            if (kw instanceof Bild){
                 Bild bild = (Bild) kw;
                 writeLine("<h4>Bild: "+bild.getBezeichnung()+"</h4>");
                 writeLine("Wand: "+bild.getWand());
@@ -488,9 +491,7 @@ public class Datei
         
         //Schließen der Ausgabedatei
         closeOutFile();
-
-        
-                
+    
         return true;
     }
     
@@ -507,26 +508,20 @@ public class Datei
     {
         int error = 0;
         
-        //die Eingabewerte sind eine Liste der Objekte Kunstwerke (bzw. der Unterklassen)
-        //Sortieren der Objekte nach Leih-Quelle
-        //diese werden einzeln mit den relevanten Informationen in eine Datei geschrieben
-         
         //Sortieren der Ausstellung 
         ausstellung.sortNachRaum();
         //Get der Liste der Ausstellung
         ArrayList<Kunstwerk> a = ausstellung.getAusstellung();
         Raum aktRaum = null;
-                       
-        //die Eingabewerte sind eine Liste der Objekte Kunstwerke (bzw. der Unterklassen)
-        //Sortieren der Objekte nach Ausstellungsraum
-        //diese werden einzeln mit den relevanten Informationen in eine Datei geschrieben
-                //Anlegen einer neuen Outputdatei
+
+        //Anlegen einer neuen Outputdatei
         this.out_datei = new File("output/museumsfuehrer.html");
         try{openOutFile();}
         catch (IOException e)
         {
             System.out.println("Fehler beim Öffnen der Datei");
             System.out.println(e.getMessage());
+            errorCode = 8;
         }
         
         //Erzeuge HTML-Template Beginn
@@ -552,6 +547,7 @@ public class Datei
                 writeLine("<h3>Austellungsstücke</h3>");
             } 
             //schreibe einzelne Objekte in die Ausgabedatei
+            //Objekte wer in eine HTML-Tabelle geschrieben
             writeLine("<table>");
             if (kw instanceof Bild){
                 writeLine("<tr><td>Art:</td> <td>Bild</td> </tr>");
@@ -572,8 +568,6 @@ public class Datei
             writeLine("</table>");
             writeLine("<br/>");
         }
-        //Daten des ersten Raums in die Datei schreiben
-        //alle Kunstwerke des ersten Raums auflisten (bei jedem Kunstwerk Raum mit akt. Raum vergleichen)
         
         //Erzeuge HTML-Template Ende
         writeLine("</body>");
@@ -592,9 +586,12 @@ public class Datei
      */
     private void openInFile() throws IOException
     {
+       
         errorCode =0;
         eof = false;
         dEin = new BufferedReader(new FileReader(in_datei));
+        
+
     }
     
     /**
@@ -617,6 +614,7 @@ public class Datei
      */
     private String readLine() throws IOException
     {
+        try{
         String zw_in = dEin.readLine();
         if (zw_in == null){
             eof=true;
@@ -625,7 +623,15 @@ public class Datei
         else{
             errorCode =0;
             return zw_in;
+        }}
+        catch (Exception e){
+            System.out.println("Die angegebene Datei existiert nicht bzw. es ist ein Fehler beim Lesen aufgetreten.");
+            System.out.println(e.getMessage());
+            errorCode = 9;
+            return null;
+            
         }
+ 
     }
     
     /**
@@ -662,6 +668,23 @@ public class Datei
         errorCode =0;
         dAus.write(in_str+"\n");
 
+    }
+    
+    public int errorMessage()
+    {
+        switch (errorCode){
+            case 0: System.out.println ("Glückwunsch: Es sind keine Fehler aufgetreten!"); break;
+            case 1: System.out.println ("Error Code 1: Es ist ein Fehler beim Einlesen der Kunstwerke-Datei aufgetreten!");break;
+            case 2: System.out.println ("Error Code 2: Es ist ein Fehler beim Einlesen einer Zeile der Kunstwerke-Datei aufgetreten!");break;
+            case 3: System.out.println ("Error Code 3: Es ist ein Fehler beim Schließen der Kunstwerke-Datei aufgetreten!");break;
+            case 4: System.out.println ("Error Code 4: Es ist ein Fehler beim Einlesen der Raum-Datei aufgetreten!");break;
+            case 5: System.out.println ("Error Code 5: Es ist ein Fehler beim Schließen der Raum-Datei aufgetreten");break;
+            case 6: System.out.println ("Error Code 6: Es ist ein Fehler beim Öffnen/Erstellen der Ausgabedatei \"Leihdatei\" aufgetreten!");break;
+            case 7: System.out.println ("Error Code 7: Es ist ein Fehler beim Öffnen/Erstellen der Ausgabedatei \"Ausstellungsplan\" aufgetreten!");break;
+            case 8: System.out.println ("Error Code 8: Es ist ein Fehler beim Öffnen/Erstellen der Ausgabedatei \"Museumsführer\" aufgetreten!");break;
+            case 9: System.out.println ("Error Code 9: Es ist ein Fehler beim Lesen einer Zeile aufgetreten!");break;
+        }
+        return errorCode;
     }
     
 }

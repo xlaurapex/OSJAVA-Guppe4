@@ -1,91 +1,53 @@
 Laufende Nummer: Bezeichnung, Name des Museums, Anschrift des Museums, Kosten
-15: Woman with a Rake, Bode-Museum, Am Kupfergraben/10117 Berlin/Deutschland, 3102
-49: The Musician, Bode-Museum, Am Kupfergraben/10117 Berlin/Deutschland, 1678
-39: Portrait of a Young Man, Bode-Museum, Am Kupfergraben/10117 Berlin/Deutschland, 4743
-45: A River Landscape, Bode-Museum, Am Kupfergraben/10117 Berlin/Deutschland, 1421
 79: Louis XIV, Bode-Museum, Am Kupfergraben/10117 Berlin/Deutschland, 2963
-79: Louis XIV, Bode-Museum, Am Kupfergraben/10117 Berlin/Deutschland, 2963
-70: Dancer Looking at the Sole of Her Right Foot (Fourth State), Eremitage, Palace Square 2/St Petersburg/Russland, 4015
 72: Low cabinet (meuble à hauteur d'appui) (one of a pair), Eremitage, Palace Square 2/St Petersburg/Russland, 3216
 76: Standing boy, Eremitage, Palace Square 2/St Petersburg/Russland, 1188
-22: La Berceuse (Woman Rocking a Cradle; Augustine-Alix Pellicot Roulin 1851–1930), Eremitage, Palace Square 2/St Petersburg/Russland, 2339
-31: Louis XV (1710–1774) as a Child, Eremitage, Palace Square 2/St Petersburg/Russland, 4861
-14: The Lamentation, Eremitage, Palace Square 2/St Petersburg/Russland, 1195
-33: Springtime, Eremitage, Palace Square 2/St Petersburg/Russland, 2338
-33: Springtime, Eremitage, Palace Square 2/St Petersburg/Russland, 2338
-36: A Young Woman and a Cavalier, Metropolitan Museum of Art, 1000 5th Ave/New York/NY 10028/Vereinigte Staaten, 3509
+82: Summer (one of a set of four), Eremitage, Palace Square 2/St Petersburg/Russland, 1622
+62: Dining room from Lansdowne House, Metropolitan Museum of Art, 1000 5th Ave/New York/NY 10028/Vereinigte Staaten, 4177
 78: Nymph with a Shell, Metropolitan Museum of Art, 1000 5th Ave/New York/NY 10028/Vereinigte Staaten, 3672
-8: Hermann von Wedigh III (died 1560), Metropolitan Museum of Art, 1000 5th Ave/New York/NY 10028/Vereinigte Staaten, 1207
-17: The Garden of the Tuileries on a Spring Morning, Metropolitan Museum of Art, 1000 5th Ave/New York/NY 10028/Vereinigte Staaten, 2890
-23: Portrait of a Woman, Metropolitan Museum of Art, 1000 5th Ave/New York/NY 10028/Vereinigte Staaten, 1992
-88: Virgin of the Immaculate Conception, Metropolitan Museum of Art, 1000 5th Ave/New York/NY 10028/Vereinigte Staaten, 1740
-94: Pietà, Metropolitan Museum of Art, 1000 5th Ave/New York/NY 10028/Vereinigte Staaten, 3664
-94: Pietà, Metropolitan Museum of Art, 1000 5th Ave/New York/NY 10028/Vereinigte Staaten, 3664
-88: Virgin of the Immaculate Conception, Metropolitan Museum of Art, 1000 5th Ave/New York/NY 10028/Vereinigte Staaten, 1740
-94: Pietà, Metropolitan Museum of Art, 1000 5th Ave/New York/NY 10028/Vereinigte Staaten, 3664
-88: Virgin of the Immaculate Conception, Metropolitan Museum of Art, 1000 5th Ave/New York/NY 10028/Vereinigte Staaten, 1740
-94: Pietà, Metropolitan Museum of Art, 1000 5th Ave/New York/NY 10028/Vereinigte Staaten, 3664
-16: Garden at Sainte-Adresse, Metropolitan Museum of Art, 1000 5th Ave/New York/NY 10028/Vereinigte Staaten, 2663
-25: A Kitchen, Metropolitan Museum of Art, 1000 5th Ave/New York/NY 10028/Vereinigte Staaten, 3317
-16: Garden at Sainte-Adresse, Metropolitan Museum of Art, 1000 5th Ave/New York/NY 10028/Vereinigte Staaten, 2663
-25: A Kitchen, Metropolitan Museum of Art, 1000 5th Ave/New York/NY 10028/Vereinigte Staaten, 3317
-5: Portrait of a Woman, Museo del Prado, C. de Ruiz de Alarcón 23/28014 Madrid/Spanien, 2356
-26: A Bouquet of Flowers, Museo del Prado, C. de Ruiz de Alarcón 23/28014 Madrid/Spanien, 4663
-28: Portrait of a Young Man, Museo del Prado, C. de Ruiz de Alarcón 23/28014 Madrid/Spanien, 2103
-32: Portrait of a Man, Museo del Prado, C. de Ruiz de Alarcón 23/28014 Madrid/Spanien, 4466
-41: A Shaded Avenue, Museo del Prado, C. de Ruiz de Alarcón 23/28014 Madrid/Spanien, 4206
+62: Dining room from Lansdowne House, Metropolitan Museum of Art, 1000 5th Ave/New York/NY 10028/Vereinigte Staaten, 4177
+78: Nymph with a Shell, Metropolitan Museum of Art, 1000 5th Ave/New York/NY 10028/Vereinigte Staaten, 3672
+57: Chimneypiece (cheminée), Museo del Prado, C. de Ruiz de Alarcón 23/28014 Madrid/Spanien, 1850
+89: Five-light candelabrum (one of a pair), Museo del Prado, C. de Ruiz de Alarcón 23/28014 Madrid/Spanien, 3766
+90: Five-light candelabrum (one of a pair), Museo del Prado, C. de Ruiz de Alarcón 23/28014 Madrid/Spanien, 3804
+93: Plate depicting a lady with parasol, Museo del Prado, C. de Ruiz de Alarcón 23/28014 Madrid/Spanien, 1629
+93: Plate depicting a lady with parasol, Museo del Prado, C. de Ruiz de Alarcón 23/28014 Madrid/Spanien, 1629
+90: Five-light candelabrum (one of a pair), Museo del Prado, C. de Ruiz de Alarcón 23/28014 Madrid/Spanien, 3804
+93: Plate depicting a lady with parasol, Museo del Prado, C. de Ruiz de Alarcón 23/28014 Madrid/Spanien, 1629
+89: Five-light candelabrum (one of a pair), Museo del Prado, C. de Ruiz de Alarcón 23/28014 Madrid/Spanien, 3766
+90: Five-light candelabrum (one of a pair), Museo del Prado, C. de Ruiz de Alarcón 23/28014 Madrid/Spanien, 3804
+63: Tapestry Room from Croome Court, Museo del Prado, C. de Ruiz de Alarcón 23/28014 Madrid/Spanien, 2808
 53: Hercules and the Erymanthian boar, Musée du Louvre, Rue de Rivoli/75001 Paris/Frankreich, 3449
-69: First Arabesque Penchée, Musée du Louvre, Rue de Rivoli/75001 Paris/Frankreich, 2334
 73: Low cabinet (meuble à hauteur d'appui) (one of a pair), Musée du Louvre, Rue de Rivoli/75001 Paris/Frankreich, 3636
-27: Portrait of a Man, Musée du Louvre, Rue de Rivoli/75001 Paris/Frankreich, 1677
-38: Two Children Teasing a Cat, Musée du Louvre, Rue de Rivoli/75001 Paris/Frankreich, 1114
-38: Two Children Teasing a Cat, Musée du Louvre, Rue de Rivoli/75001 Paris/Frankreich, 1114
-68: Spanish Dancer (Second State), National Gallery, Trafalgar Square/London WC2N 5DN/Vereinigtes Königreich, 4256
-71: Woman Getting out of the Bath, National Gallery, Trafalgar Square/London WC2N 5DN/Vereinigtes Königreich, 3919
+83: Autumn (one of a set of four), Musée du Louvre, Rue de Rivoli/75001 Paris/Frankreich, 4884
+56: Chimneypiece (cheminée), National Gallery, Trafalgar Square/London WC2N 5DN/Vereinigtes Königreich, 4715
+54: Horse Trotting the Feet Not Touching the Ground, National Gallery, Trafalgar Square/London WC2N 5DN/Vereinigtes Königreich, 2981
+59: Seasons and Elements (Fire) (set of four), National Gallery, Trafalgar Square/London WC2N 5DN/Vereinigtes Königreich, 4438
+86: Seated girl, National Gallery, Trafalgar Square/London WC2N 5DN/Vereinigtes Königreich, 2190
+58: Seasons and Elements (Summer) (set of four), National Gallery, Trafalgar Square/London WC2N 5DN/Vereinigtes Königreich, 1629
+58: Seasons and Elements (Summer) (set of four), National Gallery, Trafalgar Square/London WC2N 5DN/Vereinigtes Königreich, 1629
+58: Seasons and Elements (Summer) (set of four), National Gallery, Trafalgar Square/London WC2N 5DN/Vereinigtes Königreich, 1629
+58: Seasons and Elements (Summer) (set of four), National Gallery, Trafalgar Square/London WC2N 5DN/Vereinigtes Königreich, 1629
 77: Bust of a Woman, National Gallery, Trafalgar Square/London WC2N 5DN/Vereinigtes Königreich, 4940
-6: The Garden of the Tuileries on a Winter Afternoon, National Gallery, Trafalgar Square/London WC2N 5DN/Vereinigtes Königreich, 1935
-7: Still Life with Oysters a Silver Tazza and Glassware, National Gallery, Trafalgar Square/London WC2N 5DN/Vereinigtes Königreich, 2842
-20: The Boulevard Montmartre on a Winter Morning, National Gallery, Trafalgar Square/London WC2N 5DN/Vereinigtes Königreich, 4994
-11: A Brazilian Landscape, National Gallery, Trafalgar Square/London WC2N 5DN/Vereinigtes Königreich, 2449
-29: The Dance Class, National Gallery, Trafalgar Square/London WC2N 5DN/Vereinigtes Königreich, 3275
-37: A Forest at Dawn with a Deer Hunt, National Gallery, Trafalgar Square/London WC2N 5DN/Vereinigtes Königreich, 1406
-40: A Woodland Road with Travelers, National Gallery, Trafalgar Square/London WC2N 5DN/Vereinigtes Königreich, 4519
-54: Horse Trotting the Feet Not Touching the Ground, National Gallery, Trafalgar Square/London WC2N 5DN/Vereinigtes Königreich, 2981
-29: The Dance Class, National Gallery, Trafalgar Square/London WC2N 5DN/Vereinigtes Königreich, 3275
-37: A Forest at Dawn with a Deer Hunt, National Gallery, Trafalgar Square/London WC2N 5DN/Vereinigtes Königreich, 1406
-40: A Woodland Road with Travelers, National Gallery, Trafalgar Square/London WC2N 5DN/Vereinigtes Königreich, 4519
-54: Horse Trotting the Feet Not Touching the Ground, National Gallery, Trafalgar Square/London WC2N 5DN/Vereinigtes Königreich, 2981
-3: Young Woman with a Water Pitcher, Rijksmuseum Amsterdam, Museumstraat 1/1071 XX Amsterdam/Niederlande, 1385
-44: The Card Players, Rijksmuseum Amsterdam, Museumstraat 1/1071 XX Amsterdam/Niederlande, 1105
-64: The Little Fourteen-Year-Old Dancer, Rijksmuseum Amsterdam, Museumstraat 1/1071 XX Amsterdam/Niederlande, 4261
-21: Portrait of a Woman and an Enslaved Servant, Rijksmuseum Amsterdam, Museumstraat 1/1071 XX Amsterdam/Niederlande, 1648
-18: Christ Blessing Surrounded by a Donor Family, Rijksmuseum Amsterdam, Museumstraat 1/1071 XX Amsterdam/Niederlande, 1059
+77: Bust of a Woman, National Gallery, Trafalgar Square/London WC2N 5DN/Vereinigtes Königreich, 4940
 52: Baptism of Christ, Rijksmuseum Amsterdam, Museumstraat 1/1071 XX Amsterdam/Niederlande, 3002
-55: Side table (one of a pair), Rijksmuseum Amsterdam, Museumstraat 1/1071 XX Amsterdam/Niederlande, 3202
+64: The Little Fourteen-Year-Old Dancer, Rijksmuseum Amsterdam, Museumstraat 1/1071 XX Amsterdam/Niederlande, 4261
 74: Christ and the two thieves crucified, Rijksmuseum Amsterdam, Museumstraat 1/1071 XX Amsterdam/Niederlande, 3037
-34: A Vase of Flowers, Rijksmuseum Amsterdam, Museumstraat 1/1071 XX Amsterdam/Niederlande, 2786
+55: Side table (one of a pair), Rijksmuseum Amsterdam, Museumstraat 1/1071 XX Amsterdam/Niederlande, 3202
 84: Spring (one of a set of four), Rijksmuseum Amsterdam, Museumstraat 1/1071 XX Amsterdam/Niederlande, 2148
-34: A Vase of Flowers, Rijksmuseum Amsterdam, Museumstraat 1/1071 XX Amsterdam/Niederlande, 2786
-84: Spring (one of a set of four), Rijksmuseum Amsterdam, Museumstraat 1/1071 XX Amsterdam/Niederlande, 2148
-2: Woman with a Parrot, The British Museum, Great Russell St/London WC1B 3DG/Vereinigtes Königreich, 1248
-9: A Maid Asleep, The British Museum, Great Russell St/London WC1B 3DG/Vereinigtes Königreich, 4641
+85: Winter (one of a set of four), Rijksmuseum Amsterdam, Museumstraat 1/1071 XX Amsterdam/Niederlande, 1037
+75: Pope Innocent X, Rijksmuseum Amsterdam, Museumstraat 1/1071 XX Amsterdam/Niederlande, 2176
+75: Pope Innocent X, Rijksmuseum Amsterdam, Museumstraat 1/1071 XX Amsterdam/Niederlande, 2176
+67: Woman Stretching, Rijksmuseum Amsterdam, Museumstraat 1/1071 XX Amsterdam/Niederlande, 3140
+75: Pope Innocent X, Rijksmuseum Amsterdam, Museumstraat 1/1071 XX Amsterdam/Niederlande, 2176
+67: Woman Stretching, Rijksmuseum Amsterdam, Museumstraat 1/1071 XX Amsterdam/Niederlande, 3140
 51: Pair of miniature tapersticks, The British Museum, Great Russell St/London WC1B 3DG/Vereinigtes Königreich, 2325
-4: A Matador, The British Museum, Great Russell St/London WC1B 3DG/Vereinigtes Königreich, 1917
-48: A Road in Louveciennes, The British Museum, Great Russell St/London WC1B 3DG/Vereinigtes Königreich, 4382
-48: A Road in Louveciennes, The British Museum, Great Russell St/London WC1B 3DG/Vereinigtes Königreich, 4382
-1: The Apotheosis of the Spanish Monarchy, Uffizien, Piazzale degli Uffizi 6/50122 Firenze FI/Italien, 4000
+65: Francesco I de' Medici grand duke of Tuscany, The British Museum, Great Russell St/London WC1B 3DG/Vereinigtes Königreich, 2488
+65: Francesco I de' Medici grand duke of Tuscany, The British Museum, Great Russell St/London WC1B 3DG/Vereinigtes Königreich, 2488
+65: Francesco I de' Medici grand duke of Tuscany, The British Museum, Great Russell St/London WC1B 3DG/Vereinigtes Königreich, 2488
+65: Francesco I de' Medici grand duke of Tuscany, The British Museum, Great Russell St/London WC1B 3DG/Vereinigtes Königreich, 2488
 66: A Hypocrite and a Slanderer, Uffizien, Piazzale degli Uffizi 6/50122 Firenze FI/Italien, 3475
-10: A Woman with a Dog, Uffizien, Piazzale degli Uffizi 6/50122 Firenze FI/Italien, 3214
-13: A Lock a Column and a Church beside a Lagoon, Uffizien, Piazzale degli Uffizi 6/50122 Firenze FI/Italien, 1857
-19: The Christ Child with Saints Boris and Gleb, Uffizien, Piazzale degli Uffizi 6/50122 Firenze FI/Italien, 4809
-24: Christ before Pilate; The Resurrection, Uffizien, Piazzale degli Uffizi 6/50122 Firenze FI/Italien, 3522
-87: Christ at the Column, Uffizien, Piazzale degli Uffizi 6/50122 Firenze FI/Italien, 1071
-87: Christ at the Column, Uffizien, Piazzale degli Uffizi 6/50122 Firenze FI/Italien, 1071
-30: The Rehearsal of the Ballet Onstage, Uffizien, Piazzale degli Uffizi 6/50122 Firenze FI/Italien, 4656
-47: A Shepherd and a Rider on a Country Lane, Uffizien, Piazzale degli Uffizi 6/50122 Firenze FI/Italien, 2507
-30: The Rehearsal of the Ballet Onstage, Uffizien, Piazzale degli Uffizi 6/50122 Firenze FI/Italien, 4656
-47: A Shepherd and a Rider on a Country Lane, Uffizien, Piazzale degli Uffizi 6/50122 Firenze FI/Italien, 2507
-46: A Woman Reading, Uffizien, Piazzale degli Uffizi 6/50122 Firenze FI/Italien, 4363
-46: A Woman Reading, Uffizien, Piazzale degli Uffizi 6/50122 Firenze FI/Italien, 4363
-46: A Woman Reading, Uffizien, Piazzale degli Uffizi 6/50122 Firenze FI/Italien, 4363
-Gesamtkosten:262177
+60: Seasons and Elements (Spring) (set of four), Uffizien, Piazzale degli Uffizi 6/50122 Firenze FI/Italien, 3446
+60: Seasons and Elements (Spring) (set of four), Uffizien, Piazzale degli Uffizi 6/50122 Firenze FI/Italien, 3446
+60: Seasons and Elements (Spring) (set of four), Uffizien, Piazzale degli Uffizi 6/50122 Firenze FI/Italien, 3446
+Gesamtkosten:151450
