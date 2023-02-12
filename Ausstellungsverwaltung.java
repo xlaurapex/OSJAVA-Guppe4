@@ -88,8 +88,8 @@ public class Ausstellungsverwaltung
         // Ausstellung ausstellung = new Ausstellung(a, "Rokoko");
 
         //TESTING!!!!!!!!!!!!!!
-        ArrayList<Kunstwerk> ZugeordneteKunstwerke = Optimierungsalgorithmus.optimiere(rv.getRaeume(), kv.getKunstwerke(),"Stillleben");
-        Ausstellung ausstellung = new Ausstellung(ZugeordneteKunstwerke, "Stillleben");
+        ArrayList<Kunstwerk> ZugeordneteKunstwerke = Optimierungsalgorithmus.optimiere2(rv.getRaeume(), kv.getKunstwerke(),thema);
+        Ausstellung ausstellung = new Ausstellung(ZugeordneteKunstwerke, thema);
         d.erzeugeZuordnungsDatei(ausstellung);
         d.erzeugeLeihDatei(ausstellung, "output/Leihdatei.txt");
         d.erzeugeMuseumsführer(ausstellung);

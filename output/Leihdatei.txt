@@ -1,7 +1,58 @@
 Laufende Nummer: Bezeichnung, Name des Museums, Anschrift des Museums, Kosten
-100: Vase, Bode-Museum, Am Kupfergraben/10117 Berlin/Deutschland, 3638
-97: Portrait of a German Officer, Museo del Prado, C. de Ruiz de Alarcón 23/28014 Madrid/Spanien, 4265
-99: Form in Contortion over Thread (Forme en Contorsion sur Trame), National Gallery, Trafalgar Square/London WC2N 5DN/Vereinigtes Königreich, 4428
-98: Nebula, Rijksmuseum Amsterdam, Museumstraat 1/1071 XX Amsterdam/Niederlande, 3825
-96: Woman with a Cat, The British Museum, Great Russell St/London WC1B 3DG/Vereinigtes Königreich, 3055
-Gesamtkosten:19211
+79: Louis XIV, Bode-Museum, Am Kupfergraben/10117 Berlin/Deutschland, 2963
+72: Low cabinet (meuble à hauteur d'appui) (one of a pair), Eremitage, Palace Square 2/St Petersburg/Russland, 3216
+76: Standing boy, Eremitage, Palace Square 2/St Petersburg/Russland, 1188
+82: Summer (one of a set of four), Eremitage, Palace Square 2/St Petersburg/Russland, 1622
+70: Dancer Looking at the Sole of Her Right Foot (Fourth State), Eremitage, Palace Square 2/St Petersburg/Russland, 4015
+70: Dancer Looking at the Sole of Her Right Foot (Fourth State), Eremitage, Palace Square 2/St Petersburg/Russland, 4015
+91: Pendant in the form of a mermaid, Eremitage, Palace Square 2/St Petersburg/Russland, 1510
+92: Double-spouted vase with cover, Eremitage, Palace Square 2/St Petersburg/Russland, 2909
+62: Dining room from Lansdowne House, Metropolitan Museum of Art, 1000 5th Ave/New York/NY 10028/Vereinigte Staaten, 4177
+78: Nymph with a Shell, Metropolitan Museum of Art, 1000 5th Ave/New York/NY 10028/Vereinigte Staaten, 3672
+95: Prudence, Metropolitan Museum of Art, 1000 5th Ave/New York/NY 10028/Vereinigte Staaten, 4539
+88: Virgin of the Immaculate Conception, Metropolitan Museum of Art, 1000 5th Ave/New York/NY 10028/Vereinigte Staaten, 1740
+94: Pietà, Metropolitan Museum of Art, 1000 5th Ave/New York/NY 10028/Vereinigte Staaten, 3664
+94: Pietà, Metropolitan Museum of Art, 1000 5th Ave/New York/NY 10028/Vereinigte Staaten, 3664
+88: Virgin of the Immaculate Conception, Metropolitan Museum of Art, 1000 5th Ave/New York/NY 10028/Vereinigte Staaten, 1740
+57: Chimneypiece (cheminée), Museo del Prado, C. de Ruiz de Alarcón 23/28014 Madrid/Spanien, 1850
+63: Tapestry Room from Croome Court, Museo del Prado, C. de Ruiz de Alarcón 23/28014 Madrid/Spanien, 2808
+89: Five-light candelabrum (one of a pair), Museo del Prado, C. de Ruiz de Alarcón 23/28014 Madrid/Spanien, 3766
+90: Five-light candelabrum (one of a pair), Museo del Prado, C. de Ruiz de Alarcón 23/28014 Madrid/Spanien, 3804
+89: Five-light candelabrum (one of a pair), Museo del Prado, C. de Ruiz de Alarcón 23/28014 Madrid/Spanien, 3766
+53: Hercules and the Erymanthian boar, Musée du Louvre, Rue de Rivoli/75001 Paris/Frankreich, 3449
+73: Low cabinet (meuble à hauteur d'appui) (one of a pair), Musée du Louvre, Rue de Rivoli/75001 Paris/Frankreich, 3636
+69: First Arabesque Penchée, Musée du Louvre, Rue de Rivoli/75001 Paris/Frankreich, 2334
+83: Autumn (one of a set of four), Musée du Louvre, Rue de Rivoli/75001 Paris/Frankreich, 4884
+56: Chimneypiece (cheminée), National Gallery, Trafalgar Square/London WC2N 5DN/Vereinigtes Königreich, 4715
+54: Horse Trotting the Feet Not Touching the Ground, National Gallery, Trafalgar Square/London WC2N 5DN/Vereinigtes Königreich, 2981
+59: Seasons and Elements (Fire) (set of four), National Gallery, Trafalgar Square/London WC2N 5DN/Vereinigtes Königreich, 4438
+86: Seated girl, National Gallery, Trafalgar Square/London WC2N 5DN/Vereinigtes Königreich, 2190
+58: Seasons and Elements (Summer) (set of four), National Gallery, Trafalgar Square/London WC2N 5DN/Vereinigtes Königreich, 1629
+77: Bust of a Woman, National Gallery, Trafalgar Square/London WC2N 5DN/Vereinigtes Königreich, 4940
+68: Spanish Dancer (Second State), National Gallery, Trafalgar Square/London WC2N 5DN/Vereinigtes Königreich, 4256
+71: Woman Getting out of the Bath, National Gallery, Trafalgar Square/London WC2N 5DN/Vereinigtes Königreich, 3919
+81: Andiron with figure of Juno (chenet) (one of a pair), National Gallery, Trafalgar Square/London WC2N 5DN/Vereinigtes Königreich, 3870
+81: Andiron with figure of Juno (chenet) (one of a pair), National Gallery, Trafalgar Square/London WC2N 5DN/Vereinigtes Königreich, 3870
+81: Andiron with figure of Juno (chenet) (one of a pair), National Gallery, Trafalgar Square/London WC2N 5DN/Vereinigtes Königreich, 3870
+71: Woman Getting out of the Bath, National Gallery, Trafalgar Square/London WC2N 5DN/Vereinigtes Königreich, 3919
+81: Andiron with figure of Juno (chenet) (one of a pair), National Gallery, Trafalgar Square/London WC2N 5DN/Vereinigtes Königreich, 3870
+71: Woman Getting out of the Bath, National Gallery, Trafalgar Square/London WC2N 5DN/Vereinigtes Königreich, 3919
+81: Andiron with figure of Juno (chenet) (one of a pair), National Gallery, Trafalgar Square/London WC2N 5DN/Vereinigtes Königreich, 3870
+52: Baptism of Christ, Rijksmuseum Amsterdam, Museumstraat 1/1071 XX Amsterdam/Niederlande, 3002
+64: The Little Fourteen-Year-Old Dancer, Rijksmuseum Amsterdam, Museumstraat 1/1071 XX Amsterdam/Niederlande, 4261
+74: Christ and the two thieves crucified, Rijksmuseum Amsterdam, Museumstraat 1/1071 XX Amsterdam/Niederlande, 3037
+55: Side table (one of a pair), Rijksmuseum Amsterdam, Museumstraat 1/1071 XX Amsterdam/Niederlande, 3202
+84: Spring (one of a set of four), Rijksmuseum Amsterdam, Museumstraat 1/1071 XX Amsterdam/Niederlande, 2148
+85: Winter (one of a set of four), Rijksmuseum Amsterdam, Museumstraat 1/1071 XX Amsterdam/Niederlande, 1037
+75: Pope Innocent X, Rijksmuseum Amsterdam, Museumstraat 1/1071 XX Amsterdam/Niederlande, 2176
+67: Woman Stretching, Rijksmuseum Amsterdam, Museumstraat 1/1071 XX Amsterdam/Niederlande, 3140
+51: Pair of miniature tapersticks, The British Museum, Great Russell St/London WC1B 3DG/Vereinigtes Königreich, 2325
+65: Francesco I de' Medici grand duke of Tuscany, The British Museum, Great Russell St/London WC1B 3DG/Vereinigtes Königreich, 2488
+80: Side table, The British Museum, Great Russell St/London WC1B 3DG/Vereinigtes Königreich, 4885
+80: Side table, The British Museum, Great Russell St/London WC1B 3DG/Vereinigtes Königreich, 4885
+80: Side table, The British Museum, Great Russell St/London WC1B 3DG/Vereinigtes Königreich, 4885
+66: A Hypocrite and a Slanderer, Uffizien, Piazzale degli Uffizi 6/50122 Firenze FI/Italien, 3475
+60: Seasons and Elements (Spring) (set of four), Uffizien, Piazzale degli Uffizi 6/50122 Firenze FI/Italien, 3446
+87: Christ at the Column, Uffizien, Piazzale degli Uffizi 6/50122 Firenze FI/Italien, 1071
+87: Christ at the Column, Uffizien, Piazzale degli Uffizi 6/50122 Firenze FI/Italien, 1071
+Gesamtkosten:181721
