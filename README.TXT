@@ -1,5 +1,5 @@
 PROJEKTBEZEICHNUNG: VAWi Museum
-PROJEKTZWECK: SL1
-VERSION oder DATUM: 20,12.2022
-AUTOR: Marcell Wach, Daria Bialova, Johannes Riedmeier; Laura Perlbach
+PROJEKTZWECK: SL3
+VERSION oder DATUM: 12,02.2023
+AUTOR: Marcell Wach, Daria Bialova, Johannes Riedmeier, Laura Perlbach
 
