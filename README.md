@@ -1,8 +1,7 @@
 # OSJAVA_MUSEUM
 
 Programmanweisungen
-Zum Starten des Programms bitte den Windows cd Befehl in der Konsole eingeben, um an den Ablageort der jar-Datei zu navigieren. 
-Gestartet werden kann das Programm über die Konsole mithilfe des Befehls java Dateiname.jar. Bei Ausführung des java-Befehls ist zunächst keine Angabe von Parametern notwendig.
+Gestartet werden kann das Programm über die Konsole mithilfe des Befehls java Museumsverwaltung.jar. Dabei muss der genaue Ablageort der Datei inklusive des Pfads angegeben werden, sofern die Dateien nicht im aktuellen Verzeichnis liegen. Bei Ausführung des java-Befehls ist zunächst keine Angabe von Parametern notwendig.
 
 Anschließend können Sie den Aufforderungen in der Konsole folgen.
 Sie werden nun aufgefordert nacheinander die Input Dateien für die Räume, sowie
@@ -11,7 +10,7 @@ kunstwerke.csv (bitte jeweils einzeln bestätigen). Dabei muss der genaue Ablage
 
 Anschließend werden sie aufgefordert, ein Schwerpunkt Thema, sowie eine 
 Budgetobergrenze anzugeben. Dies geschieht analog den Befehlen für die Inputdateien
-mit den Eingaben von bspw. Rokoko und bspw. 50000 (bitte auch hier wieder die Eingaben
+mit den Eingaben von bspw. Religion und bspw. 50000 (bitte auch hier wieder die Eingaben
 einzeln bestätigen).
 
 Ihre Ausstellung wird nun geplant und die entsprechenden Outputdateien generiert.
@@ -19,6 +18,7 @@ Die Output-Dateien sind anschließend unter \OSJAVA-Guppe4\output zu finden. Sof
 
 Das Programm geht an folgender Stelle über die Minimalanforderung hinaus:
 Die Ausgabedateien Museumsführer und Ausstellungsplan werden als HTML-Datei erzeugt. Der für das VAWI-Museum zuständige Web-Designer kann diese HTML-Dateien um ein Corporate Design des VAWI-Museums mittels css-Dateien ergänzen.
+Die notwendigen Eingabeinformationen werden per geführtem Konsolenmenü entgegengenommen.
 
 Zuweisung Klassen zu Entwickler:innen:
 Bild: Darya Bialova
