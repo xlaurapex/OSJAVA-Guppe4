@@ -10,7 +10,7 @@ kunstwerke.csv (bitte jeweils einzeln bestätigen). Dabei muss der genaue Ablage
 
 Anschließend werden sie aufgefordert, ein Schwerpunkt Thema, sowie eine 
 Budgetobergrenze anzugeben. Dies geschieht analog den Befehlen für die Inputdateien
-mit den Eingaben von bspw. Religion und bspw. 50000 (bitte auch hier wieder die Eingaben
+mit den Eingaben von bspw. Religion und bspw. 250000 (bitte auch hier wieder die Eingaben
 einzeln bestätigen).
 
 Ihre Ausstellung wird nun geplant und die entsprechenden Outputdateien generiert.
