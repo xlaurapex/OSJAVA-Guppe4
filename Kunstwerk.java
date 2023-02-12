@@ -27,7 +27,18 @@ public abstract class Kunstwerk
 
     
     /**
-     * Kontruktor für Objekte der abstrakten Klasse Kunstwerk
+     * Konstruktor für Objekte der abstrakten Klasse Kunstwerk
+     * @param laufendeNummer
+     * @param Bezeichnung
+     * @param Kuenstlername
+     * @param Jahresangabe
+     * @param Thema
+     * @param Attraktivitaet
+     * @param Kosten
+     * @param NameMuseums
+     * @param AnschriftMuseums
+     * @param Hoehe
+     * @param Breite
      */     
 
     public Kunstwerk (int laufendeNummer, String bezeichnung,
@@ -52,6 +63,7 @@ public abstract class Kunstwerk
 
     /**
      * Da das Attribut laufendeNummer als private deklariert wurde, brauchen wir Getter Methode, um die Objektvariable abzurufen
+     * @return LaufendeNummer
      */
 
     public int getLaufendeNummer() {
@@ -59,6 +71,7 @@ public abstract class Kunstwerk
 
     /**
      * Da das Attribut laufendeNummer als private deklariert wurde, brauchen wir Setter Methode, die die Veränderung der Objektvariablen ermöglicht
+     * @param Laufende Nummer
      */
     
     public void setLaufendeNummer(int laufendeNummer) {
@@ -66,6 +79,7 @@ public abstract class Kunstwerk
 
     /**
      * Da das Attribut Bezeichnung als private deklariert wurde, brauchen wir Getter Methode, um die Objektvariable abzurufen
+     * @return Bezeichnung
      */
 
     public String getBezeichnung() {
@@ -73,6 +87,7 @@ public abstract class Kunstwerk
 
     /**
      * Da das Attribut Bezeichnung als private deklariert wurde, brauchen wir Setter Methode, die die Veränderung der Objektvariablen ermöglicht
+     * @param Bezeichnung
      */
     
     public void setBezeichnung(String bezeichnung) {
@@ -80,6 +95,7 @@ public abstract class Kunstwerk
 
     /**
      * Da das Attribut Kuenstlername als private deklariert wurde, brauchen wir Getter Methode, um die Objektvariable abzurufen
+     * @return KuenstlerName
      */
     
     public String getKuenstlername() {
@@ -87,6 +103,7 @@ public abstract class Kunstwerk
 
     /**
      * Da das Attribut Kuenstlername als private deklariert wurde, brauchen wir Setter Methode, die die Veränderung der Objektvariablen ermöglicht
+     * @param KuenstlerName
      */
     
     public void setKuenstlername(String kuenstlername) {
@@ -94,6 +111,7 @@ public abstract class Kunstwerk
 
     /**
      * Da das Attribut Jahresangabe als private deklariert wurde, brauchen wir Getter Methode, um die Objektvariable abzurufen
+     * @return Jahresangabe
      */
     
     public String getJahresangabe() {
@@ -101,6 +119,7 @@ public abstract class Kunstwerk
 
     /**
      * Da das Attribut Jahresangabe als private deklariert wurde, brauchen wir Setter Methode, die die Veränderung der Objektvariablen ermöglicht
+     * @param Jahresangabe
      */
     
     public void setJahresangabe(String jahresangabe) {
@@ -108,6 +127,7 @@ public abstract class Kunstwerk
 
     /**
      * Da das Attribut Thema als private deklariert wurde, brauchen wir Getter Methode, um die Objektvariable abzurufen
+     * @return Thema
      */
     
     public String getThema() {
@@ -115,6 +135,7 @@ public abstract class Kunstwerk
 
     /**
      * Da das Attribut Thema als private deklariert wurde, brauchen wir Setter Methode, die die Veränderung der Objektvariablen ermöglicht
+     * @param Thema
      */
     
     public void setThema(String thema) {
@@ -122,6 +143,7 @@ public abstract class Kunstwerk
 
     /**
      * Da das Attribut Attraktivitaet als private deklariert wurde, brauchen wir Getter Methode, um die Objektvariable abzurufen
+     * @return Attraktivitaet
      */
     
     public double getAttraktivitaet() {
@@ -129,6 +151,7 @@ public abstract class Kunstwerk
 
     /**
      * Da das Attribut Attraktivitaet als private deklariert wurde, brauchen wir Setter Methode, die die Veränderung der Objektvariablen ermöglicht
+     * @param Attraktivitaet
      */
     
     public void setAttraktivitaet(double attraktivitaet) {
@@ -136,6 +159,7 @@ public abstract class Kunstwerk
 
     /**
      * Da das Attribut Kosten als private deklariert wurde, brauchen wir Getter Methode, um die Objektvariable abzurufen
+     * @return Kosten
      */
     
     public int getKosten() {
@@ -143,6 +167,7 @@ public abstract class Kunstwerk
 
     /**
      * Da das Attribut Kosten als private deklariert wurde, brauchen wir Setter Methode, die die Veränderung der Objektvariablen ermöglicht
+     * @param Kosten
      */
     
     public void setKosten(int kosten) {
@@ -150,6 +175,7 @@ public abstract class Kunstwerk
 
     /**
      * Da das Attribut NameMuseums als private deklariert wurde, brauchen wir Getter Methode, um die Objektvariable abzurufen
+     * @return NameMuseums
      */
     
     public String getNameMuseums() {
@@ -157,6 +183,7 @@ public abstract class Kunstwerk
 
     /**
      * Da das Attribut NameMuseums als private deklariert wurde, brauchen wir Setter Methode, die die Veränderung der Objektvariablen ermöglicht
+     * @param NameMuseums
      */
     
     public void setNameMuseums(String nameMuseums) {
@@ -164,6 +191,7 @@ public abstract class Kunstwerk
 
     /**
      * Da das Attribut AnschriftMuseums als private deklariert wurde, brauchen wir Getter Methode, um die Objektvariable abzurufen
+     * @return AnschreiftsMuseums
      */
     
     public String getAnschriftMuseums() {
@@ -171,6 +199,7 @@ public abstract class Kunstwerk
 
     /**
      * Da das Attribut AnschriftMuseums als private deklariert wurde, brauchen wir Setter Methode, die die Veränderung der Objektvariablen ermöglicht
+     * @param AnschriftMuseums
      */
     
     public void setAnschriftMuseums(String anschriftMuseums) {
@@ -178,6 +207,7 @@ public abstract class Kunstwerk
 
     /**
      * Da das Attribut Hoehe als private deklariert wurde, brauchen wir Getter Methode, um die Objektvariable abzurufen
+     * @return Hoehe
      */
     
     public int getHoehe() {
@@ -185,6 +215,7 @@ public abstract class Kunstwerk
 
     /**
      * Da das Attribut Hoehe als private deklariert wurde, brauchen wir Setter Methode, die die Veränderung der Objektvariablen ermöglicht
+     * @param Hoehe
      */
     
     public void setHoehe(int hoehe) {
@@ -192,6 +223,7 @@ public abstract class Kunstwerk
 
     /**
      * Da das Attribut Breite als private deklariert wurde, brauchen wir Getter Methode, um die Objektvariable abzurufen
+     * @return Breite
      */
     
     public int getBreite() {
@@ -199,6 +231,7 @@ public abstract class Kunstwerk
 
     /**
      * Da das Attribut Breite als private deklariert wurde, brauchen wir Setter Methode, die die Veränderung der Objektvariablen ermöglicht
+     * @param Breite
      */
     
     public void setBreite(int breite) {
@@ -207,6 +240,7 @@ public abstract class Kunstwerk
 
     /**
      * Da das Attribut WirdAusgestellt als private deklariert wurde, brauchen wir Getter Methode, um die Objektvariable abzurufen
+     * @return wird Ausgestellt
      */
     
     public boolean getWirdAusgestellt() {
@@ -214,6 +248,7 @@ public abstract class Kunstwerk
 
     /**
      * Da das Attribut WirdAusgestellt als private deklariert wurde, brauchen wir Setter Methode, die die Veränderung der Objektvariablen ermöglicht
+     * @param wirdAusgestellt
      */
     
     public void setWirdAusgestellt(boolean wirdAusgestellt) {
@@ -222,6 +257,7 @@ public abstract class Kunstwerk
 
     /**
      * Da das Attribut InRaum als private deklariert wurde, brauchen wir Getter Methode, um die Objektvariable abzurufen
+     * @return InRaum
      */
     
     public Raum getInRaum() {
@@ -230,7 +266,9 @@ public abstract class Kunstwerk
 
     /**
      * Da das Attribut InRaum als private deklariert wurde, brauchen wir Setter Methode, die die Veränderung der Objektvariablen ermöglicht
+     * @param InRAum
      */
+    
     public void setinRaum(Raum inRaum) {
     this.inRaum = inRaum;  
     }
@@ -239,6 +277,7 @@ public abstract class Kunstwerk
 
     /**
      * Representiert die Klasse als String
+     * @return String mit allen Parametern
      */
     public String toString() {
         return "laufendeNummer=" + laufendeNummer +

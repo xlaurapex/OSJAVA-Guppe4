@@ -55,6 +55,7 @@ public class Bild extends Kunstwerk
 
     /**
      * Da das Attribut MinTemperatur als private deklariert wurde, brauchen wir Getter Methode, um die Objektvariable abzurufen
+     * @return minTemperatur
      */
     
     public double getMinTemperatur() {
@@ -63,6 +64,7 @@ public class Bild extends Kunstwerk
 
     /**
      * Da das Attribut MinTemperatur als private deklariert wurde, brauchen wir Setter Methode, die die Veränderung der Objektvariablen ermöglicht
+     * @param minTemperatur
      */
     
     public void setMinTemperatur(double minTemperatur) {
@@ -71,6 +73,7 @@ public class Bild extends Kunstwerk
 
     /**
      * Da das Attribut MaxTemperatur als private deklariert wurde, brauchen wir Getter Methode, um die Objektvariable abzurufen
+     * @return maxTemperatur
      */
     
     public double getMaxTemperatur() {
@@ -79,6 +82,7 @@ public class Bild extends Kunstwerk
 
     /**
      * Da das Attribut MaxTemperatur als private deklariert wurde, brauchen wir Setter Methode, die die Veränderung der Objektvariablen ermöglicht
+     * @param maxTemperatur
      */
     
     public void setMaxTemperatur(double maxTemperatur) {
@@ -87,6 +91,7 @@ public class Bild extends Kunstwerk
 
     /**
      * Da das Attribut MinLuftfeuchtigkeit als private deklariert wurde, brauchen wir Getter Methode, um die Objektvariable abzurufen
+     * @return minLuftfeuchtigkeit
      */
     
     public double getMinLuftfeuchtigkeit() {
@@ -95,6 +100,7 @@ public class Bild extends Kunstwerk
 
     /**
      * Da das Attribut MinLuftfeuchtigkeit als private deklariert wurde, brauchen wir Setter Methode, die die Veränderung der Objektvariablen ermöglicht
+     * @param minLuftfeuchtigkeit
      */
     
     public void setMinLuftfeuchtigkeit(double minLuftfeuchtigkeit) {
@@ -103,6 +109,7 @@ public class Bild extends Kunstwerk
 
     /**
      * Da das Attribut MaxLuftfeuchtigkeit als private deklariert wurde, brauchen wir Getter Methode, um die Objektvariable abzurufen
+     * @return maxLuftfeuchtigkeit
      */
     
     public double getMaxLuftfeuchtigkeit() {
@@ -111,6 +118,7 @@ public class Bild extends Kunstwerk
 
     /**
      * Da das Attribut MaxLuftfeuchtigkeit als private deklariert wurde, brauchen wir Setter Methode, die die Veränderung der Objektvariablen ermöglicht
+     * @param maxLuftFeuchtigkeit
      */
     
     public void setMaxLuftfeuchtigkeit(double maxLuftfeuchtigkeit) {
@@ -119,6 +127,7 @@ public class Bild extends Kunstwerk
     
     /**
      * Da das Attribut XAufhaengung als private deklariert wurde, brauchen wir Getter Methode, um die Objektvariable abzurufen
+     * @return xAufhaengung
      */
     
     public int getXAufhaengung() {
@@ -127,6 +136,7 @@ public class Bild extends Kunstwerk
 
     /**
      * Da das Attribut XAufhaengung als private deklariert wurde, brauchen wir Setter Methode, die die Veränderung der Objektvariablen ermöglicht
+     * @param xAufhaengung
      */
     
     public void setXAufhaengung(int xAufhaengung) {
@@ -135,14 +145,16 @@ public class Bild extends Kunstwerk
     
     /**
      * Da das Attribut YAufhaengung als private deklariert wurde, brauchen wir Getter Methode, um die Objektvariable abzurufen
+     * @return yAufhaengung
      */
     
     public int getYAufhaengung() {
-        return xAufhaengung;
+        return yAufhaengung;
     }
 
     /**
      * Da das Attribut YAufhaengung als private deklariert wurde, brauchen wir Setter Methode, die die Veränderung der Objektvariablen ermöglicht
+     * @param yAufhaengung
      */
     
     public void setYAufhaengung(int YAufhaengung) {
@@ -151,6 +163,7 @@ public class Bild extends Kunstwerk
     
     /**
      * Da das Attribut Wand als private deklariert wurde, brauchen wir Getter Methode, um die Objektvariable abzurufen
+     * @return Wand
      */
     
     public String getWand() {
@@ -159,6 +172,7 @@ public class Bild extends Kunstwerk
 
     /**
      * Da das Attribut Wand als private deklariert wurde, brauchen wir Setter Methode, die die Veränderung der Objektvariablen ermöglicht
+     * @param Wand
      */
     
     public void setWand(String wand) {
@@ -167,6 +181,7 @@ public class Bild extends Kunstwerk
 
     /**
      * Representiert die Klasse als String
+     * @return String mit allen Parametern
      */
     public String toString() {
         return "Bild{" +
@@ -178,6 +193,9 @@ public class Bild extends Kunstwerk
                 '}';
     }
     
+    /**
+     * Raeumt die xy Koordinaten des Bildes auf
+     */
     public void clearZuordnung(){
         super.clearZuordnung();
         this.wand = "";

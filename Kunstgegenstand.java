@@ -16,6 +16,19 @@ public class Kunstgegenstand extends Kunstwerk {
 
        /**
      * Kontruktor für Objekte der abstrakten Klasse Kunstgegenstand
+     * @param laufendeNummer
+     * @param bezeichnung
+     * @param kuenstlername
+     * @param jahresangabe
+     * @param thema
+     * @param attraktivitaet
+     * @param kosten
+     * @param nameMuseums
+     * @param anschriftMuseums
+     * @param hoehe
+     * @param breite
+     * @param laenge
+     * @param gewicht
      */
     public Kunstgegenstand(int laufendeNummer, String bezeichnung,
                            String kuenstlername, String jahresangabe,
@@ -30,6 +43,7 @@ public class Kunstgegenstand extends Kunstwerk {
 
      /**
      * Da das Attribut Laenge als private deklariert wurde, brauchen wir Getter Methode, um die Objektvariable abzurufen
+     * @return laenge
      */
     
     public int getLaenge() {
@@ -38,6 +52,7 @@ public class Kunstgegenstand extends Kunstwerk {
 
     /**
      * Da das Attribut Laenge als private deklariert wurde, brauchen wir Setter Methode, die die Veränderung der Objektvariablen ermöglicht
+     * @param laenge
      */
     
     public void setLaenge(int laenge) {
@@ -46,6 +61,7 @@ public class Kunstgegenstand extends Kunstwerk {
 
     /**
      * Da das Attribut Gewicht als private deklariert wurde, brauchen wir Getter Methode, um die Objektvariable abzurufen
+     * @return gewicht
      */
     
     public double getGewicht() {
@@ -54,6 +70,7 @@ public class Kunstgegenstand extends Kunstwerk {
 
     /**
      * Da das Attribut Gewicht als private deklariert wurde, brauchen wir Setter Methode, die die Veränderung der Objektvariablen ermöglicht
+     * @param gewicht
      */
     
     public void setGewicht(double gewicht) {
@@ -62,6 +79,7 @@ public class Kunstgegenstand extends Kunstwerk {
     
     /**
      * Da das Attribut XPlatzierung als private deklariert wurde, brauchen wir Getter Methode, um die Objektvariable abzurufen
+     * @return xPlatzierung
      */
     
     public int getXPlatzierung() {
@@ -70,6 +88,7 @@ public class Kunstgegenstand extends Kunstwerk {
 
     /**
      * Da das Attribut XPlatzierung als private deklariert wurde, brauchen wir Setter Methode, die die Veränderung der Objektvariablen ermöglicht
+     * @param xPlatzierung
      */
     
     public void setXPlatzierung(int xPlatzierung) {
@@ -78,6 +97,7 @@ public class Kunstgegenstand extends Kunstwerk {
     
     /**
      * Da das Attribut YPlatzierung als private deklariert wurde, brauchen wir Getter Methode, um die Objektvariable abzurufen
+     * @return yPlatzierung
      */
     
     public int getYPlatzierung() {
@@ -86,6 +106,7 @@ public class Kunstgegenstand extends Kunstwerk {
 
     /**
      * Da das Attribut YPlatzierung als private deklariert wurde, brauchen wir Setter Methode, die die Veränderung der Objektvariablen ermöglicht
+     * @param yPlatzierung
      */
     
     public void setYPlatzierung(int yPlatzierung) {
@@ -94,6 +115,7 @@ public class Kunstgegenstand extends Kunstwerk {
 
     /**
      * Representiert die Klasse als String
+     * @return String mit allen Parametern
      */
     public String toString() {
         return "Kunstgegenstand{" +
@@ -103,6 +125,9 @@ public class Kunstgegenstand extends Kunstwerk {
                 '}';
     }
     
+    /**
+     * Raeumt die xy Koordinaten des Bildes auf
+     */
     public void clearZuordnung(){
         super.clearZuordnung();
         xPlatzierung = 0;
