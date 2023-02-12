@@ -11,7 +11,7 @@ import java.util.ArrayList;
  */
 public class Raumverwaltung
 {
-    // es braucht auf jeden Fall eine Variable vom Typ ArrayList<Raum>, um eine Liste der Räume zu erzeugen
+    //  Variable vom Typ ArrayList<Raum>, um eine Liste der Räume zu erzeugen
     
     private ArrayList<Raum> raeume;
     private Raum r;
@@ -62,15 +62,6 @@ public class Raumverwaltung
     }
 
 
-    // /**
-     // * Es braucht eine Methode, um aus der bestehende Liste der Räume einen neuen Raum zu entfernen.
-     // * 
-     // * @param  raum    es muss ein Objekt des Typs Raum übergeben werden, welcher aus der Liste entfernt wird
-     // * 
-     // */
-    // public void removeRaum(Raum raum)
-    // {
-        // // tragen Sie hier den Code ein
         
-    // }
+
 }
