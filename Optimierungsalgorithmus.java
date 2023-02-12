@@ -33,9 +33,17 @@ public class Optimierungsalgorithmus
     }
 
     /**
+     * Statische Methode die aus der Main aufgerufen wird.
+     * Die Methode deklariert und initialisiert wichtige Hilfsdatenstrukturen und starten anschließend den rekursiven Backtracking Algorithmus.
      * 
+     * @param   parameterRaeume         Eine Liste aller zur Verfügung stehenden Räume
+     * @param   parameterKunstwerke     Eine Liste aller Kunstwerke die für die nächste Ausstellung zur Verfügung stehen
+     * @param   parameterThema          Das Hauptthema der nächsten Ausstellung
+     * @param   pKostengrenze           Das maximale Budget der nächsten Ausstellung
+     * 
+     * @return ArrayList<Kunstwerk>     Die Liste mit den in der nächsten Ausstellung benutzten Kunstwerke.
      */
-    public static ArrayList<Kunstwerk> optimiere2(ArrayList<Raum> parameterRaeume, ArrayList<Kunstwerk> parameterKunstwerke, String parameterThema)
+    public static ArrayList<Kunstwerk> optimiere2(ArrayList<Raum> parameterRaeume, ArrayList<Kunstwerk> parameterKunstwerke, String parameterThema, int pKostengrenze)
     {
         ArrayList<Kunstwerk> ReturnList = new ArrayList<Kunstwerk>();
         HashMap<Raum, ArrayList<Kunstwerk>> Ausstellung = new HashMap<Raum, ArrayList<Kunstwerk>>();
@@ -45,19 +53,29 @@ public class Optimierungsalgorithmus
             pRaum.setSchwerpunktThema(parameterThema);
         }
 
-        return StarteOptimierung(Ausstellung,parameterKunstwerke,new ArrayList<Kunstwerk>(),parameterThema,0);
+        return StarteOptimierung(Ausstellung,parameterKunstwerke,new ArrayList<Kunstwerk>(),parameterThema,0,pKostengrenze);
     }
 
     /**
+     * Rekursiver Backtracking Algorithmus der versucht die Räume optimal unter Berücksichtigung aller vorgegebenen Bedingungen zu füllen
+     * Die Methode ruft sich solange auf bis alle Möglichkeiten ausprobiert worden sind.
+     * Jedes Mal wenn eine neue Kombination gefunden wird, in der mehr Kunstwerke in den Räumen verteilt werden können als vorher, wird diese in einer globalen Variable zwischengespeichert.
      * 
+     * @param   pAusstellung            Hashmap die ausgibt welche Kunstwerke gerade in welchem Raum zu finden sind
+     * @param   parameterKunstwerke     ArrayList die alle Kunstwerke enthält die noch nicht verteilt wurden
+     * @param   pReturnList             ArrayList die alle Kunstwerke enthält die bereits verteilt worden sind
+     * @param   parameterThema          Das Hauptthema der Ausstellung
+     * @param   BesteLaenge             Die Anzahl der verteilten Kunstwerke im aktuellen Optimum
+     * @param   pKostengrenze           Die maximalen Kosten für die Ausstellung
+     * @return BesteKunstwerk           Globale Variable die im Verlauf des Backtracking optimiert wird
      */
-    public static ArrayList<Kunstwerk> StarteOptimierung(HashMap<Raum, ArrayList<Kunstwerk>> pAusstellung, ArrayList<Kunstwerk> parameterKunstwerke, ArrayList<Kunstwerk> pReturnList, String parameterThema,int pBesteLaenge)
+    public static ArrayList<Kunstwerk> StarteOptimierung(HashMap<Raum, ArrayList<Kunstwerk>> pAusstellung, ArrayList<Kunstwerk> parameterKunstwerke, ArrayList<Kunstwerk> pReturnList, String parameterThema,int pBesteLaenge, int pKostengrenze)
     {
         //reject if 3 themen pro raum oder 50% der hauptthemen pro raum1
         //nur rejecten wenn kein add zustande gekommen ist
         //var tempRaeume = (ArrayList<Raum>)parameterRaeume.clone();
 
-        if(!BacktrackingReject(pAusstellung,parameterThema))
+        if(!BacktrackingReject(pAusstellung,parameterThema,pKostengrenze))
         {
             return null;
         }
@@ -90,7 +108,7 @@ public class Optimierungsalgorithmus
                             zRaum.setFreieFlaecheSued(0);
                             zRaum.setFreieFlaecheOst(0);
                             zRaum.setFreieFlaecheWest(0);
-                            StarteOptimierung(pAusstellung,tempKunstwerke,pReturnList,parameterThema,pBesteLaenge+1);
+                            StarteOptimierung(pAusstellung,tempKunstwerke,pReturnList,parameterThema,pBesteLaenge+1,pKostengrenze);
                         }
                     }
                     if(pKunstwerk instanceof Kunstgegenstand)
@@ -98,45 +116,50 @@ public class Optimierungsalgorithmus
                         // nur an wände mit genug platz und 3 Themen + Schwerpunktthema
                         // ArrayList<Kunstwerk> temporaereKunstwerke = Ausstellung.get(pRaum);
                         // Passt das Thema zu den anderen Themen?
+                        Kunstgegenstand pKunstgegenstand = (Kunstgegenstand)pKunstwerk;
                         if((getThemenImRaum(value).size() < 3) || (getThemenImRaum(value).contains(pKunstwerk.getThema())))
                         {
                             // Nord,West, Süd, ost
                             if((zRaum.getFreieFlaecheNord() - pKunstwerk.getBreite() - 200) >= 0)
                             {
-                                value.add(pKunstwerk);
-                                tempKunstwerke.remove(pKunstwerk);
-                                pKunstwerk.setinRaum(zRaum);
-                                pReturnList.add(pKunstwerk);
-                                zRaum.setFreieFlaecheNord(zRaum.getFreieFlaecheNord() - pKunstwerk.getBreite() - 200);
-                                // parameterKunstwerke = tempKunstwerke;
-                                StarteOptimierung(pAusstellung,tempKunstwerke,pReturnList,parameterThema,pBesteLaenge+1);
+                                value.add(pKunstgegenstand);
+                                tempKunstwerke.remove(pKunstgegenstand);
+                                pKunstgegenstand.setinRaum(zRaum);
+                                pKunstgegenstand.setXPlatzierung(zRaum.getFreieFlaecheNord() - pKunstgegenstand.getBreite());
+                                pKunstgegenstand.setYPlatzierung(200);
+                                pReturnList.add(pKunstgegenstand);
+                                zRaum.setFreieFlaecheNord(zRaum.getFreieFlaecheNord() - pKunstgegenstand.getBreite() - 200);
+                                StarteOptimierung(pAusstellung,tempKunstwerke,pReturnList,parameterThema,pBesteLaenge+1,pKostengrenze);
                             }else if ((zRaum.getFreieFlaecheSued() - pKunstwerk.getBreite() - 200) >= 0)
                             {
-                                value.add(pKunstwerk);
-                                tempKunstwerke.remove(pKunstwerk);
+                                value.add(pKunstgegenstand);
+                                tempKunstwerke.remove(pKunstgegenstand);
                                 pKunstwerk.setinRaum(zRaum);
-                                pReturnList.add(pKunstwerk);
-                                zRaum.setFreieFlaecheSued(zRaum.getFreieFlaecheSued() - pKunstwerk.getBreite() - 200);
-                                // parameterKunstwerke = tempKunstwerke;
-                                StarteOptimierung(pAusstellung,tempKunstwerke,pReturnList,parameterThema,pBesteLaenge+1);
-                            }else if((zRaum.getFreieFlaecheWest() - pKunstwerk.getBreite() - 200) >= 0)
+                                pKunstgegenstand.setXPlatzierung(zRaum.getFreieFlaecheSued() - pKunstgegenstand.getBreite());
+                                pKunstgegenstand.setYPlatzierung(200);
+                                pReturnList.add(pKunstgegenstand);
+                                zRaum.setFreieFlaecheSued(zRaum.getFreieFlaecheSued() - pKunstgegenstand.getBreite() - 200);                                
+                                StarteOptimierung(pAusstellung,tempKunstwerke,pReturnList,parameterThema,pBesteLaenge+1,pKostengrenze);
+                            }else if((zRaum.getFreieFlaecheWest() - pKunstgegenstand.getBreite() - 200) >= 0)
                             {
-                                value.add(pKunstwerk);
-                                tempKunstwerke.remove(pKunstwerk);
-                                pKunstwerk.setinRaum(zRaum);
-                                pReturnList.add(pKunstwerk);
-                                zRaum.setFreieFlaecheWest(zRaum.getFreieFlaecheWest() - pKunstwerk.getBreite() - 200);
-                                // parameterKunstwerke = tempKunstwerke;
-                                StarteOptimierung(pAusstellung,tempKunstwerke,pReturnList,parameterThema,pBesteLaenge+1);
+                                value.add(pKunstgegenstand);
+                                tempKunstwerke.remove(pKunstgegenstand);
+                                pKunstgegenstand.setinRaum(zRaum);
+                                pKunstgegenstand.setXPlatzierung(zRaum.getFreieFlaecheWest() - pKunstgegenstand.getBreite());
+                                pKunstgegenstand.setYPlatzierung(200);
+                                pReturnList.add(pKunstgegenstand);
+                                zRaum.setFreieFlaecheWest(zRaum.getFreieFlaecheWest() - pKunstgegenstand.getBreite() - 200);
+                                StarteOptimierung(pAusstellung,tempKunstwerke,pReturnList,parameterThema,pBesteLaenge+1,pKostengrenze);
                             }else if((zRaum.getFreieFlaecheOst() - pKunstwerk.getBreite() - 200) >= 0)
                             {
-                                value.add(pKunstwerk);
-                                tempKunstwerke.remove(pKunstwerk);
-                                pKunstwerk.setinRaum(zRaum);
-                                pReturnList.add(pKunstwerk);
-                                zRaum.setFreieFlaecheOst(zRaum.getFreieFlaecheOst() - pKunstwerk.getBreite() - 200);
-                                // parameterKunstwerke = tempKunstwerke;
-                                StarteOptimierung(pAusstellung,tempKunstwerke,pReturnList,parameterThema,pBesteLaenge+1);
+                                value.add(pKunstgegenstand);
+                                tempKunstwerke.remove(pKunstgegenstand);
+                                pKunstgegenstand.setinRaum(zRaum);
+                                pKunstgegenstand.setXPlatzierung(zRaum.getFreieFlaecheOst() - pKunstgegenstand.getBreite());
+                                pKunstgegenstand.setYPlatzierung(200);
+                                pReturnList.add(pKunstgegenstand);
+                                zRaum.setFreieFlaecheOst(zRaum.getFreieFlaecheOst() - pKunstgegenstand.getBreite() - 200);
+                                StarteOptimierung(pAusstellung,tempKunstwerke,pReturnList,parameterThema,pBesteLaenge+1,pKostengrenze);
                             }
                         }                                                    
                     }
@@ -145,64 +168,73 @@ public class Optimierungsalgorithmus
                         // nur an wände mit genug platz und 3 Themen + Schwerpunktthema
                         // ArrayList<Kunstwerk> temporaereKunstwerke = Ausstellung.get(pRaum);
                         // Passt das Thema zu den anderen Themen?
+                        Bild pBild = (Bild)pKunstwerk;
                         if((getThemenImRaum(value).size() < 3) || (getThemenImRaum(value).contains(pKunstwerk.getThema())))
                         {
                             // Nord,West, Süd, ost
                             if((zRaum.getFreieFlaecheNord() - pKunstwerk.getBreite() - 100) >= 0)
                             {
-                                value.add(pKunstwerk);
-                                tempKunstwerke.remove(pKunstwerk);
-                                pKunstwerk.setinRaum(zRaum);
-                                pReturnList.add(pKunstwerk);
+                                value.add(pBild);
+                                tempKunstwerke.remove(pBild);
+                                pBild.setinRaum(zRaum);
+                                pBild.setXAufhaengung(zRaum.getFreieFlaecheNord() - pKunstwerk.getBreite());
+                                pBild.setYAufhaengung(100);
+                                pReturnList.add(pBild);
                                 zRaum.setFreieFlaecheNord(zRaum.getFreieFlaecheNord() - pKunstwerk.getBreite() - 100);
-                                // parameterKunstwerke = tempKunstwerke;
-                                StarteOptimierung(pAusstellung,tempKunstwerke,pReturnList,parameterThema,pBesteLaenge+1);
+                                StarteOptimierung(pAusstellung,tempKunstwerke,pReturnList,parameterThema,pBesteLaenge+1,pKostengrenze);
                             }else if ((zRaum.getFreieFlaecheSued() - pKunstwerk.getBreite() - 100) >= 0)
                             {
                                 value.add(pKunstwerk);
                                 tempKunstwerke.remove(pKunstwerk);
                                 pKunstwerk.setinRaum(zRaum);
+                                pBild.setXAufhaengung(zRaum.getFreieFlaecheSued() - pKunstwerk.getBreite());
+                                pBild.setYAufhaengung(100);
                                 pReturnList.add(pKunstwerk);
                                 zRaum.setFreieFlaecheSued(zRaum.getFreieFlaecheSued() - pKunstwerk.getBreite() - 100);
-                                // parameterKunstwerke = tempKunstwerke;
-                                StarteOptimierung(pAusstellung,tempKunstwerke,pReturnList,parameterThema,pBesteLaenge+1);
+                                StarteOptimierung(pAusstellung,tempKunstwerke,pReturnList,parameterThema,pBesteLaenge+1,pKostengrenze);
                             }else if((zRaum.getFreieFlaecheWest() - pKunstwerk.getBreite() - 100) >= 0)
                             {
                                 value.add(pKunstwerk);
                                 tempKunstwerke.remove(pKunstwerk);
                                 pKunstwerk.setinRaum(zRaum);
+                                pBild.setXAufhaengung(zRaum.getFreieFlaecheWest() - pKunstwerk.getBreite());
+                                pBild.setYAufhaengung(100);
                                 pReturnList.add(pKunstwerk);
                                 zRaum.setFreieFlaecheWest(zRaum.getFreieFlaecheWest() - pKunstwerk.getBreite() - 100);
-                                // parameterKunstwerke = tempKunstwerke;
-                                StarteOptimierung(pAusstellung,tempKunstwerke,pReturnList,parameterThema,pBesteLaenge+1);
+                                StarteOptimierung(pAusstellung,tempKunstwerke,pReturnList,parameterThema,pBesteLaenge+1,pKostengrenze);
                             }else if((zRaum.getFreieFlaecheOst() - pKunstwerk.getBreite() - 100) >= 0)
                             {
                                 value.add(pKunstwerk);
                                 tempKunstwerke.remove(pKunstwerk);
                                 pKunstwerk.setinRaum(zRaum);
+                                pBild.setXAufhaengung(zRaum.getFreieFlaecheOst() - pKunstwerk.getBreite());
+                                pBild.setYAufhaengung(100);
                                 pReturnList.add(pKunstwerk);
                                 zRaum.setFreieFlaecheOst(zRaum.getFreieFlaecheOst() - pKunstwerk.getBreite() - 100);
-                                // parameterKunstwerke = tempKunstwerke;
-                                StarteOptimierung(pAusstellung,tempKunstwerke,pReturnList,parameterThema,pBesteLaenge+1);
+                                StarteOptimierung(pAusstellung,tempKunstwerke,pReturnList,parameterThema,pBesteLaenge+1,pKostengrenze);
                             }
                         }                                                    
                     }
                 }                
             }
-            // return null;
         }
         return BesteKunstwerk;
     }
 
     /**
-     * Bla
-     * @param
-     * @return
+     * Die Methode prüft mehrere Bedingungen die wichtig sind um die Kunstwerke optimal zu verteilen.
+     * Es wird geprüft ob das Hauptthema in mindestens 50% der Räumen als Mehrheit vertreten ist
+     * @param pAusstellung  Alle Räume mit ihren beinhalteten Kunstwerken
+     * @param pThema        Das Hauptthema der Ausstellung
+     * @param pKostengrenze Das Budget für die Ausstellung
+     * @return boolean      True, wenn alle Bedingungen weiterhin gültig sind
+     *                      False, falls eine oder beide Bedingungen gebrochen wurden
      */
-    public static boolean BacktrackingReject(HashMap<Raum, ArrayList<Kunstwerk>> pAusstellung, String pThema)
+    public static boolean BacktrackingReject(HashMap<Raum, ArrayList<Kunstwerk>> pAusstellung, String pThema, int pKostengrenze)
     {
         //Prüfe ob 50% sind..        
-        double RaeumeMitMehrheit = 0;        
+        double RaeumeMitMehrheit = 0;       
+        double Kostengrenze = 0.00;
         for(HashMap.Entry<Raum, ArrayList<Kunstwerk>> pRaumMitKunstwerk : pAusstellung.entrySet()) 
         {            
             // double WerkeMitThema = 0;
@@ -211,11 +243,8 @@ public class Optimierungsalgorithmus
             HashMap.Entry<String, Integer> maxEntry = null;
             for(Kunstwerk pKunstwerk : value)
             {
-                // if(ZuordnungMehrheit.containsKey(pKunstwerk.getThema()))
-                // {
-                // WerkeMitThema++;
-                // }
                 ZuordnungMehrheit.merge(pKunstwerk.getThema(), 1, Integer::sum);
+                Kostengrenze = Kostengrenze + pKunstwerk.getKosten();
             }            
             for (HashMap.Entry<String, Integer> entry : ZuordnungMehrheit.entrySet())
             {
@@ -230,7 +259,7 @@ public class Optimierungsalgorithmus
             }
         }
 
-        if((RaeumeMitMehrheit/pAusstellung.size()) >= 0.5)
+        if(((RaeumeMitMehrheit/pAusstellung.size()) >= 0.5) && (Kostengrenze <= pKostengrenze))
         {
             return true;
         }
@@ -238,200 +267,9 @@ public class Optimierungsalgorithmus
     }
 
     /**
-     * Es benötigt die Methode optimiere, um aus den Anforderungen ein Objekt der Klasse Ausstellung zu erzeugen
-     * 
-     * @param  r    eine Liste der Räume (aus der Raumverwaltung) muss eingegeben werden 
-     * @param  k    eine Liste der Kunstwerke (aus der Kunstwerksverwaltung) muss eingegeben werden 
-     * @param  thema    das vorgegebene Thema muss eingegeben werden 
-     * 
-     * @return        ein Objekt der Klasse Ausstellung wird zurückgegeben, welches die optimierte Zuordnung von Raum zu Kunstwerk beinhaltet
-     * Liste mit Kunstwerken -> Kunstwerk hat eine RaumID
-     */
-    public static ArrayList<Kunstwerk> optimiere(ArrayList<Raum> parameterRaeume, ArrayList<Kunstwerk> parameterKunstwerke, String parameterThema)
-    {
-        //int AnzahlKunstwerke = parameterKunstwerke.size();
-        int AnzahlKunstwerke = berechneInstaUndGegen(parameterKunstwerke);
-        ArrayList<Kunstwerk> ReturnList = new ArrayList<Kunstwerk>();
-        int AnzahlKunstinstallationen = 0;
-
-        //Initialisiere die gebrauchten Datenstrukturen
-        double ThemaInRaeumen = 0.00; // Noch nicht umgesetzt
-        boolean RaumOptimiert = false;
-        var Ausstellung = new HashMap<Raum, ArrayList<Kunstwerk>>();
-        // Speichere alle Räume und ordne den ersten Räumen alle Kunstinstallationen zu
-        var tempRaeume = (ArrayList<Raum>)parameterRaeume.clone();
-        var tempKunstwerke = (ArrayList<Kunstwerk>)parameterKunstwerke.clone();
-
-        for(Raum pRaum : parameterRaeume)
-        {
-            Ausstellung.put(pRaum, new ArrayList<Kunstwerk>());
-            tempRaeume.remove(pRaum);
-            for(Kunstwerk pKunstwerk : parameterKunstwerke)
-            {        
-                //hoehe vergleichen? pKunstwerkunstwerkunstwerkunstwerk.getHoehe >= pRaum.getHoehe
-                // thema in allen räumchen berechnen
-                if(pKunstwerk.getHoehe() <= pRaum.getHoehe())
-                {
-                    if(pKunstwerk instanceof Kunstinstallation)
-                    {
-                        // nur in leere räume
-                        ArrayList<Kunstwerk> AndereKunstwerkeImRaum = Ausstellung.get(pRaum);
-                        //Raum leer?
-                        if(AndereKunstwerkeImRaum.size() == 0)
-                        {
-                            AndereKunstwerkeImRaum.add(pKunstwerk);
-                            tempKunstwerke.remove(pKunstwerk);
-                            pKunstwerk.setinRaum(pRaum);
-                            ReturnList.add(pKunstwerk);
-                            break;
-                        }                        
-                    }
-                }
-                parameterKunstwerke = tempKunstwerke;
-            }
-            parameterRaeume = tempRaeume;
-        }
-
-        // while(true != RaumOptimiert)
-        // {
-        for(HashMap.Entry<Raum, ArrayList<Kunstwerk>> pRaumMitKunstwerk : Ausstellung.entrySet()) {
-            Raum zRaum = pRaumMitKunstwerk.getKey();
-            ArrayList<Kunstwerk> value = pRaumMitKunstwerk.getValue();
-            for(Kunstwerk pKunstwerk: parameterKunstwerke)
-            {
-                if(pKunstwerk instanceof Kunstgegenstand)
-                {
-                    // nur an wände mit genug platz und 3 Themen + Schwerpunktthema
-                    // ArrayList<Kunstwerk> temporaereKunstwerke = Ausstellung.get(pRaum);
-                    // Passt das Thema zu den anderen Themen?
-                    if((getThemenImRaum(value).size() < 3) || (getThemenImRaum(value).contains(pKunstwerk.getThema())))
-                    {
-                        // Nord,West, Süd, ost
-                        if((zRaum.getFreieFlaecheNord() - pKunstwerk.getBreite() - 200) >= 0)
-                        {
-                            value.add(pKunstwerk);
-                            tempKunstwerke.remove(pKunstwerk);
-                            pKunstwerk.setinRaum(zRaum);
-                            ReturnList.add(pKunstwerk);
-                            zRaum.setFreieFlaecheNord(zRaum.getFreieFlaecheNord() - pKunstwerk.getBreite() - 200);
-                            parameterKunstwerke = tempKunstwerke;
-                            break;
-                        }else if ((zRaum.getFreieFlaecheSued() - pKunstwerk.getBreite() - 200) >= 0)
-                        {
-                            value.add(pKunstwerk);
-                            tempKunstwerke.remove(pKunstwerk);
-                            pKunstwerk.setinRaum(zRaum);
-                            ReturnList.add(pKunstwerk);
-                            zRaum.setFreieFlaecheSued(zRaum.getFreieFlaecheSued() - pKunstwerk.getBreite() - 200);
-                            parameterKunstwerke = tempKunstwerke;
-                            break;
-                        }else if((zRaum.getFreieFlaecheWest() - pKunstwerk.getBreite() - 200) >= 0)
-                        {
-                            value.add(pKunstwerk);
-                            tempKunstwerke.remove(pKunstwerk);
-                            pKunstwerk.setinRaum(zRaum);
-                            ReturnList.add(pKunstwerk);
-                            zRaum.setFreieFlaecheWest(zRaum.getFreieFlaecheWest() - pKunstwerk.getBreite() - 200);
-                            parameterKunstwerke = tempKunstwerke;
-                            break;
-                        }else if((zRaum.getFreieFlaecheOst() - pKunstwerk.getBreite() - 200) >= 0)
-                        {
-                            value.add(pKunstwerk);
-                            tempKunstwerke.remove(pKunstwerk);
-                            pKunstwerk.setinRaum(zRaum);
-                            ReturnList.add(pKunstwerk);
-                            zRaum.setFreieFlaecheOst(zRaum.getFreieFlaecheOst() - pKunstwerk.getBreite() - 200);
-                            parameterKunstwerke = tempKunstwerke;
-                            break;
-                        }
-                    }                                                    
-                }
-                if(pKunstwerk instanceof Bild)
-                {
-                    // nur an wände mit genug platz und 3 Themen + Schwerpunktthema
-                    // ArrayList<Kunstwerk> temporaereKunstwerke = Ausstellung.get(pRaum);
-                    // Passt das Thema zu den anderen Themen?
-                    if((getThemenImRaum(value).size() < 3) || (getThemenImRaum(value).contains(pKunstwerk.getThema())))
-                    {
-                        // Nord,West, Süd, ost
-                        if((zRaum.getFreieFlaecheNord() - pKunstwerk.getBreite() - 100) >= 0)
-                        {
-                            value.add(pKunstwerk);
-                            parameterKunstwerke.remove(pKunstwerk);
-                            pKunstwerk.setinRaum(zRaum);
-                            ReturnList.add(pKunstwerk);
-                            zRaum.setFreieFlaecheNord(zRaum.getFreieFlaecheNord() - pKunstwerk.getBreite() - 100);
-                            break;
-                        }else if ((zRaum.getFreieFlaecheSued() - pKunstwerk.getBreite() - 100) >= 0)
-                        {
-                            value.add(pKunstwerk);
-                            parameterKunstwerke.remove(pKunstwerk);
-                            pKunstwerk.setinRaum(zRaum);
-                            ReturnList.add(pKunstwerk);
-                            zRaum.setFreieFlaecheSued(zRaum.getFreieFlaecheSued() - pKunstwerk.getBreite() - 100);
-                            break;
-                        }else if((zRaum.getFreieFlaecheWest() - pKunstwerk.getBreite() - 100) >= 0)
-                        {
-                            value.add(pKunstwerk);
-                            parameterKunstwerke.remove(pKunstwerk);
-                            pKunstwerk.setinRaum(zRaum);
-                            ReturnList.add(pKunstwerk);
-                            zRaum.setFreieFlaecheWest(zRaum.getFreieFlaecheWest() - pKunstwerk.getBreite() - 100);
-                            break;
-                        }else if((zRaum.getFreieFlaecheOst() - pKunstwerk.getBreite() - 100) >= 0)
-                        {
-                            value.add(pKunstwerk);
-                            parameterKunstwerke.remove(pKunstwerk);
-                            pKunstwerk.setinRaum(zRaum);
-                            ReturnList.add(pKunstwerk);
-                            zRaum.setFreieFlaecheOst(zRaum.getFreieFlaecheOst() - pKunstwerk.getBreite() - 100);
-                            break;
-                        }
-                    }
-                }
-
-            }
-        }
-        // if(ReturnList.size() == AnzahlKunstwerke)
-        // {
-        // RaumOptimiert = true;
-        // }
-
-        return ReturnList;
-    }
-
-    /**
-     * Bla
-     * @param
-     * @return
-     */
-    private double berechneThemaInAllenRaeumen()
-    {
-        return -1;
-    }
-
-    /**
-     * Bla
-     * @param
-     * @return
-     */
-    private static int berechneInstaUndGegen(ArrayList<Kunstwerk> pKunstwerke)
-    {
-        int Return = 0;
-        for( var zKunstwerk : pKunstwerke )
-        {
-            if((zKunstwerk instanceof Kunstinstallation) || (zKunstwerk instanceof Kunstgegenstand))
-            {
-                Return++;
-            }
-        }
-        return Return;
-    }
-
-    /**
-     * Bla
-     * @param
-     * @return
+     * Die Methode soll zurückgeben welche Themen bereits in einem Raum vertreten sind
+     * @param pKunstwerk    Alle Kunstwerke aus einem Raum
+     * @return ReturnList   Alle Themen des Raumes in einer Liste des Typs String
      */
     private static ArrayList<String> getThemenImRaum(ArrayList<Kunstwerk> pKunstwerk)
     {

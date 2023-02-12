@@ -123,7 +123,7 @@ public class Ausstellung
                 {
                     if(kw2.getInRaum() == tmpRaum)
                     {
-                        tmp.add(kw2);
+                        tmp.add(kw2);                        
                     }
                 }
                 r.add(tmpRaum);
