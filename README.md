@@ -1,7 +1,7 @@
 # OSJAVA_MUSEUM
 
 Programmanweisungen
-Gestartet werden kann das Programm über die Konsole mithilfe des Befehls java Museumsverwaltung.jar. Dabei muss der genaue Ablageort der Datei inklusive des Pfads angegeben werden, sofern die Dateien nicht im aktuellen Verzeichnis liegen. Bei Ausführung des java-Befehls ist zunächst keine Angabe von Parametern notwendig.
+Gestartet werden kann das Programm über die Konsole mithilfe des Befehls java -jar Museumsverwaltung.jar. Dabei muss der genaue Ablageort der Datei inklusive des Pfads angegeben werden, sofern die Dateien nicht im aktuellen Verzeichnis liegen. Bei Ausführung des java-Befehls ist zunächst keine Angabe von Parametern notwendig.
 
 Anschließend können Sie den Aufforderungen in der Konsole folgen.
 Sie werden nun aufgefordert nacheinander die Input Dateien für die Räume, sowie
